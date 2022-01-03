@@ -329,7 +329,7 @@ Style="{DynamicResource TextBoxStyle1}"
                      Grid.Column="2"
                      Style="{DynamicResource TextBoxStyle1}"
                      x:Name="historia_enfermedad"/>
-                <DatePicker x:Name="fecha"  Grid.Column="2" HorizontalAlignment="Left" Grid.Row="14" VerticalAlignment="Center"/>
+                <DatePicker x:Name="fecha" CalendarClosed="DatePicker_CalendarClosed"  Grid.Column="2" HorizontalAlignment="Left" Grid.Row="14" VerticalAlignment="Center"/>
                 <!--#endregion PACIENTE-->
 
 
@@ -353,7 +353,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="23"
+                <DatePicker Grid.Row="23"
                      Grid.Column="1"
                      
                      x:Name="mx1" Margin="110,4,24,8" Grid.RowSpan="2"/>
@@ -370,7 +370,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="25"
+                <DatePicker Grid.Row="25"
                      Grid.Column="1"
                      x:Name="qx1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="25"
@@ -389,7 +389,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="27"
+                <DatePicker Grid.Row="27"
                      Grid.Column="1"
                      x:Name="tx1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="27"
@@ -409,7 +409,7 @@ Style="{DynamicResource TextBoxStyle1}"
                        Text="Fam:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="30"
+                <DatePicker Grid.Row="30"
                      Grid.Column="1"
                      x:Name="fam1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="30"
@@ -427,7 +427,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="33"
+                <DatePicker Grid.Row="33"
                      Grid.Column="1"
                      x:Name="tox1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="33"
@@ -444,7 +444,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="60,0,0,0"/>
-                <TextBox Grid.Row="35"
+                <DatePicker Grid.Row="35"
                      Grid.Column="1"
                      x:Name="alg1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="35"
@@ -462,7 +462,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Grid.RowSpan="2" Margin="37,0,0,0"/>
-                <TextBox Grid.Row="37"
+                <DatePicker Grid.Row="37"
                      Grid.Column="1"
                      x:Name="rh1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="37"
@@ -479,7 +479,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Grid.RowSpan="2" Margin="71,0,0,0"/>
-                <TextBox Grid.Row="40"
+                <DatePicker Grid.Row="40"
                      Grid.Column="1"
                      x:Name="hiv1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="40"
@@ -500,7 +500,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Grid.RowSpan="2" Margin="71,0,0,0"/>
-                <TextBox Grid.Row="43"
+                <DatePicker Grid.Row="43"
                      Grid.Column="1"
                      x:Name="vdri1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="43"
@@ -517,7 +517,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Grid.RowSpan="2" Margin="71,0,0,0"/>
-                <TextBox Grid.Row="47"
+                <DatePicker Grid.Row="47"
                      Grid.Column="1"
                      x:Name="hep1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="47"
@@ -535,7 +535,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="61,0,0,0"/>
-                <TextBox Grid.Row="50"
+                <DatePicker Grid.Row="50"
                      Grid.Column="1"
                      x:Name="torch1" Margin="110,4,24,8" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="50"

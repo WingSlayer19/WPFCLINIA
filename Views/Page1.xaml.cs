@@ -29,5 +29,20 @@ namespace WPFclinica.Views
         {
         //    Content = new Pacientes();
         }
+
+        private void DatePicker_CalendarClosed(object sender, RoutedEventArgs e)
+        {
+            mx1.Text = fecha.Text;
+            qx1.Text = fecha.Text;
+            tx1.Text = fecha.Text;
+            fam1.Text = fecha.Text;
+            tox1.Text = fecha.Text;
+            alg1.Text = fecha.Text;
+            rh1.Text = fecha.Text;
+            hiv1.Text = fecha.Text;
+            vdri1.Text = fecha.Text;
+            hep1.Text = fecha.Text;
+            torch1.Text = fecha.Text;
+        }
     }
 }
