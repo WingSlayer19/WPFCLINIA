@@ -18,7 +18,7 @@ namespace WPFclinica.Model
         // No se si esto debe estar aqui
         public string MotivoConsulta { get; set; }
         public string HistoriaEnfermedadActual { get; set; }
-        // ----------------------------------
+        // Pero me parece que esto hay que corregirlo no se
         
         public List<RevisionSistemas> RevisionSistemas { get; set; }
         public List<ND> Nd { get; set; }
