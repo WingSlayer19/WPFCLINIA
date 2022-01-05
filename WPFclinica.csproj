@@ -131,6 +131,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Database\MongoConnection.cs" />
+    <Compile Include="Handler\ExpedienteHandler.cs" />
+    <Compile Include="Model\Antecedentes.cs" />
+    <Compile Include="Model\ExamenFisico.cs" />
+    <Compile Include="Model\Expediente.cs" />
+    <Compile Include="Model\GinecoObstretrico.cs" />
+    <Compile Include="Model\Historial.cs" />
+    <Compile Include="Model\ND.cs" />
     <Compile Include="Views\crudPacientes.xaml.cs">
       <DependentUpon>crudPacientes.xaml</DependentUpon>
     </Compile>
