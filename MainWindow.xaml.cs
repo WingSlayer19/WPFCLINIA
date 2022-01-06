@@ -58,11 +58,6 @@ namespace WPFclinica
             DataContext = new Pacientes();
         }
 
-        private void Inicio(object sender, RoutedEventArgs e)
-        {
-            DataContext = new Inicio(); 
-        }
-
         private void TBShow1(object sender, RoutedEventArgs e)
         {
 

@@ -419,7 +419,7 @@
                                 HorizontalAlignment="Left"
                                 Cursor="Hand"
                                 Background="Transparent"
-                                BorderBrush="Transparent" Click="Inicio">
+                                BorderBrush="Transparent" >
                             <Grid Width="200">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="60"/>

@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace WPFclinica.Views
 {
     /// <summary>
-    /// Lógica de interacción para crudPacientes.xaml
+    /// Lógica de interacción para obstetrico.xaml
     /// </summary>
-    public partial class crudPacientes : Page
+    public partial class obstetrico : Page
     {
-        public crudPacientes()
+        public obstetrico()
         {
             InitializeComponent();
-         
-            
         }
     }
 }
