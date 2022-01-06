@@ -24,5 +24,9 @@ namespace WPFclinica.Database
             return list;
         }
 
+        public void SaveExpe(Expediente e)
+        {
+            _expediente.InsertOne(e);
+        }
     }
 }

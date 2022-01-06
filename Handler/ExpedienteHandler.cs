@@ -20,5 +20,15 @@ namespace WPFclinica.Handler
         {
             return mongoConnection.GetAllExpe();
         }
+
+        public void SaveExpediente(Expediente e)
+        {
+            // TODO: Validar el expediente
+            /*
+             * De ser necesario Adaptar el modelo expeidnete al
+             * formulario de la vista Page1. 
+             */
+            mongoConnection.SaveExpe(e);
+        }
     }
 }
