@@ -9,6 +9,21 @@ namespace WPFclinica.Model
 {
     internal class ExamenFisico
     {
+        public ExamenFisico()
+        {
+
+        }
+        public ExamenFisico(uint Pa, uint Mmhg, uint Fc, uint Fr, uint T, string W, ushort Talla, ushort Imc)
+        {
+            this.Pa = Pa;
+            this.Mmhg = Mmhg;
+            this.Fc = Fc;
+            this.Fr = Fr;
+            this.Talla = Talla;
+            this.Imc = Imc;
+            this.W = W;
+            this.T = T;
+        }
         [BsonElement("PA")]
         public uint Pa { get; set; }
         [BsonElement("MMHG")]

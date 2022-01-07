@@ -9,6 +9,28 @@ namespace WPFclinica.Model
 {
     internal class GinecoObstretrico
     {
+        public GinecoObstretrico()
+        {
+
+        }
+        public GinecoObstretrico(uint G, uint P, uint Ab, uint Fur, double Pan, string Menarquia, string Ciclos, string Ivs, uint Ps, string Pap, string Ets, uint C, string Fpp, string Pf)
+        {
+            this.G = G;
+            this.P = P;
+            this.Ab = Ab;
+            this.Fur = Fur;
+            this.Pan = Pan;
+            this.Menarquia = Menarquia;
+            this.Ciclos = Ciclos;
+            this.Ivs = Ivs;
+            this.Pap = Pap;
+            this.Ets = Ets;
+            this.C = C;
+            this.Ps = Ps;
+            this.FPP = Fpp;
+            this.PF = Pf;
+        }
+
         [BsonElement("G")]
         public uint G { get; set; }
         [BsonElement("P")]
@@ -33,5 +55,9 @@ namespace WPFclinica.Model
         public string Ets { get; set; }
         [BsonElement("C")]
         public uint C { get; set; }
+        [BsonElement("FPP")]
+        public string FPP { get; set; }
+        [BsonElement("PF")]
+        public string PF { get; set; }
     }
 }

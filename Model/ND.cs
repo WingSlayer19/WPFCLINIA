@@ -9,6 +9,15 @@ namespace WPFclinica.Model
 {
     internal class ND
     {
+        public ND()
+        {
+
+        }
+        public ND(string d)
+        {
+            this.Descripcion = d;
+            this.Fecha = DateTime.Now.ToString();
+        }
         [BsonElement("descripcion")]
         public string Descripcion { get; set; }
         [BsonElement("fecha")]

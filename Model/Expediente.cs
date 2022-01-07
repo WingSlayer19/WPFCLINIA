@@ -54,6 +54,15 @@ namespace WPFclinica.Model
     }
     public class RevisionSistemas
     {
+        public RevisionSistemas()
+        {
+
+        }
+        public RevisionSistemas(string d)
+        {
+            this.Descripcion = d;
+            this.Fecha = DateTime.Now.ToString();
+        }
         [BsonElement("descripcion")]
         public string Descripcion { get; set; }
         [BsonElement("fecha")]
