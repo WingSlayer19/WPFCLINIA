@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPFclinica.Handler;
+using WPFclinica.Model;
 
 namespace WPFclinica.Views
 {
@@ -25,9 +27,9 @@ namespace WPFclinica.Views
         private void ReadAllExpedientes()
         {
             var list = _expediente.GetAllExpedientes();
-            GridDatos.ItemsSource = list;
-            String eso = list[0].Nombre + " " + list[0].Edad;
-            MessageBox.Show(eso);
+            ViewExpediente viewExpediente = new ViewExpediente();
+            datos.ItemsSource = viewExpediente.ConvertElement(list);
+            
         }
         public Pacientes()
         {
