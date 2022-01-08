@@ -42,24 +42,14 @@ namespace WPFclinica.Views
             expediente.Telefonos = listaTel(telefono.Text);
             expediente.MotivoConsulta = motivo_consulta.Text;
             expediente.HistoriaEnfermedadActual = historia_enfermedad.Text;
-            expediente.RevisionSistemas.Add(new RevisionSistemas(revision1.Text));
-            expediente.Nd.Add(new ND(ND1.Text));
-            expediente.Antecedentes.Mx = ExamenDatos(mx1, mx3, mx2);
-            expediente.Antecedentes.Qx = ExamenDatos(qx1, qx3, qx2);
-            expediente.Antecedentes.Tx = ExamenDatos(tx1, tx3, tx2);
-            expediente.Antecedentes.Fam = ExamenDatos(fam1, fam2, fam3);
-            expediente.Antecedentes.Tox = ExamenDatos(tox1, tox3, tox2);
-            expediente.Antecedentes.Alergia = ExamenDatos(alg1, alg2, alg3);
-            expediente.Antecedentes.RH = ExamenDatos(rh1, rh2, rh3);
-            expediente.Antecedentes.HepB = ExamenDatos(hep1, hep3, hebp2);
-            expediente.Antecedentes.Hiv = ExamenDatos(hiv1, hiv3, hiv2);
-            expediente.Antecedentes.Vdri = ExamenDatos(vdri1, vdri3, vdri2);
-            expediente.Antecedentes.Torch = ExamenDatos(torch1, torch2, torch3);
+            expediente.RevisionSistemas = RevisionSistemasNuevo(revision1.Text);
+            expediente.Nd = NDNuevo(ND1.Text);
+            expediente.Antecedentes = AntecedentesNuevos();
             expediente.GinecoObstretrico = new GinecoObstretrico(
                 G: uint.Parse(g1.Text),
                 P: uint.Parse(p1.Text),
                 Ab: uint.Parse(ab1.Text),
-                Pan: uint.Parse(pan1.Text),
+                Pan: double.Parse(pan1.Text),
                 Menarquia: menarquia.Text,
                 Ciclos: ciclos.Text,
                 Ivs: ivs1.Text,
@@ -69,7 +59,8 @@ namespace WPFclinica.Views
                 C: uint.Parse(c1.Text),
                 Fur: uint.Parse(fur1.Text),
                 Fpp: ffp1.Text,
-                Pf: pf1.Text);
+                Pf: pf1.Text,
+                Ectopico: uint.Parse(ecto1.Text));
             expediente.ExamenFisico = new ExamenFisico(
                 Pa: uint.Parse(pa.Text),
                 Mmhg: uint.Parse(mmgh.Text),
@@ -103,9 +94,37 @@ namespace WPFclinica.Views
             return new List<string> { tel };
         }
 
-        private Examen ExamenDatos(DatePicker tfe, TextBox tfo, TextBox tti)
+        private Examen ExamenDatos(DatePicker tfe, TextBox tti, TextBox tfo)
         {
             return new Examen(tfe.Text, tti.Text, uint.Parse(tfo.Text));
+        }
+
+        private List<RevisionSistemas> RevisionSistemasNuevo(string t)
+        {
+            var r = new RevisionSistemas(t);
+            return new List<RevisionSistemas> { r };
+        }
+
+        private List<ND> NDNuevo(string t)
+        {
+            ND r = new ND(t);
+            return new List<ND> { r };
+        }
+
+        private Antecedentes AntecedentesNuevos()
+        {
+            var Mx = ExamenDatos(mx1, mx3, mx2);
+            var Qx = ExamenDatos(qx1, qx3, qx2);
+            var Tx = ExamenDatos(tx1, tx3, tx2);
+            var Fam = ExamenDatos(fam1, fam3, fam2);
+            var Tox = ExamenDatos(tox1, tox3, tox2);
+            var Alergia = ExamenDatos(alg1, alg3, alg2);
+            var RH = ExamenDatos(rh1, rh3, rh2);
+            var HepB = ExamenDatos(hep1, hep3, hebp2);
+            var Hiv = ExamenDatos(hiv1, hiv3, hiv2);
+            var Vdri = ExamenDatos(vdri1, vdri3, vdri2);
+            var Torch = ExamenDatos(torch1, torch3, torch2);
+            return new Antecedentes(Mx,Qx,Tx,Fam,Tox,Alergia,RH,Hiv,Vdri,HepB,Torch);
         }
     }
 }

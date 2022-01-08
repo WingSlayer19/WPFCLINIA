@@ -9,6 +9,24 @@ namespace WPFclinica.Model
 {
     internal class Antecedentes
     {
+        public Antecedentes()
+        {
+
+        }
+        public Antecedentes(Examen Mx, Examen Qx, Examen Tx, Examen Fam, Examen Tox, Examen Alergia, Examen RH, Examen Hiv, Examen Vdri, Examen HepB, Examen Torch)
+        {
+            this.Mx = Mx;
+            this.Qx = Qx;
+            this.Tx = Tx;
+            this.Fam = Fam; 
+            this.Tox = Tox; 
+            this.Alergia = Alergia;
+            this.RH = RH;   
+            this.Vdri = Vdri;   
+            this.HepB = HepB;   
+            this.Hiv = Hiv;
+            this.Torch = Torch;
+        }
         [BsonElement("MX")]
         public Examen Mx { get; set; }
         [BsonElement("QX")]

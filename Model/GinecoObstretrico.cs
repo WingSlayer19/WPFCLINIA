@@ -13,7 +13,7 @@ namespace WPFclinica.Model
         {
 
         }
-        public GinecoObstretrico(uint G, uint P, uint Ab, uint Fur, double Pan, string Menarquia, string Ciclos, string Ivs, uint Ps, string Pap, string Ets, uint C, string Fpp, string Pf)
+        public GinecoObstretrico(uint G, uint P, uint Ab, uint Fur, double Pan, string Menarquia, string Ciclos, string Ivs, uint Ps, string Pap, string Ets, uint C, string Fpp, string Pf, uint Ectopico)
         {
             this.G = G;
             this.P = P;
@@ -29,6 +29,7 @@ namespace WPFclinica.Model
             this.Ps = Ps;
             this.FPP = Fpp;
             this.PF = Pf;
+            this.Ectopico = Ectopico;
         }
 
         [BsonElement("G")]
@@ -59,5 +60,7 @@ namespace WPFclinica.Model
         public string FPP { get; set; }
         [BsonElement("PF")]
         public string PF { get; set; }
+        [BsonElement("Ectopico")]
+        public uint Ectopico { get; set; }
     }
 }
