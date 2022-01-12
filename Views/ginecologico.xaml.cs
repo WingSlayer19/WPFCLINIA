@@ -24,5 +24,7 @@ namespace WPFclinica.Views
         {
             InitializeComponent();
         }
+
+        //TODO: Hacer un fucking metodo para trabajar el Gineco y demas
     }
 }

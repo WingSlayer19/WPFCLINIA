@@ -140,7 +140,6 @@
     <Compile Include="Model\Historial.cs" />
     <Compile Include="Model\ND.cs" />
     <Compile Include="Model\ViewExpediente.cs" />
-    <Compile Include="Views\crudPacientes.xaml.cs">
     <Compile Include="Views\ginecologico.xaml.cs">
       <DependentUpon>ginecologico.xaml</DependentUpon>
     </Compile>
