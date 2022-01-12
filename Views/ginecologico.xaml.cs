@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPFclinica.Views
 {
     /// <summary>
-    /// Lógica de interacción para Inicio.xaml
+    /// Lógica de interacción para ginecologico.xaml
     /// </summary>
-    public partial class Inicio : Page
+    public partial class ginecologico : Page
     {
-        public Inicio()
+        public ginecologico()
         {
             InitializeComponent();
         }

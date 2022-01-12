@@ -194,6 +194,8 @@
             <Setter Property="Height" Value="20"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
+        
+        
     </UserControl.Resources>
 
 
