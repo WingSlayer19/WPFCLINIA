@@ -65,6 +65,14 @@ namespace WPFclinica.Model
 
     public class SignosVitales
     {
+        public SignosVitales(string W, uint PresionArterial, uint Fc, uint Fr, uint T)
+        {
+            this.W = W;
+            this.Fr = Fr;
+            this.T = T;
+            this.Fc = Fc;
+            this.PresionArterial = PresionArterial;
+        }
         [BsonElement("W")]
         public string W { get; set; }
         [BsonElement("PRESION_ARTERIAL")]
@@ -79,6 +87,15 @@ namespace WPFclinica.Model
 
     public class PlanDatos
     {
+        public PlanDatos()
+        {
+
+        }
+        public PlanDatos(string Descripcion)
+        {
+            this.Descripcion = Descripcion;
+            Fecha = DateTime.Now.ToString();
+        }
         [BsonElement("DESCRIPCION")]
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
@@ -87,6 +104,15 @@ namespace WPFclinica.Model
 
     public class Descripciones
     {
+        public Descripciones()
+        {
+
+        }
+        public Descripciones(string Descripcion)
+        {
+            this.Descripcion = Descripcion;
+            Fecha = DateTime.Now.ToString();
+        }
         [BsonElement("DESCRIPCION")]
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
