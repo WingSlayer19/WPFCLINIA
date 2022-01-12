@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFclinica.Handler;
+using WPFclinica.Model;
 
 namespace WPFclinica.Views
 {
@@ -20,9 +23,18 @@ namespace WPFclinica.Views
     /// </summary>
     public partial class Pacientes : UserControl
     {
+        private ExpedienteHandler _expediente = new ExpedienteHandler();
+        private void ReadAllExpedientes()
+        {
+            var list = _expediente.GetAllExpedientes();
+            ViewExpediente viewExpediente = new ViewExpediente();
+            datos.ItemsSource = viewExpediente.ConvertElement(list);
+            
+        }
         public Pacientes()
         {
             InitializeComponent();
+            ReadAllExpedientes();
         }
         private void Agregar(object sender, RoutedEventArgs e)
         {
@@ -31,5 +43,7 @@ namespace WPFclinica.Views
         Page1 ventana = new Page1();
             FramePacientes.Content = ventana;
         }
+
+
     }
 }

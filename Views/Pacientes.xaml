@@ -288,49 +288,38 @@
             <!--#endregion AGREGAR-->
             
             <!--#region DATAGRID-->
-            <DataGrid Style="{DynamicResource DataGridStyle}" Grid.Row="4"
-                      Grid.Column="1"
-                      Grid.RowSpan="2"
-                      Grid.ColumnSpan="4"
-                      x:Name="GridDatos"
-                      AutoGenerateColumns="False"
-                      Background="GhostWhite"
-                      Foreground="Black"
-                      FontSize="15"
-                      CanUserAddRows="False"
-                      CanUserResizeColumns="True"
-                      CanUserResizeRows="False"
-                      CanUserSortColumns="False"
-                      RowBackground="Transparent"
-                      HeadersVisibility="Column"
-                      GridLinesVisibility="Horizontal"
-                      HorizontalGridLinesBrush="Black">
+            <DataGrid 
+                x:Name="datos" 
+                Grid.Row="4"
+                Grid.Column="1"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="4"
+                Background="GhostWhite"
+                Foreground="Black"
+                FontSize="15"
+                RowBackground="Transparent"
+                HeadersVisibility="Column"
+                GridLinesVisibility="Horizontal"
+                HorizontalGridLinesBrush="Black"
+                CanUserAddRows="False"
+                CanUserResizeColumns="True"
+                CanUserResizeRows="False"
+                CanUserSortColumns="False">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn Header="Opciones"
                                             Width="245">
-                    <DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <DockPanel>
-                                   <!--#region BOTONES CONTROL-->
-                                    
+                                    <!--#region BOTONES CONTROL-->
+
                                     <!--#endregion BOTONES CONTROL-->
                                 </DockPanel>
                             </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                    <DataGridTextColumn
-                        Header="ID"
-                        Width="50"/>
-                    <DataGridTextColumn
-                        Header="Nombres"
-                        Width="100"/>
-                    <DataGridTextColumn
-                        Header="Apellidos"
-                        Width="*"/>
-                    <DataGridTextColumn
-                        Header="Teléfono"
-                        Width="*"/>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
+
             </DataGrid>
             <!--#endregion DATAGRID-->
             <!--#region FRAME-->
@@ -340,6 +329,7 @@
                 Grid.Row="0"
                 Grid.RowSpan="8"
                 Grid.ColumnSpan="6" Margin="0,0,-70,-483" />
+           
             <!--#endregion FRAME-->
             
         </Grid>
