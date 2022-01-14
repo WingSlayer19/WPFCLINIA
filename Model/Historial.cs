@@ -57,6 +57,14 @@ namespace WPFclinica.Model
 
     public class Evolucion
     {
+        public Evolucion()
+        {
+
+        }
+        public Evolucion(string Descripcion)
+        {
+            this.Descripcion = Descripcion;
+        }
         [BsonElement("DESCRIPCION")]
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
