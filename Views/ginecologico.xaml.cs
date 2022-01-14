@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFclinica.Model;
 
 namespace WPFclinica.Views
 {
@@ -23,6 +24,51 @@ namespace WPFclinica.Views
         public ginecologico()
         {
             InitializeComponent();
+        }
+
+        //TODO: Hacer un fucking metodo para trabajar el Gineco y demas
+        public void InsertGineco()
+        {
+            var historialGinecologico = GinecologicoDatos();
+        }
+
+        public List<HGinecologico> GinecologicoDatos()
+        {
+            HGinecologico obst = new HGinecologico();
+            obst.Medico = medico.Text;
+            obst.Hora = hora.Text;
+            obst.Fecha = fecha.Text;
+            obst.MotivoConsulta = motivo_consultag.Text;
+            obst.SignosVitales = new SignosVitales(
+                W: W.Text,
+                PresionArterial: uint.Parse(presion.Text),
+                Fc: uint.Parse(FC.Text),
+                Fr: uint.Parse(FR.Text),
+                T: uint.Parse(T.Text));
+            obst.Descripciones = NewDescripciones();
+            obst.NuevosDatos = NewPlanDatos(nd.Text);
+            obst.Plan = NewPlanDatos(plan.Text);
+
+            return new List<HGinecologico>() { obst };
+        }
+
+        public List<Descripciones> NewDescripciones()
+        {
+            Descripciones desc = new Descripciones(descripcion.Text);
+            
+            return new List<Descripciones>() { desc };
+        }
+
+        public List<PlanDatos> NewPlanDatos(string t)
+        {
+            PlanDatos planDatos = new PlanDatos(t);
+
+            return new List<PlanDatos>() { planDatos };
+        }
+
+        private void nd_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

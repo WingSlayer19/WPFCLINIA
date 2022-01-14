@@ -375,7 +375,7 @@ Style="{DynamicResource TextBoxStyle1}"
             <TextBox Grid.Row="29"
                 Grid.Column="1"
                 Style="{DynamicResource TextBoxStyle1}"
-                x:Name="nd" Grid.ColumnSpan="2" Margin="0,9,0,7" Grid.RowSpan="4"/>
+                x:Name="nd" Grid.ColumnSpan="2" Margin="0,9,0,7" Grid.RowSpan="4" TextChanged="nd_TextChanged"/>
 
 
 

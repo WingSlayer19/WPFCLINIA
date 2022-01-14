@@ -28,5 +28,10 @@ namespace WPFclinica.Database
         {
             _expediente.InsertOne(e);
         }
+
+        public void UpdateExpInsertHistorial(string Id, Expediente e)
+        {
+            // Insertar un historial actualizando el expedientel
+        }
     }
 }
