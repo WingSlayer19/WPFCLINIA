@@ -28,7 +28,7 @@ namespace WPFclinica.Views
         {
             var list = _expediente.GetAllExpedientes();
             ViewExpediente viewExpediente = new ViewExpediente();
-            datos.ItemsSource = viewExpediente.ConvertElement(list);
+        //    datos.ItemsSource = viewExpediente.ConvertElement(list);
             
         }
         public Pacientes()
@@ -44,6 +44,6 @@ namespace WPFclinica.Views
             FramePacientes.Content = ventana;
         }
 
-
+   
     }
 }
