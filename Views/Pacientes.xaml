@@ -312,22 +312,30 @@
                             <DataTemplate>
                                 <DockPanel>
                                    <!--#region BOTONES CONTROL-->
-                                    
+                                    <Button 
+                                        Content="Consultar"
+                                        x:Name="btnConsultar"
+                                        Click="Consultar"
+                                        CommandParameter="{Binding Id}"
+                                        Background="Pink"
+                                        Foreground="White"
+                                        Width="80"
+                                        BorderBrush="Transparent"/>
                                     <!--#endregion BOTONES CONTROL-->
                                 </DockPanel>
                             </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                     <DataGridTextColumn
+                        Binding="{Binding Id}"
                         Header="ID"
                         Width="50"/>
                     <DataGridTextColumn
+                        Binding="{Binding Nombre}"
                         Header="Nombres"
                         Width="100"/>
                     <DataGridTextColumn
-                        Header="Apellidos"
-                        Width="*"/>
-                    <DataGridTextColumn
+                        Binding="{Binding Telefonos}"
                         Header="Teléfono"
                         Width="*"/>
                 </DataGrid.Columns>

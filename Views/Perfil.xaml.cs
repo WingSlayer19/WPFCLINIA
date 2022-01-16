@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFclinica.Handler;
 
 namespace WPFclinica.Views
 {
@@ -20,9 +22,25 @@ namespace WPFclinica.Views
     /// </summary>
     public partial class Perfil : Page
     {
+        ExpedienteHandler _expediente = new ExpedienteHandler();
         public Perfil()
         {
             InitializeComponent();
         }
+
+        public void Consultar()
+        {
+            MessageBox.Show("Tuhermana " + IdUsuario);
+            ObjectId id = new ObjectId(IdUsuario);
+            var exp = _expediente.GetById(id);
+            if (exp != null)
+            {
+                nombre_paciente.Text = exp.Nombre;
+                télefono_paciente.Text = String.Join("  ", exp.Telefonos);
+                direccion_paciente.Text = exp.Procedencia;
+            }
+        }
+
+        public string IdUsuario = string.Empty;
     }
 }
