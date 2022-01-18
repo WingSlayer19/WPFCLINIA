@@ -38,6 +38,11 @@ namespace WPFclinica.Views
                 nombre_paciente.Text = exp.Nombre;
                 télefono_paciente.Text = String.Join("  ", exp.Telefonos);
                 direccion_paciente.Text = exp.Procedencia;
+                if (exp.Historial.HObstetricos != null || exp.Historial.HGinecologicos != null)
+                {
+                    var lista = exp.Historial.ConverToViewHistorial(exp.Historial);
+                    historias.ItemsSource = lista;
+                }
             }
         }
 
