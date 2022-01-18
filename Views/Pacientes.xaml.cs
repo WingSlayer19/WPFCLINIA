@@ -28,13 +28,23 @@ namespace WPFclinica.Views
         {
             var list = _expediente.GetAllExpedientes();
             ViewExpediente viewExpediente = new ViewExpediente();
-        //    datos.ItemsSource = viewExpediente.ConvertElement(list);
+            GridDatos.ItemsSource = viewExpediente.ConvertElement(list);
             
         }
         public Pacientes()
         {
             InitializeComponent();
             ReadAllExpedientes();
+        }
+
+        private void Consultar(object sender, RoutedEventArgs e)
+        {
+            var id = ((Button)sender).CommandParameter.ToString();
+            Perfil perfil = new Perfil();
+            perfil.IdUsuario = id;
+            MessageBox.Show(id + " Tuhermana");
+            FramePacientes.Content = perfil;
+            perfil.Consultar();
         }
         private void Agregar(object sender, RoutedEventArgs e)
         {
