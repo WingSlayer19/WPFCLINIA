@@ -22,7 +22,7 @@ namespace WPFclinica.Handler
             return mongoConnection.GetAllExpe();
         }
 
-        public Expediente GetById(ObjectId id)
+        public Expediente GetById(string id)
         {
             return mongoConnection.GetExpeByid(id);
         }
@@ -39,7 +39,7 @@ namespace WPFclinica.Handler
 
         public void SaveHistorial(string Id, Expediente e)
         {
-            // Trabajar un metodo para insertar a un elemento especifico
+            mongoConnection.UpdateExpInsertHistorial(Id, e);
         }
     }
 }
