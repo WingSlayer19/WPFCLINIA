@@ -356,6 +356,15 @@ Style="{DynamicResource TextBoxStyle1}"
                      Grid.Column="1"
    Style="{DynamicResource TextBoxStyle1}"
                      x:Name="plan" Grid.ColumnSpan="2" Margin="0,5,0,10" Grid.RowSpan="4"/>
+            <Button 
+                Grid.Column="4" 
+                Content="Button" 
+                HorizontalAlignment="Left" 
+                Margin="142,0,0,0" 
+                Grid.Row="10" 
+                VerticalAlignment="Center" 
+                Grid.ColumnSpan="2"
+                Click="InserObstetrico"/>
 
 
 

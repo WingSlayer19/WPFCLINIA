@@ -376,6 +376,15 @@ Style="{DynamicResource TextBoxStyle1}"
                 Grid.Column="1"
                 Style="{DynamicResource TextBoxStyle1}"
                 x:Name="nd" Grid.ColumnSpan="2" Margin="0,9,0,7" Grid.RowSpan="4" TextChanged="nd_TextChanged"/>
+            <Button 
+                Grid.Column="5" 
+                Content="Button" 
+                HorizontalAlignment="Left" 
+                Margin="19,15,0,0" 
+                Grid.RowSpan="2" 
+                Grid.Row="8" 
+                VerticalAlignment="Top"
+                Click="InsertGineco"/>
 
 
 

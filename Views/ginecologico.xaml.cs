@@ -29,15 +29,6 @@ namespace WPFclinica.Views
             InitializeComponent();
         }
 
-        //TODO: Hacer un fucking metodo para trabajar el Gineco y demas
-        public void InsertGineco()
-        {
-            var historialGinecologico = GinecologicoDatos();
-            var expediente = _expediente.GetById(IdExpediente);
-            expediente.Historial.HGinecologicos = historialGinecologico;
-            _expediente.SaveHistorial(IdExpediente, expediente);
-        }
-
         public List<HGinecologico> GinecologicoDatos()
         {
             HGinecologico obst = new HGinecologico();
@@ -73,10 +64,18 @@ namespace WPFclinica.Views
         }
 
         public string IdExpediente;
+        private void InsertGineco(object sender, RoutedEventArgs e)
+        {
+            var historialGinecologico = GinecologicoDatos();
+            var expediente = _expediente.GetById(IdExpediente);
+            expediente.Historial.HGinecologicos = historialGinecologico;
+            _expediente.SaveHistorial(IdExpediente, expediente);
+        }
 
         private void nd_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
+
     }
 }

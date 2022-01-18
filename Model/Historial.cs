@@ -18,22 +18,29 @@ namespace WPFclinica.Model
         {
             List<ViewHistorial> vistaHistorial = new List<ViewHistorial>();
             ViewHistorial historial;
-            foreach (var item in lista.HGinecologicos)
+            if (lista.HObstetricos != null)
             {
-                historial = new ViewHistorial();
-                historial.Fecha = item.Fecha;
-                historial.Medico = item.Medico;
-                historial.Tipo = "Ginecologico";
-                vistaHistorial.Add(historial);
+                foreach (var item in lista.HObstetricos)
+                {
+                    historial = new ViewHistorial();
+                    historial.Fecha = item.Fecha;
+                    historial.Medico = item.Medico;
+                    historial.Tipo = "Obstetrico";
+                    vistaHistorial.Add(historial);
+                }
             }
-            foreach (var item in lista.HObstetricos)
+            if (lista.HGinecologicos != null)
             {
-                historial = new ViewHistorial();
-                historial.Fecha = item.Fecha;
-                historial.Medico = item.Medico;
-                historial.Tipo = "Obstetrico";
-                vistaHistorial.Add(historial);
+                foreach (var item in lista.HGinecologicos)
+                {
+                    historial = new ViewHistorial();
+                    historial.Fecha = item.Fecha;
+                    historial.Medico = item.Medico;
+                    historial.Tipo = "Ginecologico";
+                    vistaHistorial.Add(historial);
+                }
             }
+            
             return vistaHistorial;
         }
     }

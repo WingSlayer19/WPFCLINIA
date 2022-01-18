@@ -28,14 +28,6 @@ namespace WPFclinica.Views
             InitializeComponent();
         }
 
-        public void InserObstetrico()
-        {
-            var obstetricoDatos = ObstetricoDatos();
-            var expediente = _expediente.GetById(IdExpediente);
-            expediente.Historial.HObstetricos = obstetricoDatos;
-            _expediente.SaveHistorial(IdExpediente, expediente);
-        }
-
         public List<HObstetrico> ObstetricoDatos()
         {
             HObstetrico obst = new HObstetrico();
@@ -68,5 +60,13 @@ namespace WPFclinica.Views
         }
 
         public string IdExpediente;
+
+        private void InserObstetrico(object sender, RoutedEventArgs e)
+        {
+            var obstetricoDatos = ObstetricoDatos();
+            var expediente = _expediente.GetById(IdExpediente);
+            expediente.Historial.HObstetricos = obstetricoDatos;
+            _expediente.SaveHistorial(IdExpediente, expediente);
+        }
     }
 }
