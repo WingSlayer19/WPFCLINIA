@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,13 @@ namespace WPFclinica.Database
         {
             List<Expediente> list = _expediente.AsQueryable().ToList(); 
             return list;
+        }
+
+        public Expediente GetExpeByid(ObjectId id)
+        {
+            Expediente exp = _expediente.Find(x => x.Id == id).First();
+
+            return exp;
         }
 
         public void SaveExpe(Expediente e)

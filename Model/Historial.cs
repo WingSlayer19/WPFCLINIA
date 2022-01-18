@@ -13,6 +13,29 @@ namespace WPFclinica.Model
         public List<HObstetrico> HObstetricos { get; set; }
         [BsonElement("H_GINECOLOGICO")]
         public List<HGinecologico> HGinecologicos { get; set; }
+
+        public List<ViewHistorial> ConverToViewHistorial(Historial lista)
+        {
+            List<ViewHistorial> vistaHistorial = new List<ViewHistorial>();
+            ViewHistorial historial;
+            foreach (var item in lista.HGinecologicos)
+            {
+                historial = new ViewHistorial();
+                historial.Fecha = item.Fecha;
+                historial.Medico = item.Medico;
+                historial.Tipo = "Ginecologico";
+                vistaHistorial.Add(historial);
+            }
+            foreach (var item in lista.HObstetricos)
+            {
+                historial = new ViewHistorial();
+                historial.Fecha = item.Fecha;
+                historial.Medico = item.Medico;
+                historial.Tipo = "Ginecologico";
+                vistaHistorial.Add(historial);
+            }
+            return vistaHistorial;
+        }
     }
 
     public class HObstetrico
@@ -125,5 +148,13 @@ namespace WPFclinica.Model
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
         public string Fecha { set; get; }
+    }
+
+    public class ViewHistorial
+    {
+        public string Tipo { get; set; } = string.Empty;
+        public string Medico { get; set; } = string.Empty;
+        public string Fecha { get; set; } = string.Empty;
+
     }
 }

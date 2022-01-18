@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,11 @@ namespace WPFclinica.Handler
         public List<Expediente> GetAllExpedientes()
         {
             return mongoConnection.GetAllExpe();
+        }
+
+        public Expediente GetById(ObjectId id)
+        {
+            return mongoConnection.GetExpeByid(id);
         }
 
         public void SaveExpediente(Expediente e)
