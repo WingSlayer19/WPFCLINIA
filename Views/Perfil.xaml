@@ -304,7 +304,7 @@
                     Background="#bbdefb"
                     Cursor="Hand"
                     BorderBrush="White"
-                    x:Name="BtnObs" Margin="30,20,3,0">
+                    x:Name="BtnObs" Margin="30,20,3,0" Click="BtnObs_Click">
                 <TextBlock
                     Text="Nueva Historia Obstétrica"
                     Foreground="White"
@@ -320,7 +320,7 @@
                     Background="#bbdefb"
                     Cursor="Hand"
                     BorderBrush="White"
-                    x:Name="BtnGinecologico" Margin="25,21,1,0">
+                    x:Name="BtnGinecologico" Margin="25,21,1,0" Click="Avanzar">
                 <TextBlock
                     Text="Nueva Historia Ginecológica"
                     Foreground="White"
@@ -373,7 +373,19 @@
             </DataGrid>
             <!--#endregion DATAGRID-->
 
+            <!--#region FRAME-->
 
+            <Frame
+                  x:Name="FramePerfil"
+                Grid.Column="0"
+                Grid.Row="0"
+                 Grid.RowSpan="8"
+                Grid.ColumnSpan="6" Margin="0,0,-70,-483" />
+          
+
+
+            <!--#endregion FRAME-->
+            
         </Grid>
     </Border>
 </Page>
