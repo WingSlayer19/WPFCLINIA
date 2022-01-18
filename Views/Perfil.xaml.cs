@@ -31,25 +31,26 @@ namespace WPFclinica.Views
         private void BtnObs_Click(object sender, RoutedEventArgs e)
         {
             obstetrico ventana1 = new obstetrico();
+            ventana1.IdExpediente = IdUsuario;
             FramePerfil.Content = ventana1;
         }
 
         private void Avanzar(object sender, RoutedEventArgs e)
         {
             ginecologico ventana2 = new ginecologico();
+            ventana2.IdExpediente = IdUsuario;
             FramePerfil.Content = ventana2;
         }
 
         public void Consultar()
         {
-            ObjectId id = new ObjectId(IdUsuario);
-            var exp = _expediente.GetById(id);
+            var exp = _expediente.GetById(IdUsuario);
             if (exp != null)
             {
                 nombre_paciente.Text = exp.Nombre;
                 télefono_paciente.Text = String.Join("  ", exp.Telefonos);
                 direccion_paciente.Text = exp.Procedencia;
-                if (exp.Historial.HObstetricos != null || exp.Historial.HGinecologicos != null)
+                if (exp.Historial != null)
                 {
                     var lista = exp.Historial.ConverToViewHistorial(exp.Historial);
                     historias.ItemsSource = lista;

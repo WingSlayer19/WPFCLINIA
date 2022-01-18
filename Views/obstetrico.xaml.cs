@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFclinica.Handler;
 using WPFclinica.Model;
 
 namespace WPFclinica.Views
@@ -21,14 +22,10 @@ namespace WPFclinica.Views
     /// </summary>
     public partial class obstetrico : Page
     {
+        private ExpedienteHandler _expediente = new ExpedienteHandler();
         public obstetrico()
         {
             InitializeComponent();
-        }
-
-        public void InserObstetrico()
-        {
-            var obstetricoDatos = ObstetricoDatos();
         }
 
         public List<HObstetrico> ObstetricoDatos()
@@ -62,5 +59,16 @@ namespace WPFclinica.Views
             return new List<PlanDatos>() { planDatos };
         }
 
+        public string IdExpediente;
+
+        private void InserObstetrico(object sender, RoutedEventArgs e)
+        {
+            var obstetricoDatos = ObstetricoDatos();
+            Historial h = new Historial();
+            h.HObstetricos = obstetricoDatos;
+            var expediente = _expediente.GetById(IdExpediente);
+            expediente.Historial = h;
+            _expediente.SaveHistorial(IdExpediente, expediente);
+        }
     }
 }

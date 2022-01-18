@@ -25,9 +25,10 @@ namespace WPFclinica.Database
             return list;
         }
 
-        public Expediente GetExpeByid(ObjectId id)
+        public Expediente GetExpeByid(string id)
         {
-            Expediente exp = _expediente.Find(x => x.Id == id).First();
+            ObjectId Id = new ObjectId(id);
+            Expediente exp = _expediente.Find(x => x.Id == Id).First();
 
             return exp;
         }
@@ -37,9 +38,10 @@ namespace WPFclinica.Database
             _expediente.InsertOne(e);
         }
 
-        public void UpdateExpInsertHistorial(string Id, Expediente e)
+        public void UpdateExpInsertHistorial(string id, Expediente e)
         {
-            // Insertar un historial actualizando el expedientel
+            ObjectId Id = new ObjectId(id);
+            _expediente.ReplaceOne(x => x.Id == Id, e);
         }
     }
 }

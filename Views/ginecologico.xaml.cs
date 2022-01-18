@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFclinica.Handler;
 using WPFclinica.Model;
 
 namespace WPFclinica.Views
@@ -21,15 +22,11 @@ namespace WPFclinica.Views
     /// </summary>
     public partial class ginecologico : Page
     {
+
+        private ExpedienteHandler _expediente = new ExpedienteHandler();
         public ginecologico()
         {
             InitializeComponent();
-        }
-
-        //TODO: Hacer un fucking metodo para trabajar el Gineco y demas
-        public void InsertGineco()
-        {
-            var historialGinecologico = GinecologicoDatos();
         }
 
         public List<HGinecologico> GinecologicoDatos()
@@ -66,9 +63,21 @@ namespace WPFclinica.Views
             return new List<PlanDatos>() { planDatos };
         }
 
+        public string IdExpediente;
+        private void InsertGineco(object sender, RoutedEventArgs e)
+        {
+            var historialGinecologico = GinecologicoDatos();
+            Historial h = new Historial();
+            h.HGinecologicos = historialGinecologico;
+            var expediente = _expediente.GetById(IdExpediente);
+            expediente.Historial = h;
+            _expediente.SaveHistorial(IdExpediente, expediente);
+        }
+
         private void nd_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
+
     }
 }
