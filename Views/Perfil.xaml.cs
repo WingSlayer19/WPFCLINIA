@@ -28,7 +28,6 @@ namespace WPFclinica.Views
             InitializeComponent();
         }
 
-<<<<<<< HEAD
         private void BtnObs_Click(object sender, RoutedEventArgs e)
         {
             obstetrico ventana1 = new obstetrico();
@@ -40,7 +39,7 @@ namespace WPFclinica.Views
             ginecologico ventana2 = new ginecologico();
             FramePerfil.Content = ventana2;
         }
-=======
+
         public void Consultar()
         {
             ObjectId id = new ObjectId(IdUsuario);
@@ -59,6 +58,5 @@ namespace WPFclinica.Views
         }
 
         public string IdUsuario = string.Empty;
->>>>>>> b933c48be7cafd74120891bf9b2fdd5d04dc60e9
     }
 }
