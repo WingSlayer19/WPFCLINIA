@@ -64,8 +64,10 @@ namespace WPFclinica.Views
         private void InserObstetrico(object sender, RoutedEventArgs e)
         {
             var obstetricoDatos = ObstetricoDatos();
+            Historial h = new Historial();
+            h.HObstetricos = obstetricoDatos;
             var expediente = _expediente.GetById(IdExpediente);
-            expediente.Historial.HObstetricos = obstetricoDatos;
+            expediente.Historial = h;
             _expediente.SaveHistorial(IdExpediente, expediente);
         }
     }

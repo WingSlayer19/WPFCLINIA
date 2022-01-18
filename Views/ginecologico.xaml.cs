@@ -67,8 +67,10 @@ namespace WPFclinica.Views
         private void InsertGineco(object sender, RoutedEventArgs e)
         {
             var historialGinecologico = GinecologicoDatos();
+            Historial h = new Historial();
+            h.HGinecologicos = historialGinecologico;
             var expediente = _expediente.GetById(IdExpediente);
-            expediente.Historial.HGinecologicos = historialGinecologico;
+            expediente.Historial = h;
             _expediente.SaveHistorial(IdExpediente, expediente);
         }
 
