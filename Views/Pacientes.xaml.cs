@@ -42,7 +42,6 @@ namespace WPFclinica.Views
             var id = ((Button)sender).CommandParameter.ToString();
             Perfil perfil = new Perfil();
             perfil.IdUsuario = id;
-            MessageBox.Show(id + " Tuhermana");
             FramePacientes.Content = perfil;
             perfil.Consultar();
         }

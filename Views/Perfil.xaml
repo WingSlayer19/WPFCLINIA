@@ -344,6 +344,7 @@
                 Background="GhostWhite"
                 Foreground="Black"
                 FontSize="15"
+                AutoGenerateColumns="False"
                 RowBackground="Transparent"
                 HeadersVisibility="Column"
                 GridLinesVisibility="Horizontal"
@@ -356,12 +357,15 @@
 
 
                     <DataGridTextColumn
+                        Binding="{Binding Fecha}"
                         Header="Fecha"
                         Width="*"/>
                     <DataGridTextColumn
+                        Binding="{Binding Tipo}"
                         Header="Tipo"
                         Width="*"/>
                     <DataGridTextColumn
+                        Binding="{Binding Medico}"
                         Header="Médico"
                         Width="*"/>
 

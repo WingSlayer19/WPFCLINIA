@@ -31,7 +31,7 @@ namespace WPFclinica.Model
                 historial = new ViewHistorial();
                 historial.Fecha = item.Fecha;
                 historial.Medico = item.Medico;
-                historial.Tipo = "Ginecologico";
+                historial.Tipo = "Obstetrico";
                 vistaHistorial.Add(historial);
             }
             return vistaHistorial;

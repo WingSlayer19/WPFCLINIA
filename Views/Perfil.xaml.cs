@@ -30,7 +30,6 @@ namespace WPFclinica.Views
 
         public void Consultar()
         {
-            MessageBox.Show("Tuhermana " + IdUsuario);
             ObjectId id = new ObjectId(IdUsuario);
             var exp = _expediente.GetById(id);
             if (exp != null)
