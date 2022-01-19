@@ -197,7 +197,8 @@
     </Page.Resources>
 
     <Border CornerRadius="10,10,0,0" Background="#f8bbd0">
-        <Grid x:Name="Grid_Historias" Margin="0,0,0,349">
+        <ScrollViewer Margin="0,0,0,234">
+            <Grid x:Name="Grid_Historias" Margin="0,0,0,349">
             <!--#region Columnas-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
@@ -391,5 +392,6 @@
             <!--#endregion FRAME-->
             
         </Grid>
+        </ScrollViewer>
     </Border>
 </Page>

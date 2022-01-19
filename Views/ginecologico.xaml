@@ -109,8 +109,8 @@
         </Style>
     </Page.Resources>
 
-    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,131,-77" >
-
+    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,131,-36" >
+        <ScrollViewer Margin="0,0,0,175">
         <Grid Margin="0,10,0,98" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
@@ -397,7 +397,7 @@ Style="{DynamicResource TextBoxStyle1}"
 
         </Grid>
 
-
+        </ScrollViewer>
     </Border>
 
 </Page>

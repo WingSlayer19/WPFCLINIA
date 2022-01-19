@@ -89,7 +89,7 @@
 
 
     <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,131,0" >
-
+        <ScrollViewer>
         <Grid Margin="0,18,0,-167" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
@@ -177,7 +177,7 @@
             <!--#endregion TITULO-->
             <!--#region BOTONES -->
             <!--#region REGRESAR -->
-            <Button Template="{DynamicResource ButtonTemplate1}" Style="{DynamicResource ButtonStyle1}"  x:Name="BtnRegresar"
+            <Button Template="{DynamicResource ButtonTemplate1}"   x:Name="BtnRegresar"
                     Content="Regresar"
                     Grid.Column="1"
                     Grid.Row="1"
@@ -376,7 +376,7 @@ Style="{DynamicResource TextBoxStyle1}"
             <!--#endregion CONTENIDO-->
 
         </Grid>
-
+        </ScrollViewer>
 
     </Border>
 
