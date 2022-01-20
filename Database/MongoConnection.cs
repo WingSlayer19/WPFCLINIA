@@ -25,8 +25,9 @@ namespace WPFclinica.Database
             return list;
         }
 
-        public Expediente GetExpeByid(ObjectId id)
-        {
+        public Expediente GetExpeByid(string Id)
+        { 
+            ObjectId id = ObjectId.Parse(Id);
             Expediente exp = _expediente.Find(x => x.Id == id).First();
 
             return exp;

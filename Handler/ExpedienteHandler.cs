@@ -22,7 +22,7 @@ namespace WPFclinica.Handler
             return mongoConnection.GetAllExpe();
         }
 
-        public Expediente GetById(ObjectId id)
+        public Expediente GetById(string id)
         {
             return mongoConnection.GetExpeByid(id);
         }

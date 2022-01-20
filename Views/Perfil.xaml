@@ -354,7 +354,26 @@
                 CanUserResizeRows="False"
                 CanUserSortColumns="False" Margin="0,24,166,25" Grid.RowSpan="6">
                 <DataGrid.Columns>
-
+                    <DataGridTemplateColumn Header="Opciones"
+                                            Width="245">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DockPanel>
+                                    <!--#region BOTONES CONTROL-->
+                                    <Button 
+                                        Content="Consultar"
+                                        x:Name="btnConsultar"
+                                        Click="ConsultarContenido"
+                                        CommandParameter="{Binding Position}"
+                                        Background="Pink"
+                                        Foreground="White"
+                                        Width="80"
+                                        BorderBrush="Transparent"/>
+                                    <!--#endregion BOTONES CONTROL-->
+                                </DockPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
 
                     <DataGridTextColumn
                         Binding="{Binding Fecha}"
