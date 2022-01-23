@@ -22,6 +22,11 @@ namespace WPFclinica.Handler
             return mongoConnection.GetAllExpe();
         }
 
+        public List<Expediente> GetPacientes(string Nombre)
+        {
+            return mongoConnection.GetPacientes(Nombre);
+        }
+
         public Expediente GetById(string id)
         {
             return mongoConnection.GetExpeByid(id);

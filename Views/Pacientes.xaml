@@ -251,7 +251,7 @@
                         Grid.Column="2"
                        Grid.Row="2"
                        FontSize="20"
-                       />
+                       x:Name="pacienteName"/>
             <!--#endregion TEXTBOX-->
             <!--#region BUSCADOR-->
             <Button Style="{DynamicResource ButtonBuscarStyle}" Grid.Column="3"
@@ -262,7 +262,8 @@
                     Cursor="Hand"
                     Width="100"
                     x:Name="BtnBuscar"
-                    HorizontalAlignment="Left">
+                    HorizontalAlignment="Left"
+                    Click="BuscarPaciente">
                 <TextBlock Text="Buscar"
                            Foreground="White"
                            FontSize="15"/>

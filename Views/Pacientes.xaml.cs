@@ -53,6 +53,18 @@ namespace WPFclinica.Views
             FramePacientes.Content = ventana;
         }
 
-   
+        private void BuscarPaciente(object sender, RoutedEventArgs e)
+        {
+            if (pacienteName.Text != String.Empty)
+            {
+                var lista = _expediente.GetPacientes(pacienteName.Text);
+                ViewExpediente view = new ViewExpediente();
+                GridDatos.ItemsSource = view.ConvertElement(lista);
+            } 
+            else
+            {
+                ReadAllExpedientes();
+            }
+        }
     }
 }

@@ -33,6 +33,11 @@ namespace WPFclinica.Database
             return exp;
         }
 
+        public List<Expediente> GetPacientes(string Nombre)
+        {
+            return _expediente.Find(x => x.Nombre.Contains(Nombre)).ToList();
+        }
+
         public void SaveExpe(Expediente e)
         {
             _expediente.InsertOne(e);
