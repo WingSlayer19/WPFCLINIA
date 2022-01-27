@@ -44,7 +44,7 @@ namespace WPFclinica.Handler
 
         public void SaveHistorial(string Id, Expediente e)
         {
-            // Trabajar un metodo para insertar a un elemento especifico
+            mongoConnection.UpdateExpInsertHistorial(Id, e);
         }
     }
 }

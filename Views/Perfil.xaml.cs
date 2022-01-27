@@ -32,12 +32,14 @@ namespace WPFclinica.Views
         private void BtnObs_Click(object sender, RoutedEventArgs e)
         {
             obstetrico ventana1 = new obstetrico();
+            ventana1.Id = IdUsuario;
             FramePerfil.Content = ventana1;
         }
 
         private void Avanzar(object sender, RoutedEventArgs e)
         {
             ginecologico ventana2 = new ginecologico();
+            ventana2.Id = IdUsuario;
             FramePerfil.Content = ventana2;
         }
 
