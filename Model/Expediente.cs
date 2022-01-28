@@ -62,11 +62,13 @@ namespace WPFclinica.Model
         {
             this.Descripcion = d;
             this.Fecha = DateTime.Now.ToString();
+            MyUUID = Guid.NewGuid().ToString();
         }
         [BsonElement("descripcion")]
         public string Descripcion { get; set; }
         [BsonElement("fecha")]
         public string Fecha { set; get; }
+        [BsonElement("uuid")]
         public string MyUUID { get; set; }
     }
 }
