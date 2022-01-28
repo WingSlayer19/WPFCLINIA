@@ -47,6 +47,11 @@ namespace WPFclinica.Model
 
     public class HObstetrico
     {
+        public HObstetrico()
+        {
+            Fecha = DateTime.Now.ToString();
+            MyUUID = Guid.NewGuid().ToString();
+        }
         [BsonElement("FECHA")]
         public string Fecha { get; set; }
         [BsonElement("MEDICO")]
@@ -63,12 +68,17 @@ namespace WPFclinica.Model
         public List<PlanDatos> NuevosDatos { get; set; }
         [BsonElement("Plan")]
         public List<PlanDatos> Plan { get; set; }
+        [BsonElement("uuid")]
         public string MyUUID { get; set; }
-        public string CreatedAt { get; set; }
     }
 
     public class HGinecologico
     {
+        public HGinecologico()
+        {
+            Fecha = DateTime.Now.ToString();
+            MyUUID = Guid.NewGuid().ToString();
+        }
         [BsonElement("FECHA")]
         public string Fecha { get; set; }
         [BsonElement("MEDICO")]
@@ -85,8 +95,8 @@ namespace WPFclinica.Model
         public List<PlanDatos> Plan { get; set; }
         [BsonElement("DESCRIPCION")]
         public List<Descripciones> Descripciones { get; set; }
+        [BsonElement("uuid")]
         public string MyUUID { get; set; }
-        public string CreatedAt { get; set; }
     }
 
     public class Evolucion
@@ -103,6 +113,7 @@ namespace WPFclinica.Model
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
         public string Fecha { set; get; }
+        [BsonElement("uuid")]
         public string MyUUID { get; set; }
     }
 
@@ -143,6 +154,7 @@ namespace WPFclinica.Model
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
         public string Fecha { set; get; }
+        [BsonElement("uuid")]
         public string MyUUID { get; set; }
     }
 
@@ -161,6 +173,7 @@ namespace WPFclinica.Model
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
         public string Fecha { set; get; }
+        [BsonElement("uuid")]
         public string MyUUID { get; set; }
     }
 
