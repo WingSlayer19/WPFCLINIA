@@ -22,5 +22,6 @@ namespace WPFclinica.Model
         public string Descripcion { get; set; }
         [BsonElement("fecha")]
         public string Fecha { get; set; }
+        public string MyUUID { get; set; }
     }
 }

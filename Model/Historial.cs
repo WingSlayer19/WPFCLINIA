@@ -63,6 +63,8 @@ namespace WPFclinica.Model
         public List<PlanDatos> NuevosDatos { get; set; }
         [BsonElement("Plan")]
         public List<PlanDatos> Plan { get; set; }
+        public string MyUUID { get; set; }
+        public string CreatedAt { get; set; }
     }
 
     public class HGinecologico
@@ -83,6 +85,8 @@ namespace WPFclinica.Model
         public List<PlanDatos> Plan { get; set; }
         [BsonElement("DESCRIPCION")]
         public List<Descripciones> Descripciones { get; set; }
+        public string MyUUID { get; set; }
+        public string CreatedAt { get; set; }
     }
 
     public class Evolucion
@@ -99,6 +103,7 @@ namespace WPFclinica.Model
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
         public string Fecha { set; get; }
+        public string MyUUID { get; set; }
     }
 
     public class SignosVitales
@@ -138,6 +143,7 @@ namespace WPFclinica.Model
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
         public string Fecha { set; get; }
+        public string MyUUID { get; set; }
     }
 
     public class Descripciones
@@ -155,6 +161,7 @@ namespace WPFclinica.Model
         public string Descripcion { get; set; }
         [BsonElement("FECHA")]
         public string Fecha { set; get; }
+        public string MyUUID { get; set; }
     }
 
     public class ViewHistorial
