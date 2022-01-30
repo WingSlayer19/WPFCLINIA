@@ -26,6 +26,7 @@ namespace WPFclinica.Model
                     historial.Fecha = item.Fecha;
                     historial.Medico = item.Medico;
                     historial.Tipo = "Obstetrico";
+                    historial.MyUUID = item.MyUUID;
                     vistaHistorial.Add(historial);
                 }
             }
@@ -37,6 +38,7 @@ namespace WPFclinica.Model
                     historial.Fecha = item.Fecha;
                     historial.Medico = item.Medico;
                     historial.Tipo = "Ginecologico";
+                    historial.MyUUID = item.MyUUID;
                     vistaHistorial.Add(historial);
                 }
             }
@@ -182,6 +184,6 @@ namespace WPFclinica.Model
         public string Tipo { get; set; } = string.Empty;
         public string Medico { get; set; } = string.Empty;
         public string Fecha { get; set; } = string.Empty;
-
+        public string MyUUID { get; set; } = string.Empty;
     }
 }
