@@ -43,5 +43,6 @@ namespace WPFclinica.Database
             ObjectId Id = new ObjectId(id);
             _expediente.ReplaceOne(x => x.Id == Id, e);
         }
+
     }
 }

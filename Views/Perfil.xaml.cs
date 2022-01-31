@@ -58,6 +58,12 @@ namespace WPFclinica.Views
             }
         }
 
+        public void Ver(object sender, RoutedEventArgs e)
+        {
+            string uuid = ((Button)sender).CommandParameter.ToString();
+            MessageBox.Show("UUID: " + uuid);
+        }
+
         public string IdUsuario = string.Empty;
     }
 }

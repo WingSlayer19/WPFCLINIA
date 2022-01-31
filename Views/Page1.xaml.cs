@@ -39,7 +39,7 @@ namespace WPFclinica.Views
             expediente.EstadoCivil = estado_civil.Text;
             expediente.Edad = ushort.Parse(edad.Text);
             expediente.Procedencia = procedencia.Text;
-            expediente.Telefonos = listaTel(telefono.Text);
+            expediente.Telefonos = ListaTel(telefono.Text);
             expediente.MotivoConsulta = motivo_consulta.Text;
             expediente.HistoriaEnfermedadActual = historia_enfermedad.Text;
             expediente.RevisionSistemas = RevisionSistemasNuevo(revision1.Text);
@@ -60,7 +60,10 @@ namespace WPFclinica.Views
                 Fur: uint.Parse(fur1.Text),
                 Fpp: ffp1.Text,
                 Pf: pf1.Text,
-                Ectopico: uint.Parse(ecto1.Text));
+                Ectopico: uint.Parse(ecto1.Text),
+                Hv: hv1.Text,
+                Hm: hm1.Text,
+                Fup: fup1.Text);
             expediente.ExamenFisico = new ExamenFisico(
                 Pa: uint.Parse(pa.Text),
                 Mmhg: uint.Parse(mmgh.Text),
@@ -89,7 +92,7 @@ namespace WPFclinica.Views
             torch1.Text = fecha.Text;
         }
 
-        private List<string> listaTel(string tel)
+        private List<string> ListaTel(string tel)
         {
             return new List<string> { tel };
         }
