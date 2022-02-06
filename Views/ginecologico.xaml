@@ -111,83 +111,83 @@
 
     <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,131,-36" >
         <ScrollViewer Margin="0,0,0,175">
-        <Grid Margin="0,10,0,98" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="20"/>
+            <Grid Margin="0,10,0,98" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="20"/>
 
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
 
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-
-
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
 
 
-            </Grid.RowDefinitions>
-            <!--#endregion COLUMNAS FILAS-->
-            <!--#region TITULO-->
-            <TextBlock x:Name="Titulo"
+
+
+                </Grid.RowDefinitions>
+                <!--#endregion COLUMNAS FILAS-->
+                <!--#region TITULO-->
+                <TextBlock x:Name="Titulo"
                        Text="Historial Ginecológico"
                        Grid.Column="1"
                        Grid.Row="1"
@@ -195,10 +195,10 @@
                        FontSize="30"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"/>
-            <!--#endregion TITULO-->
-            <!--#region BOTONES -->
-            <!--#region REGRESAR -->
-            <Button Style="{DynamicResource ButtonStyle1}"   x:Name="BtnRegresar"
+                <!--#endregion TITULO-->
+                <!--#region BOTONES -->
+                <!--#region REGRESAR -->
+                <Button Style="{DynamicResource ButtonStyle1}"   x:Name="BtnRegresar"
                     Content="Regresar"
                     Grid.Column="1"
                     Grid.Row="1"
@@ -206,25 +206,25 @@
                     Cursor="Hand"
                       BorderBrush="Pink"
                     Background="pink" Margin="3,20,33,10" Grid.RowSpan="2" />
-            <!--#endregion REGRESAR-->
+                <!--#endregion REGRESAR-->
 
 
-            <!--#endregion BOTONES-->
-            <!--#region CONTENIDO -->
+                <!--#endregion BOTONES-->
+                <!--#region CONTENIDO -->
 
-            <!--#region PACIENTE-->
-            <TextBlock Grid.Row="4"
+                <!--#region PACIENTE-->
+                <TextBlock Grid.Row="4"
                        Grid.Column="1"
                        Text="Médico:"
                          FontSize="15"
                 Foreground="White" 
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <TextBox Style="{DynamicResource TextBoxStyle1}"  Grid.Row="4"
+                <TextBox Style="{DynamicResource TextBoxStyle1}"  Grid.Row="4"
                      Grid.Column="1"
                      x:Name="medico" Grid.ColumnSpan="3" Margin="64,0,0,5"
                      />
-            <TextBlock Grid.Row="4"
+                <TextBlock Grid.Row="4"
                        Grid.Column="4"
                 FontSize="15"
                 Foreground="White"
@@ -232,35 +232,35 @@
                        
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="36,3,0,0" RenderTransformOrigin="-2.006,0.2"/>
-            <TextBox  Grid.Row="4"
+                <TextBox  Grid.Row="4"
       Style="{DynamicResource TextBoxStyle1}"
                      Grid.Column="4"
                      x:Name="hora" Margin="78,1,133,7" Grid.ColumnSpan="2"/>
 
 
-            <TextBlock Grid.Row="6"
+                <TextBlock Grid.Row="6"
                        Grid.Column="1"
                        Text="Fecha:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <DatePicker x:Name="fecha"  Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="68,0,0,0"/>
+                <DatePicker x:Name="fecha"  Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="68,0,0,0"/>
 
 
-            <TextBlock Grid.Row="8"
+                <TextBlock Grid.Row="8"
                        Grid.Column="1"
   FontSize="15"
                 Foreground="White"
                        Text="Motivo de Consulta"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <TextBox Grid.Row="9"
+                <TextBox Grid.Row="9"
                      Grid.Column="1"
 Style="{DynamicResource TextBoxStyle1}"
                      x:Name="motivo_consultag" Grid.ColumnSpan="2" Margin="0,16,0,0" Grid.RowSpan="4"/>
 
-            <TextBlock Grid.Row="14"
+                <TextBlock Grid.Row="14"
                        Grid.Column="2"
                        Text="Signos Vitales"
                          FontSize="15"
@@ -268,67 +268,67 @@ Style="{DynamicResource TextBoxStyle1}"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center" Grid.ColumnSpan="3" Margin="115,0,0,0"/>
 
-            <TextBlock Grid.Row="16"
+                <TextBlock Grid.Row="16"
                        Grid.Column="1"
                          FontSize="15"
                 Foreground="White"
                        Text="W:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <TextBox Grid.Row="15"
+                <TextBox Grid.Row="15"
                      Grid.Column="1"
           Style="{DynamicResource TextBoxStyle1}"
                      x:Name="W" Margin="36,0,33,0" Grid.RowSpan="2"/>
 
 
-            <TextBlock Grid.Row="16"
+                <TextBlock Grid.Row="16"
                        Grid.Column="2"
                          FontSize="15"
                 Foreground="White"
                        Text="PA:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <TextBox Grid.Row="15"
+                <TextBox Grid.Row="15"
                      Grid.Column="2"
       Style="{DynamicResource TextBoxStyle1}"
                      x:Name="presion" Margin="36,0,32,0" Grid.RowSpan="2"/>
 
 
-            <TextBlock Grid.Row="16"
+                <TextBlock Grid.Row="16"
                        Grid.Column="4"
                          FontSize="15"
                 Foreground="White"
                        Text="FC:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <TextBox Grid.Row="15"
+                <TextBox Grid.Row="15"
                      Grid.Column="4"
 Style="{DynamicResource TextBoxStyle1}"
                      x:Name="FC" Margin="36,0,33,0" Grid.RowSpan="2"/>
 
 
 
-            <TextBlock Grid.Row="16"
+                <TextBlock Grid.Row="16"
                        Grid.Column="5"
                          FontSize="15"
                 Foreground="White"
                        Text="FR:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <TextBox Grid.Row="15"
+                <TextBox Grid.Row="15"
                      Grid.Column="5"
        Style="{DynamicResource TextBoxStyle1}"
                      x:Name="FR" Margin="36,0,33,0" Grid.RowSpan="2"/>
 
 
-            <TextBlock Grid.Row="18"
+                <TextBlock Grid.Row="18"
                        Grid.Column="1"
                          FontSize="15"
                 Foreground="White"
                        Text="T:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <TextBox Grid.Row="17"
+                <TextBox Grid.Row="17"
                      Grid.Column="1"
                 Style="{DynamicResource TextBoxStyle1}"
                      x:Name="T" Margin="36,7,33,24" Grid.RowSpan="4"/>
@@ -338,20 +338,20 @@ Style="{DynamicResource TextBoxStyle1}"
 
 
 
-            <TextBlock Grid.Row="20"
+                <TextBlock Grid.Row="20"
                         FontSize="15"
                        Foreground="White"
                        Text="Descripción:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center" Margin="19,0,0,0" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
-            <TextBox Grid.Row="21"
+                <TextBox Grid.Row="21"
                      Grid.Column="1"
                    Style="{DynamicResource TextBoxStyle1}"
                      x:Name="descripcion" Grid.ColumnSpan="2" Margin="0,16,0,0" Grid.RowSpan="4"/>
 
 
 
-            <TextBlock Grid.Row="27"
+                <TextBlock Grid.Row="27"
                        Grid.Column="1"
                         FontSize="15"
                        Foreground="White"
@@ -361,22 +361,22 @@ Style="{DynamicResource TextBoxStyle1}"
 
 
 
-            <TextBlock Grid.Row="35"
+                <TextBlock Grid.Row="35"
                        Grid.Column="1"
                         FontSize="15"
                        Foreground="White"
                        Text="Plan:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"/>
-            <TextBox Grid.Row="33"
+                <TextBox Grid.Row="33"
                      Grid.Column="1"
                     Style="{DynamicResource TextBoxStyle1}"
                      x:Name="plan" Grid.ColumnSpan="2" Margin="0,28,0,18" Grid.RowSpan="9"/>
-            <TextBox Grid.Row="29"
+                <TextBox Grid.Row="29"
                 Grid.Column="1"
                 Style="{DynamicResource TextBoxStyle1}"
                 x:Name="nd" Grid.ColumnSpan="2" Margin="0,9,0,7" Grid.RowSpan="4" TextChanged="nd_TextChanged"/>
-            <Button 
+                <Button 
                 Grid.Column="5" 
                 Content="Button" 
                 HorizontalAlignment="Left" 
@@ -385,17 +385,26 @@ Style="{DynamicResource TextBoxStyle1}"
                 Grid.Row="8" 
                 VerticalAlignment="Top"
                 Click="InsertGineco"/>
+                <Button 
+                Grid.Column="5" 
+                Content="Actualizar" 
+                HorizontalAlignment="Left" 
+                Margin="56,25,0,0" 
+                Grid.RowSpan="3" 
+                Grid.Row="4" 
+                VerticalAlignment="Top"
+                Click="updateObstet"/>
 
 
 
 
 
-            <!--#endregion PACIENTE-->
+                <!--#endregion PACIENTE-->
 
 
-            <!--#endregion CONTENIDO-->
+                <!--#endregion CONTENIDO-->
 
-        </Grid>
+            </Grid>
 
         </ScrollViewer>
     </Border>

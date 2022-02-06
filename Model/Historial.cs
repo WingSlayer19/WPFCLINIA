@@ -105,11 +105,12 @@ namespace WPFclinica.Model
     {
         public Evolucion()
         {
-
+            this.MyUUID = Guid.NewGuid().ToString();
         }
         public Evolucion(string Descripcion)
         {
             this.Descripcion = Descripcion;
+            this.MyUUID = Guid.NewGuid().ToString();
         }
         [BsonElement("DESCRIPCION")]
         public string Descripcion { get; set; }
@@ -145,12 +146,13 @@ namespace WPFclinica.Model
     {
         public PlanDatos()
         {
-
+            this.MyUUID = Guid.NewGuid().ToString();
         }
         public PlanDatos(string Descripcion)
         {
             this.Descripcion = Descripcion;
             Fecha = DateTime.Now.ToString();
+            this.MyUUID = Guid.NewGuid().ToString();
         }
         [BsonElement("DESCRIPCION")]
         public string Descripcion { get; set; }
@@ -164,12 +166,13 @@ namespace WPFclinica.Model
     {
         public Descripciones()
         {
-
+            this.MyUUID = Guid.NewGuid().ToString();
         }
         public Descripciones(string Descripcion)
         {
             this.Descripcion = Descripcion;
             Fecha = DateTime.Now.ToString();
+            this.MyUUID = Guid.NewGuid().ToString();
         }
         [BsonElement("DESCRIPCION")]
         public string Descripcion { get; set; }
@@ -181,6 +184,10 @@ namespace WPFclinica.Model
 
     public class ViewHistorial
     {
+        public ViewHistorial()
+        {
+            this.MyUUID = Guid.NewGuid().ToString();
+        }
         public string Tipo { get; set; } = string.Empty;
         public string Medico { get; set; } = string.Empty;
         public string Fecha { get; set; } = string.Empty;
