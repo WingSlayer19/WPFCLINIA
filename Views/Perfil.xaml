@@ -297,7 +297,6 @@
 
             <!--#region AGREGAR-->
 
-
             <Button 
                  Style="{DynamicResource ButtonStyle1}"
                 Grid.Row="4"
@@ -305,7 +304,7 @@
                     Background="#bbdefb"
                     Cursor="Hand"
                     BorderBrush="White"
-                    x:Name="BtnObs" Margin="30,20,3,0" Click="BtnObs_Click">
+                    x:Name="BtnObs" Margin="23,20,10,0" Click="BtnObs_Click">
                 <TextBlock
                     Text="Nueva Historia Obstétrica"
                     Foreground="White"
@@ -329,10 +328,6 @@
 
                 </TextBlock>
             </Button>
-
-
-
-
 
             <!--#endregion AGREGAR-->
 
@@ -364,12 +359,36 @@
                                         <Button 
                                         Content="Consultar"
                                         x:Name="btnConsultar"
-                                            Click="Ver"
+                                        Click="Ver"
                                         CommandParameter="{Binding MyUUID}"
                                         Background="Pink"
                                         Foreground="White"
                                         Width="80"
                                         BorderBrush="Transparent"/>
+
+                                       <Button 
+                                        x:Name="BtnActualizar"
+                                        Content="Actualizar"
+                                        Grid.Column="5"
+                                        Grid.Row="10"
+                                        CommandParameter="{Binding MyUUID}"
+                                        Foreground="White"
+                                        Cursor="Hand"
+                                        BorderBrush="White"
+                                        Background="Green" Margin="56,4,8,0"
+                                        Click="updateObstet"/>
+
+                                        <Button 
+                                        x:Name="BtnBorrar"
+                                        Content="Eliminar"
+                                        CommandParameter="{Binding MyUUID}"
+                                        Grid.Column="5"
+                                        Grid.Row="12"
+                                        Foreground="White"
+                                        Cursor="Hand"
+                                        BorderBrush="White"
+                                        Background="red" Margin="56,4,8,0"
+                                        Click="deleteObstet"/>
                                         <!--#endregion BOTONES CONTROL-->
                                     </DockPanel>
                                 </DataTemplate>
@@ -398,17 +417,13 @@
             <!--#endregion DATAGRID-->
 
             <!--#region FRAME-->
-
-            <Frame
+                <Frame
                 x:Name="FramePerfil"
                 Grid.Column="0"
                 Grid.Row="0"
-                 Grid.RowSpan="8"
+                Grid.RowSpan="8"
                 Grid.ColumnSpan="6" Margin="0,0,-70,-483" />
-          
-
-
-            <!--#endregion FRAME-->
+                <!--#endregion FRAME-->
             
         </Grid>
         </ScrollViewer>
