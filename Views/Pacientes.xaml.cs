@@ -53,6 +53,15 @@ namespace WPFclinica.Views
             FramePacientes.Content = ventana;
         }
 
-   
+        
+        public void deleteObstet(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void updateObstet(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

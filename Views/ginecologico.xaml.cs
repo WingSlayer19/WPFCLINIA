@@ -64,14 +64,34 @@ namespace WPFclinica.Views
         }
 
         public string IdExpediente;
+        public string MyUUID;
         private void InsertGineco(object sender, RoutedEventArgs e)
         {
             var historialGinecologico = GinecologicoDatos();
             Historial h = new Historial();
             h.HGinecologicos = historialGinecologico;
             var expediente = _expediente.GetById(IdExpediente);
-            expediente.Historial = h;
+            expediente.Historial.HGinecologicos = h.HGinecologicos;
             _expediente.SaveHistorial(IdExpediente, expediente);
+        }
+
+        public void SetHistorial(string id, string uuid)
+        {
+            var exp = _expediente.GetById(id);
+            var h = exp.Historial.HGinecologicos.Find(x => x.MyUUID == uuid);
+
+            medico.Text = h.Medico;
+            hora.Text = h.Hora;
+            fecha.SelectedDate = DateTime.Parse(h.Fecha);
+            motivo_consultag.Text = h.MotivoConsulta;
+            W.Text = h.SignosVitales.W;
+            presion.Text = h.SignosVitales.PresionArterial.ToString();
+            FC.Text = h.SignosVitales.Fc.ToString();
+            FR.Text = h.SignosVitales.Fr.ToString();
+            T.Text = h.SignosVitales.T.ToString();
+            descripcion.Text = h.Descripciones.First().Descripcion;
+            nd.Text = h.NuevosDatos.First().Descripcion;
+            plan.Text = h.Plan.First().Descripcion;
         }
 
         private void updateObstet(object sender, RoutedEventArgs e)

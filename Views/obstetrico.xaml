@@ -360,6 +360,7 @@ Style="{DynamicResource TextBoxStyle1}"
 
                 <Button Template="{DynamicResource ButtonTemplate1}"
                 Grid.Column="4" 
+                        x:Name="BtnSave"
                 Content="Guardar" 
                 HorizontalAlignment="Left" 
                 Margin="98,0,0,0" 
