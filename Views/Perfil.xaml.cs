@@ -33,6 +33,8 @@ namespace WPFclinica.Views
         {
             obstetrico ventana1 = new obstetrico();
             ventana1.IdExpediente = IdUsuario;
+            ventana1.btnDelete.IsEnabled = false;
+            ventana1.btnDelete.Visibility = Visibility.Collapsed;
             FramePerfil.Content = ventana1;
         }
 
@@ -40,6 +42,8 @@ namespace WPFclinica.Views
         {
             ginecologico ventana2 = new ginecologico();
             ventana2.IdExpediente = IdUsuario;
+            ventana2.btnDelete.IsEnabled = false;
+            ventana2.btnDelete.Visibility = Visibility.Collapsed;
             FramePerfil.Content = ventana2;
         }
 

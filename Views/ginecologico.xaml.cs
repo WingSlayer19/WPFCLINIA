@@ -94,7 +94,7 @@ namespace WPFclinica.Views
             plan.Text = h.Plan.First().Descripcion;
         }
 
-        private void updateObstet(object sender, RoutedEventArgs e)
+        private void UpdateObstet(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Me ejecute bb");
             Expediente expediente = _expediente.GetById(IdExpediente);
@@ -109,25 +109,34 @@ namespace WPFclinica.Views
             */
 
             /*
-             * 
-             * Actualizar
-             * 
-             * 
+              *
+              *Actualizar
+              *
+              *
                 if (hGine != null)
-                {
-                    HGinecologico hGineElement= hGine.FirstOrDefault(h => h.MyUUID == "e9719011-ccc6-4463-a3a6-4a21881e5db1");
-                    hGineElement.Fecha = "jejejeje";
-                }
-                else
-                {
-                    hGine = new List<HGinecologico>();
-                    hGine.Add(new HGinecologico());
-                    expediente.Historial.HGinecologicos = hGine;
-                }
-
+            {
+                HGinecologico hGineElement = hGine.FirstOrDefault(h => h.MyUUID == "e9719011-ccc6-4463-a3a6-4a21881e5db1");
+                hGineElement.Fecha = "jejejeje";
+            }
+            else
+            {
+                hGine = new List<HGinecologico>();
+                hGine.Add(new HGinecologico());
+                expediente.Historial.HGinecologicos = hGine;
+            }
             */
             _expediente.SaveHistorial(IdExpediente, expediente);
 
+        }
+
+        private void DeleteHistorial(object sender, RoutedEventArgs e)
+        {
+            Expediente expediente = _expediente.GetById(IdExpediente);
+            var hGinecologicos = expediente.Historial.HGinecologicos;
+            var hGine = hGinecologicos.FirstOrDefault(h => h.MyUUID == MyUUID);
+            hGinecologicos.Remove(hGine);
+            expediente.Historial.HGinecologicos = hGinecologicos;
+            _expediente.SaveHistorial(IdExpediente, expediente);
         }
 
         private void nd_TextChanged(object sender, TextChangedEventArgs e)

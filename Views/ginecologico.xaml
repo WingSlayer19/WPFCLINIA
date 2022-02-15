@@ -386,7 +386,15 @@ Style="{DynamicResource TextBoxStyle1}"
                       BorderBrush="White"
                     Background="blue" Margin="56,3,8,1"
                 Click="InsertGineco"/>
-             
+                <Button Grid.Column="5" 
+                        Content="Borrar" 
+                        HorizontalAlignment="Left" 
+                        Margin="10,3,0,0" 
+                        Grid.RowSpan="2" 
+                        Grid.Row="11" 
+                        VerticalAlignment="Top"
+                        x:Name="btnDelete"/>
+
 
 
 
