@@ -108,23 +108,24 @@ namespace WPFclinica.Views
 
             */
 
-            /*
-              *
-              *Actualizar
-              *
-              *
-                if (hGine != null)
-            {
-                HGinecologico hGineElement = hGine.FirstOrDefault(h => h.MyUUID == "e9719011-ccc6-4463-a3a6-4a21881e5db1");
-                hGineElement.Fecha = "jejejeje";
-            }
-            else
-            {
-                hGine = new List<HGinecologico>();
-                hGine.Add(new HGinecologico());
-                expediente.Historial.HGinecologicos = hGine;
-            }
-            */
+
+         /*
+          * 
+          * Actualizar
+          * 
+          * 
+             if (hGine != null)
+             {
+                 HGinecologico hGineElement= hGine.FirstOrDefault(h => h.MyUUID == "e9719011-ccc6-4463-a3a6-4a21881e5db1");
+                 hGineElement.Fecha = "jejejeje";
+             }
+             else
+             {
+                 hGine = new List<HGinecologico>();
+                 hGine.Add(new HGinecologico());
+                 expediente.Historial.HGinecologicos = hGine;
+             }
+         */
             _expediente.SaveHistorial(IdExpediente, expediente);
 
         }

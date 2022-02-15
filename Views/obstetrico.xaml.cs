@@ -92,5 +92,15 @@ namespace WPFclinica.Views
             nd.Text = h.NuevosDatos.First().Descripcion;
             plan.Text = h.Plan.First().Descripcion;
         }
+
+        public void DeleteHistorial(object sender, RoutedEventArgs e)
+        {
+            Expediente expediente = _expediente.GetById(IdExpediente);
+            var hObstetricos = expediente.Historial.HObstetricos;
+            var hObst = hObstetricos.FirstOrDefault(h => h.MyUUID == MyUUID);
+            hObstetricos.Remove(hObst);
+            expediente.Historial.HObstetricos = hObstetricos;
+            _expediente.SaveHistorial(IdExpediente, expediente);
+        }
     }
 }
