@@ -395,6 +395,14 @@ Style="{DynamicResource TextBoxStyle1}"
                         VerticalAlignment="Top"
                         x:Name="btnDelete"
                         Click="DeleteHistorial"/>
+                <Button Grid.Column="4" 
+                        Content="Actualizar" 
+                        HorizontalAlignment="Left" 
+                        Margin="72,12,0,0" 
+                        Grid.Row="12" 
+                        VerticalAlignment="Top"
+                        Click="UpdateGine"
+                        x:Name="btnUpdate"/>
 
 
 

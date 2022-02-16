@@ -378,7 +378,17 @@ Style="{DynamicResource TextBoxStyle1}"
                         Grid.RowSpan="2" 
                         Grid.Row="14" 
                         VerticalAlignment="Top"
-                        x:Name="btnDelete"/>
+                        x:Name="btnDelete"
+                        Click="DeleteHistorial"/>
+                <Button Grid.Column="5" 
+                        Content="Actualizar"
+                        HorizontalAlignment="Left" 
+                        Margin="20,10,0,0" 
+                        Grid.RowSpan="2" 
+                        Grid.Row="16" 
+                        VerticalAlignment="Top"
+                        x:Name="btnUpdate"
+                        Click="UpdateObstet"/>
 
 
 

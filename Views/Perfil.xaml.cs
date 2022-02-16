@@ -35,6 +35,8 @@ namespace WPFclinica.Views
             ventana1.IdExpediente = IdUsuario;
             ventana1.btnDelete.IsEnabled = false;
             ventana1.btnDelete.Visibility = Visibility.Collapsed;
+            ventana1.btnUpdate.IsEnabled = false;
+            ventana1.btnUpdate.Visibility = Visibility.Collapsed;
             FramePerfil.Content = ventana1;
         }
 
@@ -44,6 +46,8 @@ namespace WPFclinica.Views
             ventana2.IdExpediente = IdUsuario;
             ventana2.btnDelete.IsEnabled = false;
             ventana2.btnDelete.Visibility = Visibility.Collapsed;
+            ventana2.btnUpdate.IsEnabled = false;
+            ventana2.btnUpdate.Visibility = Visibility.Collapsed;
             FramePerfil.Content = ventana2;
         }
 

@@ -94,7 +94,7 @@ namespace WPFclinica.Views
             plan.Text = h.Plan.First().Descripcion;
         }
 
-        private void UpdateObstet(object sender, RoutedEventArgs e)
+        private void UpdateGine(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Me ejecute bb");
             Expediente expediente = _expediente.GetById(IdExpediente);
@@ -109,23 +109,26 @@ namespace WPFclinica.Views
             */
 
 
-         /*
-          * 
-          * Actualizar
-          * 
-          * 
-             if (hGine != null)
-             {
-                 HGinecologico hGineElement= hGine.FirstOrDefault(h => h.MyUUID == "e9719011-ccc6-4463-a3a6-4a21881e5db1");
-                 hGineElement.Fecha = "jejejeje";
-             }
-             else
-             {
-                 hGine = new List<HGinecologico>();
-                 hGine.Add(new HGinecologico());
-                 expediente.Historial.HGinecologicos = hGine;
-             }
-         */
+            if (hGine != null)
+            {
+                HGinecologico hGineElement= hGine.FirstOrDefault(h => h.MyUUID == MyUUID);
+                var hgine = GinecologicoDatos().FirstOrDefault();
+                hGineElement.Fecha = hgine.Fecha;
+                hGineElement.Medico = hgine.Medico;
+                hGineElement.Hora = hgine.Hora;
+                hGineElement.MotivoConsulta = hgine.MotivoConsulta;
+                hGineElement.SignosVitales = hgine.SignosVitales;
+                hGineElement.Descripciones = hgine.Descripciones;
+                hGineElement.NuevosDatos = hgine.NuevosDatos;
+                hGineElement.Plan = hgine.Plan;
+            }
+            else
+            {
+                hGine = new List<HGinecologico>();
+                hGine.Add(new HGinecologico());
+                expediente.Historial.HGinecologicos = hGine;
+            }
+         
             _expediente.SaveHistorial(IdExpediente, expediente);
 
         }

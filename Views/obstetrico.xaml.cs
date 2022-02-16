@@ -102,5 +102,44 @@ namespace WPFclinica.Views
             expediente.Historial.HObstetricos = hObstetricos;
             _expediente.SaveHistorial(IdExpediente, expediente);
         }
+
+        private void UpdateObstet(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Me ejecute bb");
+            Expediente expediente = _expediente.GetById(IdExpediente);
+            List<HObstetrico> hObste = expediente.Historial.HObstetricos;
+            /*
+             * Borrar
+             * 
+            
+            HGinecologico hGineElement = hGine.FirstOrDefault(h => h.MyUUID == "e9719011-ccc6-4463-a3a6-4a21881e5db1");
+            hGine.Remove(hGineElement);
+
+            */
+
+
+            if (hObste != null)
+            {
+                HObstetrico hObsteElement = hObste.FirstOrDefault(h => h.MyUUID == MyUUID);
+                var hgine = ObstetricoDatos().FirstOrDefault();
+                hObsteElement.Fecha = hgine.Fecha;
+                hObsteElement.Medico = hgine.Medico;
+                hObsteElement.Hora = hgine.Hora;
+                hObsteElement.Evoluciones = hgine.Evoluciones;
+                hObsteElement.MotivoConsulta = hgine.MotivoConsulta;
+                hObsteElement.SignosVitales = hgine.SignosVitales;
+                hObsteElement.NuevosDatos = hgine.NuevosDatos;
+                hObsteElement.Plan = hgine.Plan;
+            }
+            else
+            {
+                hObste = new List<HObstetrico>();
+                hObste.Add(new HObstetrico());
+                expediente.Historial.HObstetricos = hObste;
+            }
+
+            _expediente.SaveHistorial(IdExpediente, expediente);
+
+        }
     }
 }
