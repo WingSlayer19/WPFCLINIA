@@ -61,6 +61,7 @@
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
       <Private>True</Private>
@@ -143,6 +144,9 @@
     <Compile Include="Views\ginecologico.xaml.cs">
       <DependentUpon>ginecologico.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Lista_Examen.xaml.cs">
+      <DependentUpon>Lista_Examen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\obstetrico.xaml.cs">
       <DependentUpon>obstetrico.xaml</DependentUpon>
     </Compile>
@@ -168,6 +172,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\ginecologico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Lista_Examen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
