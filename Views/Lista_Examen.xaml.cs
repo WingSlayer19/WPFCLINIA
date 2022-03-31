@@ -32,10 +32,20 @@ namespace WPFclinica.Views
             if (ofd.ShowDialog() == true)
             {
                 System.IO.FileStream fs = new System.IO.FileStream(ofd.FileName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+                ofd.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 data = System.IO.File.ReadAllBytes(ofd.FileName);
                 base64Text = Convert.ToBase64String(data);
                 Console.WriteLine(base64Text);
                 ofd.Multiselect = true;
+                if (ofd.ShowDialog() == true)
+                {
+                    foreach (string filename in ofd.FileNames)
+                        Lista.Items.Add(System.IO.Path.GetFileName(filename));
+                }
+
+
+                foreach (string filename in ofd.FileNames)
+                    Lista.Items.Add(System.IO.Path.GetFileName(filename));
                 //fs.Read(data, 0,System.Convert.ToInt32(fs.Length));
                 //fs.Close();
                 // ImageSourceConverter imgs = new ImageSourceConverter();
