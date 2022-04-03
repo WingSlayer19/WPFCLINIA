@@ -21,13 +21,15 @@ namespace WPFclinica.Views
     /// </summary>
     public partial class Lista_Examen : Window
     {
+        byte[] data;
+        String base64Text;
+        public string expeId;
+        private ExpedienteHandler _handler = new ExpedienteHandler();
         public Lista_Examen()
         {
             InitializeComponent();
         }
-        byte[] data;
-        String base64Text;
-        public string expeId;
+        
         private void Cargar(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
@@ -80,11 +82,13 @@ namespace WPFclinica.Views
             }
         }
 
-        private void probar(object sender, RoutedEventArgs e)
+        public void probar()
         {
-            MessageBox.Show("Puto el que lo lea " + expeId);// sate sate sate
-            
-
+            var archivos = _handler.GetAllExpeAndFiles(expeId);
+            foreach (var item in archivos)
+            {
+                Lista.Items.Add(item.Id.ToString() + " " + item.Nombre);
+            }
         }
     }
  

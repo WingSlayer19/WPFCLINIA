@@ -158,6 +158,7 @@ namespace WPFclinica.Views
         {
             Lista_Examen p = new Lista_Examen();
             p.expeId = IdUsuario;
+            p.probar();
             p.Show();
         }
     }

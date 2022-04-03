@@ -41,5 +41,10 @@ namespace WPFclinica.Handler
         {
             mongoConnection.UpdateExpInsertHistorial(Id, e);
         }
+
+        public List<Archivo> GetAllExpeAndFiles(string id)
+        {
+            return mongoConnection.GetAllExpeAndFiles(id);
+        }
     }
 }
