@@ -157,6 +157,7 @@ namespace WPFclinica.Views
         private void Visualizar(object sender, RoutedEventArgs e)
         {
             Lista_Examen p = new Lista_Examen();
+            p.expeId = IdUsuario;
             p.Show();
         }
     }

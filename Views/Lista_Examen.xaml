@@ -70,6 +70,7 @@
             <Button Style="{DynamicResource ButtonStyle1}" Name="BTnGuardar" BorderBrush="Pink" Content="Guardar" HorizontalAlignment="Left" Height="33" Margin="120,262,0,0" VerticalAlignment="Top" Width="65" Foreground="Pink" Background="white" />
             <Button Style="{DynamicResource ButtonStyle1}" Name="BTnEliminar" BorderBrush="Pink" Content="Eliminar" HorizontalAlignment="Left" Height="33" Margin="190,262,0,0" VerticalAlignment="Top" Width="65" Foreground="Pink" Background="white"/>
             <Button Style="{DynamicResource ButtonStyle1}" x:Name="BTnDescargar" BorderBrush="Pink" Content="Descargar" HorizontalAlignment="Left" Height="33" Margin="259,262,0,0" VerticalAlignment="Top" Width="65" Foreground="Pink" Background="white" Click="download"/>
+            <Button x:Name="btnProbarVo" Content="Button" HorizontalAlignment="Left" Margin="538,186,0,0" VerticalAlignment="Top" Click="probar"/>
 
 
         </Grid>

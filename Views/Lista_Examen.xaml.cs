@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPFclinica.Handler;
 
 namespace WPFclinica.Views
 {
@@ -26,6 +27,7 @@ namespace WPFclinica.Views
         }
         byte[] data;
         String base64Text;
+        public string expeId;
         private void Cargar(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
@@ -37,11 +39,11 @@ namespace WPFclinica.Views
                 base64Text = Convert.ToBase64String(data);
                 Console.WriteLine(base64Text);
                 ofd.Multiselect = true;
-                if (ofd.ShowDialog() == true)
-                {
-                    foreach (string filename in ofd.FileNames)
-                        Lista.Items.Add(System.IO.Path.GetFileName(filename));
-                }
+                //if (ofd.ShowDialog() == true)
+                //{
+                //    foreach (string filename in ofd.FileNames)
+                //        Lista.Items.Add(System.IO.Path.GetFileName(filename));
+                //}
 
 
                 foreach (string filename in ofd.FileNames)
@@ -54,6 +56,7 @@ namespace WPFclinica.Views
 
          
         }
+        //where is the click event
 
         private void Visualizar(object sender, RoutedEventArgs e)
         {
@@ -63,18 +66,25 @@ namespace WPFclinica.Views
 
         private void download(object sender, RoutedEventArgs e)
         {
-               Microsoft.Win32.SaveFileDialog saveFileDialog1;
+            Microsoft.Win32.SaveFileDialog saveFileDialog1;
             saveFileDialog1 = new Microsoft.Win32.SaveFileDialog();
             saveFileDialog1.Filter = "Imagenes PNG (*.png)|*.png|Imagenes JPEG (*.jpg)|*.jpg|Archivos PDF (*.pdf)|*.pdf|Archivos Word (*.docx)|*.docx";
             saveFileDialog1.DefaultExt = ".pdf";
             saveFileDialog1.AddExtension = true;
             if (saveFileDialog1.ShowDialog() == true)
             {
-                string filename = saveFileDialog1.FileName;
+                string filename = saveFileDialog1.FileName;// ! this is a nepe
                 byte[] data = Convert.FromBase64String(base64Text);
                 File.WriteAllBytes(filename, Convert.FromBase64String(base64Text));
                 //save file using stream.
             }
+        }
+
+        private void probar(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Puto el que lo lea " + expeId);// sate sate sate
+            
+
         }
     }
  

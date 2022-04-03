@@ -12,17 +12,26 @@ namespace WPFclinica.Database
     internal class MongoConnection
     {
         private readonly IMongoCollection<Expediente> _expediente;
+        private readonly IMongoCollection<Archivo> _archivos;
         public MongoConnection()
         {
             MongoClient client = new MongoClient("mongodb+srv://Erickff:Test12345.@cluster0.plls6.mongodb.net");
             IMongoDatabase database = client.GetDatabase("test");
             _expediente = database.GetCollection<Expediente>("expediente");
+            _archivos = database.GetCollection<Archivo>("archivos");
         }
 
         public List<Expediente> GetAllExpe()
         {
             List<Expediente> list = _expediente.AsQueryable().ToList(); 
             return list;
+        }
+
+        public List<Archivo> GetAllExpeAndFiles(string idExpe)
+        {
+            //return _expediente.AsQueryable().GroupJoin(_archivos.AsQueryable(), p => p.Id, o => o.ExpedienteId, (p, o) => new { p.Id, p.Nombre, other = o }).ToList();
+            ObjectId Id = new ObjectId(idExpe);
+            return _archivos.Find(x => x.ExpedienteId == Id).ToList(); 
         }
 
         public Expediente GetExpeByid(string id)
