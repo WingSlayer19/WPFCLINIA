@@ -53,5 +53,10 @@ namespace WPFclinica.Database
             _expediente.ReplaceOne(x => x.Id == Id, e);
         }
 
+        public void SaveFiles(List<Archivo> archivos)
+        {
+           _archivos.InsertManyAsync(archivos);
+        }
+
     }
 }

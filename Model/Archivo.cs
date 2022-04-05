@@ -24,5 +24,15 @@ namespace WPFclinica.Model
 
         [BsonElement("_expedienteId")]
         public ObjectId ExpedienteId { get; set; }
+
+        public Archivo() { }
+
+        public Archivo(string nameFile, string idExpe)
+        {
+            this.Nombre = nameFile.Replace(" ", "_");
+            this.ExpedienteId = new ObjectId(idExpe);
+            this.Extension = nameFile.Substring(nameFile.LastIndexOf('.'));
+            this.Path = "C:\\Files\\CLINICA\\" + idExpe + "\\" + idExpe + "_" + this.Nombre;
+        }
     }
 }

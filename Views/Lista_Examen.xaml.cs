@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WPFclinica.Handler;
+using WPFclinica.Model;
 
 namespace WPFclinica.Views
 {
@@ -25,6 +26,7 @@ namespace WPFclinica.Views
         String base64Text;
         public string expeId;
         private ExpedienteHandler _handler = new ExpedienteHandler();
+        private List<Archivo> listaArchivos = new List<Archivo>();
         public Lista_Examen()
         {
             InitializeComponent();
@@ -49,7 +51,11 @@ namespace WPFclinica.Views
 
 
                 foreach (string filename in ofd.FileNames)
+                {
+                    listaArchivos.Add(new Archivo(System.IO.Path.GetFileName(filename), expeId));
                     Lista.Items.Add(System.IO.Path.GetFileName(filename));
+                }
+
                 //fs.Read(data, 0,System.Convert.ToInt32(fs.Length));
                 //fs.Close();
                 // ImageSourceConverter imgs = new ImageSourceConverter();
@@ -63,10 +69,10 @@ namespace WPFclinica.Views
         private void Visualizar(object sender, RoutedEventArgs e)
         {
             Lista_Examen p = new Lista_Examen();
-            p.Show();
+            p.ShowFiles();
         }
 
-        private void download(object sender, RoutedEventArgs e)
+        private void Download(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.SaveFileDialog saveFileDialog1;
             saveFileDialog1 = new Microsoft.Win32.SaveFileDialog();
@@ -75,15 +81,22 @@ namespace WPFclinica.Views
             saveFileDialog1.AddExtension = true;
             if (saveFileDialog1.ShowDialog() == true)
             {
-                string filename = saveFileDialog1.FileName;// ! this is a nepe
+                string filename = saveFileDialog1.FileName;
                 byte[] data = Convert.FromBase64String(base64Text);
                 File.WriteAllBytes(filename, Convert.FromBase64String(base64Text));
-                //save file using stream.
             }
         }
 
-        public void probar()
+        private void SaveFile(object sender, RoutedEventArgs e)
         {
+            _handler.SaveFiles(listaArchivos);
+            ShowFiles();
+            listaArchivos.Clear();
+        }
+
+        public void ShowFiles()
+        {
+            Lista.Items.Clear();
             var archivos = _handler.GetAllExpeAndFiles(expeId);
             foreach (var item in archivos)
             {

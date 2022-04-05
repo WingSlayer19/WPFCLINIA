@@ -46,5 +46,10 @@ namespace WPFclinica.Handler
         {
             return mongoConnection.GetAllExpeAndFiles(id);
         }
+
+        public void SaveFiles(List<Archivo> archivos)
+        {
+            mongoConnection.SaveFiles(archivos);
+        }
     }
 }
