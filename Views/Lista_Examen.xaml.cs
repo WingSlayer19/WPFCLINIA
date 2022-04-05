@@ -27,6 +27,7 @@ namespace WPFclinica.Views
         public string expeId;
         private ExpedienteHandler _handler = new ExpedienteHandler();
         private List<Archivo> listaArchivos = new List<Archivo>();
+        private List<String> namesStrings = new List<String>();
         public Lista_Examen()
         {
             InitializeComponent();
@@ -53,6 +54,7 @@ namespace WPFclinica.Views
                 foreach (string filename in ofd.FileNames)
                 {
                     listaArchivos.Add(new Archivo(System.IO.Path.GetFileName(filename), expeId));
+                    namesStrings.Add(filename);
                     Lista.Items.Add(System.IO.Path.GetFileName(filename));
                 }
 
@@ -90,8 +92,25 @@ namespace WPFclinica.Views
         private void SaveFile(object sender, RoutedEventArgs e)
         {
             _handler.SaveFiles(listaArchivos);
+            Directories();
+            for (int i = 0; i < listaArchivos.Count; i++)
+            {
+                File.Move(namesStrings[i], listaArchivos[i].Path);
+            }
             ShowFiles();
             listaArchivos.Clear();
+            namesStrings.Clear();
+        }
+
+        private void Directories()
+        {
+            foreach (var item in listaArchivos)
+            {
+                string path = item.Path;
+                path = path.Substring(0, path.LastIndexOf("\\"));
+                Directory.CreateDirectory(path);
+                MessageBox.Show(path);
+            }
         }
 
         public void ShowFiles()
