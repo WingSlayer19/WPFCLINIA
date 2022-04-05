@@ -108,8 +108,8 @@ namespace WPFclinica.Views
             {
                 string path = item.Path;
                 path = path.Substring(0, path.LastIndexOf("\\"));
-                Directory.CreateDirectory(path);
-                MessageBox.Show(path);
+                if (!File.Exists(path))
+                    Directory.CreateDirectory(path);
             }
         }
 
