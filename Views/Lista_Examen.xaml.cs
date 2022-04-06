@@ -27,6 +27,7 @@ namespace WPFclinica.Views
         public string expeId;
         private ExpedienteHandler _handler = new ExpedienteHandler();
         private List<Archivo> listaArchivos = new List<Archivo>();
+        private List<Archivo> listaArchivosCargados = new List<Archivo>();
         private List<String> namesStrings = new List<String>();
         public Lista_Examen()
         {
@@ -74,6 +75,25 @@ namespace WPFclinica.Views
             p.ShowFiles();
         }
 
+        private void ShowDefaultViewer(object sender, RoutedEventArgs e)
+        {
+            if (listaArchivosCargados.Count < 1)
+            {
+                MessageBox.Show("La lista no contiene tal elemento");
+                return;
+            }
+
+            if (Lista.SelectedIndex > listaArchivosCargados.Count -1)
+            {
+                MessageBox.Show("Elemento Inesperado. Asegurese de Guardar el archivo para visualizar");
+                return;
+            }
+
+            var indexTemp = Lista.SelectedIndex;
+            var itemTemp = listaArchivosCargados[indexTemp];
+            System.Diagnostics.Process.Start(@""+itemTemp.Path);
+        }
+
         private void Download(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.SaveFileDialog saveFileDialog1;
@@ -94,12 +114,12 @@ namespace WPFclinica.Views
             _handler.SaveFiles(listaArchivos);
             Directories();
             for (int i = 0; i < listaArchivos.Count; i++)
-            {
                 File.Move(namesStrings[i], listaArchivos[i].Path);
-            }
+            
             ShowFiles();
             listaArchivos.Clear();
             namesStrings.Clear();
+            listaArchivosCargados.Clear();
         }
 
         private void Directories()
@@ -116,8 +136,8 @@ namespace WPFclinica.Views
         public void ShowFiles()
         {
             Lista.Items.Clear();
-            var archivos = _handler.GetAllExpeAndFiles(expeId);
-            foreach (var item in archivos)
+            listaArchivosCargados = _handler.GetAllExpeAndFiles(expeId);
+            foreach (var item in listaArchivosCargados)
             {
                 Lista.Items.Add(item.Id.ToString() + " " + item.Nombre);
             }
