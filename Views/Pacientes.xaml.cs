@@ -24,9 +24,10 @@ namespace WPFclinica.Views
     public partial class Pacientes : UserControl
     {
         private ExpedienteHandler _expediente = new ExpedienteHandler();
+        private List<Expediente> list = new List<Expediente>();
         private void ReadAllExpedientes()
         {
-            var list = _expediente.GetAllExpedientes();
+            list = _expediente.GetAllExpedientes();
             ViewExpediente viewExpediente = new ViewExpediente();
             GridDatos.ItemsSource = viewExpediente.ConvertElement(list);
             
@@ -53,7 +54,32 @@ namespace WPFclinica.Views
             FramePacientes.Content = ventana;
         }
 
-        
+        private void RealizarBusqueda(object sender, RoutedEventArgs e)
+        {
+            BuscarEnLista();
+        }
+
+        private void RealizarBusquedaEnter(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                BuscarEnLista();
+        }
+
+        private void BuscarEnLista()
+        {
+            if (txtBuscarPaciente.Text == "")
+            {
+                list.Clear();
+                ReadAllExpedientes();
+            }
+            else
+            {
+                var lista = list.Where(x => x.Nombre.Contains(txtBuscarPaciente.Text)).ToList();
+                ViewExpediente viewExpediente = new ViewExpediente();
+                GridDatos.ItemsSource = viewExpediente.ConvertElement(lista);
+            }
+        }
+
         public void deleteObstet(object sender, RoutedEventArgs e)
         {
 

@@ -60,12 +60,10 @@ namespace WPFclinica.Views
                 }
 
                 //fs.Read(data, 0,System.Convert.ToInt32(fs.Length));
-                //fs.Close();
+                fs.Close();
                 // ImageSourceConverter imgs = new ImageSourceConverter();
                 //  foto.SetValue(Image.SourceProperty, imgs.ConvertFromString(ofd.FileName.ToString()));
             }
-
-         
         }
         //where is the click event
 
@@ -114,12 +112,12 @@ namespace WPFclinica.Views
             _handler.SaveFiles(listaArchivos);
             Directories();
             for (int i = 0; i < listaArchivos.Count; i++)
-                File.Move(namesStrings[i], listaArchivos[i].Path);
+                File.Move(@""+namesStrings[i], @""+listaArchivos[i].Path);
+                
             
             ShowFiles();
             listaArchivos.Clear();
             namesStrings.Clear();
-            listaArchivosCargados.Clear();
         }
 
         private void Directories()
@@ -136,6 +134,7 @@ namespace WPFclinica.Views
         public void ShowFiles()
         {
             Lista.Items.Clear();
+            listaArchivosCargados.Clear();
             listaArchivosCargados = _handler.GetAllExpeAndFiles(expeId);
             foreach (var item in listaArchivosCargados)
             {

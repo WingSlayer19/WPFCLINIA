@@ -13,6 +13,9 @@ namespace WPFclinica.Model
         [BsonId]
         public ObjectId Id { get; set; }
 
+        [BsonElement("Image")]
+        public byte[] Image { get; set; }
+
         [BsonElement("nombre")]
         public string Nombre { get; set; }
 

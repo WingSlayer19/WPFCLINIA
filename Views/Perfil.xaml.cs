@@ -60,6 +60,8 @@ namespace WPFclinica.Views
                 nombre_paciente.Text = exp.Nombre;
                 télefono_paciente.Text = String.Join("  ", exp.Telefonos);
                 direccion_paciente.Text = exp.Procedencia;
+                ImageSourceConverter imgs = new ImageSourceConverter();
+                foto.SetValue(Image.SourceProperty, imgs.ConvertFrom(exp.Image));
                 if (exp.Historial != null)
                 {
                     lista = exp.Historial.ConverToViewHistorial(exp.Historial);
@@ -125,19 +127,28 @@ namespace WPFclinica.Views
 
         byte[] data;
         String base64Text;
+        private System.Drawing.Image image; 
         private void Subir(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog();
+            Microsoft.Win32.OpenFileDialog ofd = new Microsoft.Win32.OpenFileDialog(); 
             if (ofd.ShowDialog() == true)
             {
-                System.IO.FileStream fs = new System.IO.FileStream(ofd.FileName,System.IO.FileMode.Open, System.IO.FileAccess.Read);
+                System.IO.FileStream fs = new System.IO.FileStream(ofd.FileName, System.IO.FileMode.Open, System.IO.FileAccess.Read);
                 data = System.IO.File.ReadAllBytes(ofd.FileName);
                 base64Text = Convert.ToBase64String(data);
                 Console.WriteLine(base64Text);
                 //fs.Read(data, 0,System.Convert.ToInt32(fs.Length));
                 //fs.Close();
                 ImageSourceConverter imgs = new ImageSourceConverter();
+                image = new System.Drawing.Bitmap(ofd.FileName.ToString());
                 foto.SetValue(Image.SourceProperty, imgs.ConvertFromString(ofd.FileName.ToString()));
+            }
+
+            if (foto.Source != null)
+            {
+                var converter = new System.Drawing.ImageConverter();
+                data = (byte[])converter.ConvertTo(image, typeof(byte[]));
+                _expediente.NewProfilePhoto(data, exp);
             }
 
             /*Microsoft.Win32.SaveFileDialog saveFileDialog1;
@@ -161,5 +172,6 @@ namespace WPFclinica.Views
             p.ShowFiles();
             p.Show();
         }
+
     }
 }

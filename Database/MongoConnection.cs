@@ -58,5 +58,10 @@ namespace WPFclinica.Database
            _archivos.InsertManyAsync(archivos);
         }
 
+        public void NewProfilePhoto(byte[] img, Expediente e)
+        {
+            e.Image = img;
+            _expediente.ReplaceOne(x => x.Id == e.Id, e);
+        }
     }
 }

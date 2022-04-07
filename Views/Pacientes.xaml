@@ -248,9 +248,11 @@
             <TextBox Style="{DynamicResource TextBoxStyle}" TextAlignment="Center"
                        Background="Transparent"
                        BorderBrush ="White"
-                        Grid.Column="2"
+                       Grid.Column="2"
                        Grid.Row="2"
                        FontSize="20"
+                     x:Name="txtBuscarPaciente"
+                     KeyDown="RealizarBusquedaEnter"
                        />
             <!--#endregion TEXTBOX-->
             <!--#region BUSCADOR-->
@@ -262,6 +264,7 @@
                     Cursor="Hand"
                     Width="100"
                     x:Name="BtnBuscar"
+                    Click="RealizarBusqueda"
                     HorizontalAlignment="Left">
                 <TextBlock Text="Buscar"
                            Foreground="White"

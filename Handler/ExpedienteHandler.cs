@@ -51,5 +51,10 @@ namespace WPFclinica.Handler
         {
             mongoConnection.SaveFiles(archivos);
         }
+
+        public void NewProfilePhoto(byte[] img, Expediente e)
+        {
+            mongoConnection.NewProfilePhoto(img, e);
+        }
     }
 }
