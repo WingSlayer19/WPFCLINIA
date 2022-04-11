@@ -32,6 +32,14 @@ namespace WPFclinica.Views
 
         public List<HGinecologico> GinecologicoDatos()
         {
+            if (presion.Text == "")
+                presion.Text = "0";
+            if (FC.Text == "")
+                FC.Text = "0";
+            if (FR.Text == "")
+                FR.Text = "0";
+            if (T.Text == "")
+                T.Text = "0";
             HGinecologico obst = new HGinecologico();
             obst.Medico = medico.Text;
             obst.Hora = hora.Text;
@@ -72,8 +80,12 @@ namespace WPFclinica.Views
             Historial h = new Historial();
             h.HGinecologicos = historialGinecologico;
             var expediente = _expediente.GetById(IdExpediente);
-            expediente.Historial.HGinecologicos = h.HGinecologicos;
+            if (expediente.Historial.HGinecologicos != null)
+                expediente.Historial.HGinecologicos.Add(h.HGinecologicos[0]);
+            else
+                expediente.Historial.HGinecologicos = h.HGinecologicos;
             _expediente.SaveHistorial(IdExpediente, expediente);
+            MessageBox.Show("Historial Registrado");
         }
 
         public void SetHistorial(string id, string uuid)

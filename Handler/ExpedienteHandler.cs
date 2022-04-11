@@ -56,5 +56,10 @@ namespace WPFclinica.Handler
         {
             mongoConnection.NewProfilePhoto(img, e);
         }
+
+        public void DeleteFile(Archivo a)
+        {
+            mongoConnection.DeleteFile(a);
+        }
     }
 }

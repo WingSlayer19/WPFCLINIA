@@ -969,6 +969,15 @@ Style="{DynamicResource TextBoxStyle1}"
                      Grid.Column="5"
                 Style="{DynamicResource TextBoxStyle1}"
                      x:Name="imc" Margin="110,21,24,26" Grid.RowSpan="4"/>
+                <Button Style="{DynamicResource ButtonStyle}" x:Name="BtnRegresar_Copy"
+                    Click="InsertarPaciente"
+                        Content="Guardar"
+                    Grid.Column="4"
+                    Grid.Row="10"
+                    Width="100"
+                    Cursor="Hand"
+                    BorderBrush="Pink"
+                    Background="pink" Margin="147,15,0,0" Grid.RowSpan="3"/>
 
 
 

@@ -60,8 +60,12 @@ namespace WPFclinica.Views
                 nombre_paciente.Text = exp.Nombre;
                 télefono_paciente.Text = String.Join("  ", exp.Telefonos);
                 direccion_paciente.Text = exp.Procedencia;
-                ImageSourceConverter imgs = new ImageSourceConverter();
-                foto.SetValue(Image.SourceProperty, imgs.ConvertFrom(exp.Image));
+                if (exp.Image != null)
+                {
+                    ImageSourceConverter imgs = new ImageSourceConverter();
+                    foto.SetValue(Image.SourceProperty, imgs.ConvertFrom(exp.Image));
+                }
+                
                 if (exp.Historial != null)
                 {
                     lista = exp.Historial.ConverToViewHistorial(exp.Historial);
