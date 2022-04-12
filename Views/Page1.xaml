@@ -226,6 +226,21 @@
                     Cursor="Hand"
                       BorderBrush="Pink"
                     Background="pink" Margin="3,20,82,10" Grid.RowSpan="2" Click="Regresar"/>
+
+                <Button Style="{DynamicResource ButtonStyle}" x:Name="BtnInsertar"
+                    Content="Guardar"
+                    Grid.Column="4"
+                    Grid.Row="2"
+                    Width="100"
+                    Cursor="Hand"
+                      BorderBrush="Pink"
+                    Background="pink" Margin="32,6,116,10" Grid.RowSpan="3" Click="InsertarPaciente"/>
+
+
+
+
+
+
                 <!--#endregion REGRESAR-->
 
 
