@@ -34,6 +34,37 @@ namespace WPFclinica.Views
         }
 
         private void InsertarPaciente(Object sender, RoutedEventArgs e) {
+            if (g1.Text == "")
+                g1.Text = "0";
+            if (p1.Text == "")
+                p1.Text = "0";
+            if (ab1.Text == "")
+                ab1.Text = "0";
+            if (pan1.Text == "")
+                pan1.Text = "0";
+            if (ps.Text == "")
+                ps.Text = "0";
+            if (c1.Text == "")
+                c1.Text = "0";
+            if (fur1.Text == "")
+                fur1.Text = "0";
+            if (ecto1.Text == "")
+                ecto1.Text = "0";
+            if (pa.Text == "")
+                pa.Text = "0";
+            if (mmgh.Text == "")
+                mmgh.Text = "0";
+            if (fc.Text == "")
+                fc.Text = "0";
+            if (fr.Text == "")
+                fr.Text = "0";
+            if (t.Text == "")
+                t.Text = "0";
+            if (talla.Text == "")
+                talla.Text = "0";
+            if (imc.Text == "")
+                imc.Text = "0";
+
             Expediente expediente = new Expediente();
             expediente.Nombre = nombres.Text + " " + apellidos.Text;
             expediente.EstadoCivil = estado_civil.Text;
@@ -75,6 +106,7 @@ namespace WPFclinica.Views
                 Imc: ushort.Parse(imc.Text));
 
             _expediente.SaveExpediente(expediente);
+            MessageBox.Show("Paciente Registrado");
         }
 
         private void DatePicker_CalendarClosed(object sender, RoutedEventArgs e)
@@ -116,6 +148,28 @@ namespace WPFclinica.Views
 
         private Antecedentes AntecedentesNuevos()
         {
+            if (mx2.Text == "")
+                mx2.Text = "0";
+            if (qx2.Text == "")
+                qx2.Text = "0";
+            if (tx2.Text == "")
+                tx2.Text = "0";
+            if (fam2.Text == "")
+                fam2.Text = "0";
+            if (tox2.Text == "")
+                tox2.Text = "0";
+            if (alg2.Text == "")
+                alg2.Text = "0";
+            if (rh2.Text == "")
+                rh2.Text = "0";
+            if (hebp2.Text == "")
+                hebp2.Text = "0";
+            if (hiv2.Text == "")
+                hiv2.Text = "0";
+            if (vdri2.Text == "")
+                vdri2.Text = "0";
+            if (torch2.Text == "")
+                torch2.Text = "0";
             var Mx = ExamenDatos(mx1, mx3, mx2);
             var Qx = ExamenDatos(qx1, qx3, qx2);
             var Tx = ExamenDatos(tx1, tx3, tx2);

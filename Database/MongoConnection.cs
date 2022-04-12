@@ -63,5 +63,10 @@ namespace WPFclinica.Database
             e.Image = img;
             _expediente.ReplaceOne(x => x.Id == e.Id, e);
         }
+
+        public void DeleteFile(Archivo e)
+        {
+            _archivos.DeleteOneAsync(x => x.Id == e.Id);
+        }
     }
 }

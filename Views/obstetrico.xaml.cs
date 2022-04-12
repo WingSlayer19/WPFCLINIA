@@ -30,6 +30,14 @@ namespace WPFclinica.Views
 
         public List<HObstetrico> ObstetricoDatos()
         {
+            if (presion.Text == "")
+                presion.Text = "0";
+            if (FC.Text == "")
+                FC.Text = "0";
+            if (FR.Text == "")
+                FR.Text = "0";
+            if (T.Text == "")
+                T.Text = "0";
             HObstetrico obst = new HObstetrico();
             obst.Medico = medico.Text;
             obst.Hora = hora.Text;
@@ -70,8 +78,12 @@ namespace WPFclinica.Views
                 HObstetricos = obstetricoDatos
             };
             var expediente = _expediente.GetById(IdExpediente);
-            expediente.Historial.HObstetricos = h.HObstetricos;
+            if (expediente.Historial.HObstetricos != null)
+                expediente.Historial.HObstetricos.Add(h.HObstetricos[0]);
+            else
+                expediente.Historial.HObstetricos = h.HObstetricos;
             _expediente.SaveHistorial(IdExpediente, expediente);
+            MessageBox.Show("Historial Registrado");
         }
 
         public void SetHistorial(string id, string uuid)

@@ -28,7 +28,7 @@ namespace WPFclinica.Views
         private ExpedienteHandler _handler = new ExpedienteHandler();
         private List<Archivo> listaArchivos = new List<Archivo>();
         private List<Archivo> listaArchivosCargados = new List<Archivo>();
-        private List<String> namesStrings = new List<String>();
+        private List<string> namesStrings = new List<string>();
         public Lista_Examen()
         {
             InitializeComponent();
@@ -106,6 +106,16 @@ namespace WPFclinica.Views
                 File.WriteAllBytes(filename, Convert.FromBase64String(base64Text));
             }
         }
+
+        private void Delete(object sender, RoutedEventArgs e)
+        {
+            var indexTemp = Lista.SelectedIndex;
+            var itemTemp = listaArchivosCargados[indexTemp];
+            _handler.DeleteFile(itemTemp);
+            MessageBox.Show("Archivo Eliminado de la lista");
+            System.IO.File.Delete(itemTemp.Path);
+            ShowFiles();
+        }   
 
         private void SaveFile(object sender, RoutedEventArgs e)
         {
