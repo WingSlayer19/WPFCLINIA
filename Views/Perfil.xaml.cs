@@ -177,5 +177,10 @@ namespace WPFclinica.Views
             p.Show();
         }
 
+        private void Ficha(object sender, RoutedEventArgs e)
+        {
+            Page1 ventana = new Page1();
+            FramePerfil.Content = ventana;
+        }
     }
 }

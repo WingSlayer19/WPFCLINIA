@@ -188,7 +188,7 @@
                     Foreground="White"
                     Cursor="Hand"
                       BorderBrush="Pink"
-                    Background="pink" Margin="3,20,33,10" Grid.RowSpan="2" />
+                    Background="pink" Margin="3,20,33,10" Grid.RowSpan="2" Click="Regresar" />
                 <!--#endregion REGRESAR-->
 
 
@@ -382,17 +382,17 @@ Style="{DynamicResource TextBoxStyle1}"
                         x:Name="btnDelete"
                         Click="DeleteHistorial" Width="69" Height="29" Grid.RowSpan="3"/>
                 <Button Style="{DynamicResource ButtonStyle1}"
-                     Grid.Column="2" 
+                     Grid.Column="4" 
                         Background="PaleVioletRed"
                         Content="Actualizar" 
                         HorizontalAlignment="Left" 
-                        Margin="11,43,0,0" 
-                        Grid.Row="38" 
+                        Margin="15,29,0,0" 
+                        Grid.Row="36" 
                         Foreground="White"
                         BorderBrush="White"
                         VerticalAlignment="Top"
                         Click="UpdateGine"
-                        x:Name="btnUpdate" Height="27" Width="61"/>
+                        x:Name="btnUpdate" Height="27" Width="61" Grid.RowSpan="3"/>
 
 
 

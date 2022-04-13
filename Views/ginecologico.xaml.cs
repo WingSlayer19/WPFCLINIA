@@ -160,6 +160,10 @@ namespace WPFclinica.Views
         {
 
         }
-
+        private Perfil _page1;
+        private void Regresar(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(_page1);
+        }
     }
 }

@@ -355,6 +355,23 @@
 
                     </TextBlock>
                 </Button>
+                <Button Style="{DynamicResource ButtonStyle1}"
+                                      Cursor="Hand"
+                        BorderBrush="White"
+                     Foreground="White"
+                    Width="100"
+                    Background="#bbdefb"      x:Name="BtnActualizar"
+                                        Content="Actualizar" Margin="55,10,29,40" Grid.Column="4" Grid.RowSpan="2" Grid.Row="9"/>
+
+
+                <Button Style="{DynamicResource ButtonStyle1}"
+                                      Cursor="Hand"
+                        BorderBrush="White"
+                     Foreground="White"
+                    Width="100"
+                    Background="#bbdefb"      x:Name="BtnFicha"
+                                        Content="Consultar Ficha" Margin="56,48,30,2" Grid.Column="4" Grid.Row="7" Grid.RowSpan="2" Click="Ficha"/>
+
 
                 <!--#endregion AGREGAR-->
 
@@ -376,6 +393,9 @@
                 CanUserResizeColumns="True"
                 CanUserResizeRows="False"
                 CanUserSortColumns="False" Margin="0,16,166,33" Grid.RowSpan="6">
+
+
+
                     <DataGrid.Columns>
                         <DataGridTemplateColumn Header="Opciones"
                                             Width="245">
@@ -393,7 +413,7 @@
                                         Width="80"
                                         BorderBrush="Transparent"/>
 
-                                        <Button 
+                                        <!--     <Button 
                                         x:Name="BtnActualizar"
                                         Content="Actualizar"
                                         Grid.Column="5"
@@ -415,7 +435,9 @@
                                         Cursor="Hand"
                                         BorderBrush="White"
                                         Background="red" Margin="56,4,8,0"
-                                        Click="deleteObstet"/>
+                                        Click="deleteObstet"/>  -->
+
+
                                         <!--#endregion BOTONES CONTROL-->
                                     </DockPanel>
                                 </DataTemplate>

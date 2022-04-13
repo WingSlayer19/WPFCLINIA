@@ -153,5 +153,10 @@ namespace WPFclinica.Views
             _expediente.SaveHistorial(IdExpediente, expediente);
 
         }
+        private Perfil _page2;
+        private void Regresar(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(_page2);
+        }
     }
 }

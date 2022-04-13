@@ -161,7 +161,7 @@
                     Foreground="White"
                     Cursor="Hand"
                       BorderBrush="Pink"
-                    Background="pink" Margin="3,20,33,10" Grid.RowSpan="2" />
+                    Background="pink" Margin="3,20,33,10" Grid.RowSpan="2" Click="Regresar" />
                 <!--#endregion REGRESAR-->
 
 
