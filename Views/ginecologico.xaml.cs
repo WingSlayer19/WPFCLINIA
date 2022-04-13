@@ -77,13 +77,20 @@ namespace WPFclinica.Views
         private void InsertGineco(object sender, RoutedEventArgs e)
         {
             var historialGinecologico = GinecologicoDatos();
-            Historial h = new Historial();
-            h.HGinecologicos = historialGinecologico;
+            Historial h = new Historial
+            {
+                HGinecologicos = historialGinecologico
+            };
             var expediente = _expediente.GetById(IdExpediente);
-            if (expediente.Historial.HGinecologicos != null)
-                expediente.Historial.HGinecologicos.Add(h.HGinecologicos[0]);
-            else
-                expediente.Historial.HGinecologicos = h.HGinecologicos;
+            if (expediente.Historial != null)
+            {
+                if (expediente.Historial.HGinecologicos != null)
+                    expediente.Historial.HGinecologicos.Add(h.HGinecologicos[0]);
+                else
+                    expediente.Historial.HGinecologicos = h.HGinecologicos;
+            } else
+                expediente.Historial = h;
+           
             _expediente.SaveHistorial(IdExpediente, expediente);
             MessageBox.Show("Historial Registrado");
         }
@@ -109,7 +116,6 @@ namespace WPFclinica.Views
 
         private void UpdateGine(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Me ejecute bb");
             Expediente expediente = _expediente.GetById(IdExpediente);
             List<HGinecologico> hGine = expediente.Historial.HGinecologicos;
             /*

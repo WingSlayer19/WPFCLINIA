@@ -355,22 +355,21 @@
 
                     </TextBlock>
                 </Button>
-                <Button Style="{DynamicResource ButtonStyle1}"
-                                      Cursor="Hand"
-                        BorderBrush="White"
-                     Foreground="White"
-                    Width="100"
-                    Background="#bbdefb"      x:Name="BtnActualizar"
-                                        Content="Actualizar" Margin="55,10,29,40" Grid.Column="4" Grid.RowSpan="2" Grid.Row="9"/>
-
+                
 
                 <Button Style="{DynamicResource ButtonStyle1}"
-                                      Cursor="Hand"
+                        Cursor="Hand"
                         BorderBrush="White"
-                     Foreground="White"
-                    Width="100"
-                    Background="#bbdefb"      x:Name="BtnFicha"
-                                        Content="Consultar Ficha" Margin="56,48,30,2" Grid.Column="4" Grid.Row="7" Grid.RowSpan="2" Click="Ficha"/>
+                        Foreground="White"
+                        Width="100"
+                        Background="#bbdefb"      
+                        x:Name="BtnFicha"
+                        Content="Consultar Ficha" 
+                        Margin="56,48,30,2" 
+                        Grid.Column="4" 
+                        Grid.Row="7" 
+                        Grid.RowSpan="2" 
+                        Click="Ficha"/>
 
 
                 <!--#endregion AGREGAR-->

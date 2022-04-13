@@ -68,5 +68,11 @@ namespace WPFclinica.Database
         {
             _archivos.DeleteOneAsync(x => x.Id == e.Id);
         }
+
+        public void UpdateExpecientePaciente(Expediente e, string id)
+        { 
+            ObjectId Id = new ObjectId(id);
+            _expediente.ReplaceOneAsync(x => x.Id == Id, e);
+        }
     }
 }

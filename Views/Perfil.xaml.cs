@@ -180,6 +180,9 @@ namespace WPFclinica.Views
         private void Ficha(object sender, RoutedEventArgs e)
         {
             Page1 ventana = new Page1();
+            ventana.btnInsertarPaciente.Visibility = Visibility.Hidden;
+            ventana.btnInsertarPaciente.IsEnabled = false;
+            ventana.LlenarCampos(IdUsuario);
             FramePerfil.Content = ventana;
         }
     }

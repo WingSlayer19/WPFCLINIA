@@ -78,10 +78,18 @@ namespace WPFclinica.Views
                 HObstetricos = obstetricoDatos
             };
             var expediente = _expediente.GetById(IdExpediente);
-            if (expediente.Historial.HObstetricos != null)
-                expediente.Historial.HObstetricos.Add(h.HObstetricos[0]);
+            if (expediente.Historial != null)
+            {
+                if (expediente.Historial.HObstetricos != null)
+                    expediente.Historial.HObstetricos.Add(h.HObstetricos[0]);
+                else
+                    expediente.Historial.HObstetricos = h.HObstetricos;
+            }
             else
-                expediente.Historial.HObstetricos = h.HObstetricos;
+            {
+                expediente.Historial = h;
+            }
+
             _expediente.SaveHistorial(IdExpediente, expediente);
             MessageBox.Show("Historial Registrado");
         }
@@ -117,7 +125,6 @@ namespace WPFclinica.Views
 
         private void UpdateObstet(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Me ejecute bb");
             Expediente expediente = _expediente.GetById(IdExpediente);
             List<HObstetrico> hObste = expediente.Historial.HObstetricos;
             /*
