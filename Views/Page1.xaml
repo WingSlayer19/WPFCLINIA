@@ -111,7 +111,7 @@
 
     <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,10,0" >
 
-        <ScrollViewer Margin="0,0,0,641">
+        <ScrollViewer Margin="0,0,0,66">
             <Grid Height="1215" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20"/>
@@ -335,7 +335,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="18"
                      Grid.Column="2"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="motivo_consulta"/>
+                     x:Name="motivo_consulta" AcceptsReturn="True" TextWrapping="Wrap" FontSize="8"/>
                 <TextBlock Grid.Row="20"
                        Grid.Column="1"
                        Text="Historia de la enfermedad actual:"
@@ -347,7 +347,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="20"
                      Grid.Column="2"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="historia_enfermedad"/>
+                     x:Name="historia_enfermedad" AcceptsReturn="True" TextWrapping="Wrap" FontSize="8"/>
                 <DatePicker x:Name="fecha" CalendarClosed="DatePicker_CalendarClosed"  Grid.Column="2" HorizontalAlignment="Left" Grid.Row="14" VerticalAlignment="Center"/>
                 <!--#endregion PACIENTE-->
 
@@ -605,7 +605,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="53"
                      Grid.Column="1"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="revision1" Margin="48,28,10,20" Grid.RowSpan="7" Grid.ColumnSpan="2"/>
+                     x:Name="revision1" Margin="48,28,10,20" Grid.RowSpan="7" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap" FontSize="10"/>
                 <!--#endregion REVISION-->
 
 
@@ -621,7 +621,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="62"
                      Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ND1" Margin="48,23,10,0" Grid.RowSpan="9" Grid.ColumnSpan="2"/>
+                     x:Name="ND1" Margin="48,23,10,0" Grid.RowSpan="9" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap"/>
 
 
 
