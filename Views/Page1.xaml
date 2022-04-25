@@ -109,9 +109,9 @@
     </Page.Resources>
 
 
-    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,10,0" >
+    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,10,-165" >
 
-        <ScrollViewer Margin="0,0,0,66">
+        <ScrollViewer Margin="0,0,0,59">
             <Grid Height="1215" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20"/>
@@ -151,56 +151,106 @@
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="30"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="30"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -269,359 +319,289 @@
                 Foreground="White"
                        Text="Apellidos:"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,8,0,0"/>
                 <TextBox Grid.Row="6"
                      Style="{DynamicResource TextBoxStyle1}"
                      Grid.Column="2"
-                     x:Name="apellidos"/>
+                     x:Name="apellidos" Grid.ColumnSpan="2" Margin="0,3,20,27" Grid.RowSpan="3"/>
                 <TextBlock Grid.Row="8"
                        Grid.Column="1"
                        Text="Edad:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,10,0,0"/>
                 <TextBox Grid.Row="8"
 Style="{DynamicResource TextBoxStyle1}"
                      Grid.Column="2"
-                     x:Name="edad"/>
+                     x:Name="edad" Grid.ColumnSpan="2" Margin="0,5,20,25" Grid.RowSpan="3"/>
                 <TextBlock Grid.Row="10"
                        Grid.Column="1"
   FontSize="15"
                 Foreground="White"
                        Text="Estado Civil:"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,10,0,0"/>
                 <TextBox Grid.Row="10"
                      Grid.Column="2"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="estado_civil"/>
+                     x:Name="estado_civil" Grid.ColumnSpan="2" Margin="0,7,20,23" Grid.RowSpan="3"/>
                 <TextBlock Grid.Row="12"
                          FontSize="15"
                 Foreground="White"
                        Grid.Column="1"
                        Text="Procedencia:"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,13,0,0" Grid.RowSpan="3"/>
                 <TextBox Grid.Row="12"
                      Grid.Column="2"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="procedencia"/>
+                     x:Name="procedencia" Grid.ColumnSpan="2" Margin="0,8,20,22" Grid.RowSpan="3"/>
                 <TextBlock Grid.Row="14"
                        Grid.Column="1"
                        Text="Fecha:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,12,0,0" Grid.RowSpan="3"/>
                 <TextBlock Grid.Row="16"
                        Grid.Column="1"
                        Text="Teléfono:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,13,0,0" Grid.RowSpan="3"/>
                 <TextBox Grid.Row="16"
                      Grid.Column="2"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="telefono"/>
+                     x:Name="telefono" Grid.ColumnSpan="2" Margin="0,8,20,22" Grid.RowSpan="3"/>
                 <TextBlock Grid.Row="18"
                        Grid.Column="1"
                          FontSize="15"
                 Foreground="White"
                        Text="Motivo de Consulta:"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,14,0,0" Grid.RowSpan="3"/>
                 <TextBox Grid.Row="18"
                      Grid.Column="2"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="motivo_consulta" AcceptsReturn="True" TextWrapping="Wrap" FontSize="8"/>
+                     x:Name="motivo_consulta" AcceptsReturn="True" TextWrapping="Wrap" FontSize="8" Grid.ColumnSpan="2" Margin="0,9,20,21" Grid.RowSpan="3"/>
                 <TextBlock Grid.Row="20"
                        Grid.Column="1"
                        Text="Historia de la enfermedad actual:"
               FontSize="11"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,18,0,0" Grid.RowSpan="3"/>
 
                 <TextBox Grid.Row="20"
                      Grid.Column="2"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="historia_enfermedad" AcceptsReturn="True" TextWrapping="Wrap" FontSize="8"/>
-                <DatePicker x:Name="fecha" CalendarClosed="DatePicker_CalendarClosed"  Grid.Column="2" HorizontalAlignment="Left" Grid.Row="14" VerticalAlignment="Center"/>
+                     x:Name="historia_enfermedad" AcceptsReturn="True" TextWrapping="Wrap" FontSize="8" Grid.ColumnSpan="2" Margin="0,10,20,20" Grid.RowSpan="3"/>
+                <DatePicker x:Name="fecha" CalendarClosed="DatePicker_CalendarClosed"  Grid.Column="2" HorizontalAlignment="Left" Grid.Row="14" VerticalAlignment="Top" Margin="0,11,0,0" Grid.RowSpan="3"/>
                 <!--#endregion PACIENTE-->
 
 
                 <!--#region ANTECEDENTES -->
 
 
-                <TextBlock Grid.Row="22"
+                <TextBlock Grid.Row="24"
                        Grid.Column="1"
                        Text="Antecedentes"
                          FontSize="20"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="136,5,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                       VerticalAlignment="Top" Margin="136,8,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
 
 
 
-                <TextBlock Grid.Row="24"
+                <TextBlock Grid.Row="26"
                        Grid.Column="1"
                        Text="MX:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <DatePicker Grid.Row="23"
-                     Grid.Column="1"
-                     
-                     x:Name="mx1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="23"
+                       VerticalAlignment="Top" Margin="72,3,0,0"/>
+                <TextBox Grid.Row="26"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="mx2" Margin="215,4,104,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="23"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="mx3" Margin="136,4,18,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-                <TextBlock Grid.Row="26"
+                x:Name="mx2" Margin="109,6,20,3" Grid.RowSpan="3" Grid.ColumnSpan="3" AcceptsReturn="True" TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="30"
                        Grid.Column="1"
                        Text="QX:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <DatePicker Grid.Row="25"
-                     Grid.Column="1"
-                     x:Name="qx1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="25"
+                       VerticalAlignment="Top" Margin="72,15,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="30"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="qx2" Margin="215,4,104,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="25"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="qx3" Margin="136,4,18,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                x:Name="qx2" Margin="109,6,20,3" Grid.ColumnSpan="3" Grid.RowSpan="3" TextWrapping="Wrap" AcceptsReturn="True"/>
 
 
 
-                <TextBlock Grid.Row="27"
+                <TextBlock Grid.Row="34"
                        Grid.Column="1"
                        Text="TX:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <DatePicker Grid.Row="27"
-                     Grid.Column="1"
-                     x:Name="tx1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="27"
+                       VerticalAlignment="Top" Margin="72,9,0,0"/>
+                <TextBox Grid.Row="34"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="tx2" Margin="215,4,104,2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="27"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="tx3" Margin="136,4,18,2" Grid.ColumnSpan="2"/>
+                x:Name="tx2" Margin="109,6,20,3" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
 
 
 
 
-                <TextBlock Grid.Row="30"
+                <TextBlock Grid.Row="38"
                        Grid.Column="1"
                          FontSize="15"
                 Foreground="White"
                        Text="Fam:"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <DatePicker Grid.Row="30"
-                     Grid.Column="1"
-                     x:Name="fam1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="30"
+                       VerticalAlignment="Center" Margin="72,0,0,0"/>
+                <TextBox Grid.Row="38"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="fam2" Margin="215,4,104,2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="30"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="fam3" Margin="136,4,18,2" Grid.ColumnSpan="2"/>
+                x:Name="fam2" Margin="109,6,20,3"  Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="33"
+                <TextBlock Grid.Row="42"
                        Grid.Column="1"
                        Text="Tox:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,0,0,0"/>
-                <DatePicker Grid.Row="33"
-                     Grid.Column="1"
-                     x:Name="tox1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="33"
+                       VerticalAlignment="Top" Margin="72,7,0,0"/>
+                <TextBox Grid.Row="42"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="tox2" Margin="215,4,104,2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="33"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="tox3" Margin="136,4,18,2" Grid.ColumnSpan="2"/>
+                x:Name="tox2" Margin="109,11,20,28" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="5"/>
 
-                <TextBlock Grid.Row="35"
+                <TextBlock Grid.Row="46"
                        Grid.Column="1"
                        Text="Alergia:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="60,0,0,0"/>
-                <DatePicker Grid.Row="35"
-                     Grid.Column="1"
-                     x:Name="alg1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="35"
+                       VerticalAlignment="Top" Margin="58,17,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="46"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="alg2" Margin="215,4,104,2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="35"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="alg3" Margin="136,4,18,2" Grid.ColumnSpan="2"/>
+                x:Name="alg2" Margin="109,9,20,0" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="37"
+                <TextBlock Grid.Row="50"
                        Grid.Column="1"
                        Text="Grupo y RH:"
                          FontSize="12"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Grid.RowSpan="2" Margin="37,0,0,0"/>
-                <DatePicker Grid.Row="37"
-                     Grid.Column="1"
-                     x:Name="rh1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="37"
+                       VerticalAlignment="Top" Margin="40,13,0,0"/>
+                <TextBox Grid.Row="50"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="rh2" Margin="215,4,104,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="37"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="rh3" Margin="136,4,18,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                x:Name="rh2" Margin="109,6,20,3" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
 
-                <TextBlock Grid.Row="40"
+                <TextBlock Grid.Row="54"
                        Grid.Column="1"
                        Text="HIV:"
                          FontSize="15"
                 Foreground="White"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Grid.RowSpan="2" Margin="71,0,0,0"/>
-                <DatePicker Grid.Row="40"
-                     Grid.Column="1"
-                     x:Name="hiv1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="40"
+                       VerticalAlignment="Top" Margin="66,17,155,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="54"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="hiv2" Margin="215,4,104,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="40"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="hiv3" Margin="136,4,18,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                x:Name="hiv2" Margin="109,6,20,3" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3" >
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="0.159"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="-0.397"/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
 
 
 
 
 
-                <TextBlock Grid.Row="43"
+                <TextBlock Grid.Row="58"
                        Grid.Column="1"
                        Text="VDRI:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Grid.RowSpan="2" Margin="71,0,0,0"/>
-                <DatePicker Grid.Row="43"
-                     Grid.Column="1"
-                     x:Name="vdri1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="43"
+                       VerticalAlignment="Top" Margin="62,7,0,0" RenderTransformOrigin="0.427,-2.774"/>
+                <TextBox Grid.Row="58"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="vdri2" Margin="215,4,104,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="43"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="vdri3" Margin="136,4,18,8" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                x:Name="vdri2" Margin="109,6,20,3" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
 
-                <TextBlock Grid.Row="47"
+                <TextBlock Grid.Row="62"
                        Grid.Column="1"
                        Text="Hep.B:"
                          FontSize="12"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Grid.RowSpan="2" Margin="71,0,0,0"/>
-                <DatePicker Grid.Row="47"
-                     Grid.Column="1"
-                     x:Name="hep1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="47"
+                       VerticalAlignment="Top" Margin="65,9,0,0"/>
+                <TextBox Grid.Row="62"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="hebp2" Margin="215,4,104,2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="47"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="hep3" Margin="136,4,18,2" Grid.ColumnSpan="2"/>
+                x:Name="hebp2" Margin="109,6,20,3" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="50"
+                <TextBlock Grid.Row="66"
                        Grid.Column="1"
                        Text="TORCH:"
                          FontSize="14"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="61,0,0,0"/>
-                <DatePicker Grid.Row="50"
-                     Grid.Column="1"
-                     x:Name="torch1" Margin="110,4,24,8" Grid.RowSpan="2"/>
-                <TextBox Grid.Row="50"
+                       VerticalAlignment="Top" Margin="56,14,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="66"
                 Grid.Column="1"
                           Style="{DynamicResource TextBoxStyle1}"
-                x:Name="torch2" Margin="215,4,104,2" Grid.ColumnSpan="2"/>
-                <TextBox Grid.Row="50"
-                Grid.Column="2"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="torch3" Margin="136,4,18,2" Grid.ColumnSpan="2"/>
+                x:Name="torch2" Margin="109,6,20,3" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
 
 
                 <!--#endregion ANTECEDENTES-->
                 <!--#region REVISION-->
 
-                <TextBlock Grid.Row="53"
+                <TextBlock Grid.Row="70"
                        Grid.Column="1"
                        Text="Revisión por Sistemas:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Center"
-                       VerticalAlignment="Top" Margin="0,5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                       VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,7,0,0"/>
 
 
 
 
 
-                <TextBox Grid.Row="53"
+                <TextBox Grid.Row="72"
                      Grid.Column="1"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="revision1" Margin="48,28,10,20" Grid.RowSpan="7" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap" FontSize="10"/>
+                     x:Name="revision1" Margin="48,0,10,1" Grid.RowSpan="7" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap" FontSize="10"/>
                 <!--#endregion REVISION-->
 
 
                 <!--#region N/D-->
-                <TextBlock Grid.Row="62"
-                       Grid.Column="1"
+                <TextBlock Grid.Row="70"
+                       Grid.Column="4"
                        Text="Nuevos Datos"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="137,0,0,0" Grid.ColumnSpan="2"/>
+                       VerticalAlignment="Top" Margin="197,7,0,0" Grid.ColumnSpan="2"/>
 
-                <TextBox Grid.Row="62"
-                     Grid.Column="1"
+                <TextBox Grid.Row="70"
+                     Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ND1" Margin="48,23,10,0" Grid.RowSpan="9" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap"/>
+                     x:Name="ND1" Margin="0,28,57,2" Grid.RowSpan="9" Grid.ColumnSpan="2" AcceptsReturn="True" TextWrapping="Wrap"/>
 
 
 
@@ -630,16 +610,16 @@ Style="{DynamicResource TextBoxStyle1}"
 
                 <!--#region GINECO-->
                 <TextBlock Grid.Row="24"
-                       Grid.Column="4"
+                       Grid.Column="2"
                        Text="G:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="19,0,0,0"/>
+                       VerticalAlignment="Top" Margin="234,0,0,0"/>
                 <TextBox Grid.Row="24"
-                     Grid.Column="4"
+                     Grid.Column="3"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="g1" Margin="39,4,89,8"/>
+                     x:Name="g1"  Margin="4,0,150,4" Grid.ColumnSpan="2"/>
 
 
                 <TextBlock Grid.Row="24"
@@ -648,24 +628,24 @@ Style="{DynamicResource TextBoxStyle1}"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="152,0,0,0"/>
-                <TextBox Grid.Row="24"
+                       VerticalAlignment="Top" Margin="99,0,0,0"/>
+                <TextBox Grid.Row="22"
                      Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="p1" Margin="169,4,183,8" Grid.ColumnSpan="2"/>
+                     x:Name="p1"  Margin="115,29,19,5" Grid.RowSpan="3"/>
 
 
                 <TextBlock Grid.Row="24"
-                       Grid.Column="5"
+                       Grid.Column="4"
                          FontSize="15"
                 Foreground="White"
                        Text="Ab:"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="66,2,0,0"/>
-                <TextBox Grid.Row="24"
+                       VerticalAlignment="Top" Margin="234,2,0,0" Grid.ColumnSpan="2"/>
+                <TextBox Grid.Row="22"
                      Grid.Column="5"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ab1" Margin="94,4,28,8" RenderTransformOrigin="0.5,0.5">
+                     x:Name="ab1"  Margin="126,29,7,5" Grid.RowSpan="3">
                     <TextBox.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleX="-1"/>
@@ -675,13 +655,13 @@ Style="{DynamicResource TextBoxStyle1}"
                         </TransformGroup>
                     </TextBox.RenderTransform>
                 </TextBox>
-                <TextBlock Grid.Row="22"
+                <TextBlock Grid.Row="20"
                        Grid.Column="4"
                        Text="Gineco-obstétricos"
                          FontSize="20"
                 Foreground="White"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Top" Margin="0,5,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="163,18,0,0" Grid.RowSpan="3"/>
 
 
 
@@ -695,7 +675,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="26"
                      Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="hv1" Margin="110,4,24,2"/>
+                     x:Name="hv1"  Margin="110,6,24,28" Grid.RowSpan="3"/>
 
                 <TextBlock Grid.Row="27"
                        Grid.Column="4"
@@ -703,11 +683,11 @@ Style="{DynamicResource TextBoxStyle1}"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,8,0,0"/>
+                       VerticalAlignment="Top" Margin="72,7,0,0" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="27"
                      Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="hm1" Margin="110,7,24,5" Grid.RowSpan="2"/>
+                     x:Name="hm1"  Margin="110,6,24,28" Grid.RowSpan="4"/>
 
 
                 <TextBlock Grid.Row="30"
@@ -720,83 +700,83 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="30"
                      Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ecto1" Margin="110,4,24,2"/>
+                     x:Name="ecto1"  Margin="110,7,24,27" Grid.RowSpan="3"/>
 
-                <TextBlock Grid.Row="33"
+                <TextBlock Grid.Row="32"
                        Grid.Column="4"
                        Text="FUR:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="33"
+                       VerticalAlignment="Top" Margin="70,12,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="32"
                      Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="fur1" Margin="110,4,24,2"/>
+                     x:Name="fur1"  Margin="110,9,24,25" Grid.RowSpan="3"/>
 
-                <TextBlock Grid.Row="35"
+                <TextBlock Grid.Row="34"
                        Grid.Column="4"
                        Text="FPP:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="35"
+                       VerticalAlignment="Top" Margin="72,14,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="34"
                      Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ffp1" Margin="110,4,24,2"/>
+                     x:Name="ffp1"  Margin="110,11,24,23" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="38"
+                <TextBlock Grid.Row="36"
                        Grid.Column="4"
                        Text="FUP:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="38"
+                       VerticalAlignment="Top" Margin="75,14,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="36"
                      Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="fup1" Margin="110,4,24,2"/>
+                     x:Name="fup1"  Margin="110,13,24,21" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="41"
+                <TextBlock Grid.Row="38"
                        Grid.Column="4"
                        Text="PAN:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="41"
+                       VerticalAlignment="Top" Margin="71,10,0,0"/>
+                <TextBox Grid.Row="38"
                      Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="pan1" Margin="110,4,24,2"/>
+                     x:Name="pan1"  Margin="110,13,24,21" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="44"
-                       Grid.Column="4"
+                <TextBlock Grid.Row="24"
+                       Grid.Column="5"
                        Text="C:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="44"
-                     Grid.Column="4"
+                       VerticalAlignment="Top" Margin="130,0,0,0"/>
+                <TextBox Grid.Row="24"
+                     Grid.Column="5"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="c1" Margin="110,4,24,2"/>
+                     x:Name="c1"  Margin="147,0,6,4" Grid.ColumnSpan="2"/>
 
 
-                <TextBlock Grid.Row="33"
+                <TextBlock Grid.Row="32"
                        Grid.Column="5"
                        Text="IVS:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center" Margin="72,0,0,0"/>
-                <TextBox Grid.Row="33"
+                <TextBox Grid.Row="32"
                      Grid.Column="5"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ivs1" Margin="110,4,24,2"/>
+                     x:Name="ivs1"  Margin="110,5,24,29" Grid.RowSpan="3"/>
 
                 <TextBlock Grid.Row="30"
                        Grid.Column="5"
@@ -816,11 +796,11 @@ Style="{DynamicResource TextBoxStyle1}"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,8,0,0"/>
+                       VerticalAlignment="Top" Margin="72,7,0,0" Grid.RowSpan="2"/>
                 <TextBox Grid.Row="27"
                      Grid.Column="5"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ets1" Margin="110,6,24,4" Grid.RowSpan="2"/>
+                     x:Name="ets1"  Margin="110,3,24,1" Grid.RowSpan="2"/>
 
 
                 <TextBlock Grid.Row="26"
@@ -833,46 +813,46 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="26"
                      Grid.Column="5"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="pap1" Margin="110,4,24,2"/>
+                     x:Name="pap1"  Margin="110,4,24,0"/>
 
 
 
-                <TextBlock Grid.Row="35"
+                <TextBlock Grid.Row="34"
                        Grid.Column="5"
                        Text="Menarquía:"
                          FontSize="12"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Margin="45,0,0,0"/>
-                <TextBox Grid.Row="35"
+                       VerticalAlignment="Top" Margin="45,10,0,0"/>
+                <TextBox Grid.Row="34"
                      Grid.Column="5"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="menarquia" Margin="110,4,24,2"/>
+                     x:Name="menarquia"  Margin="110,7,24,27" Grid.RowSpan="3"/>
 
-                <TextBlock Grid.Row="38"
+                <TextBlock Grid.Row="36"
                        Grid.Column="5"
                        Text="Ciclos:"
                          FontSize="12"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Margin="69,0,0,0"/>
-                <TextBox Grid.Row="38"
+                       VerticalAlignment="Top" Margin="64,13,0,0"/>
+                <TextBox Grid.Row="36"
                      Grid.Column="5"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ciclos" Margin="110,4,24,2"/>
+                     x:Name="ciclos"  Margin="110,8,24,26" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="41"
+                <TextBlock Grid.Row="38"
                        Grid.Column="5"
                        Text="No. de PS:"
                          FontSize="12"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center" Margin="49,0,0,0"/>
-                <TextBox Grid.Row="41"
+                       VerticalAlignment="Top" Margin="49,18,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="38"
                      Grid.Column="5"
                       Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ps" Margin="110,4,24,2"/>
+                     x:Name="ps"  Margin="110,11,24,23" Grid.RowSpan="3"/>
 
 
 
@@ -880,125 +860,125 @@ Style="{DynamicResource TextBoxStyle1}"
 
                 <!--#region EXAMEN-->
 
-                <TextBlock Grid.Row="44"
+                <TextBlock Grid.Row="48"
                        Grid.Column="4"
                        Text="Examen Físico"
                          FontSize="20"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="136,26,0,0" Grid.ColumnSpan="2" Grid.RowSpan="4"/>
+                       VerticalAlignment="Center" Margin="196,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
 
 
 
-                <TextBlock Grid.Row="47"
+                <TextBlock Grid.Row="50"
                        Grid.Column="4"
                        Text="P/A:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="49,19,0,0" Grid.RowSpan="4"/>
-                <TextBox Grid.Row="47"
+                       VerticalAlignment="Top" Margin="49,26,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="50"
                      Grid.Column="4"
                 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="pa" Margin="110,20,24,26" Grid.RowSpan="4"/>
+                     x:Name="pa"  Margin="110,20,24,0" Height="26" VerticalAlignment="Top" Grid.RowSpan="3" />
 
 
-                <TextBlock Grid.Row="50"
+                <TextBlock Grid.Row="52"
                        Grid.Column="4"
                        Text="mmgh:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="49,19,0,0" Grid.RowSpan="4"/>
-                <TextBox Grid.Row="50"
+                       VerticalAlignment="Top" Margin="49,26,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="52"
                      Grid.Column="4"
                 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="mmgh" Margin="110,21,24,26" Grid.RowSpan="4"/>
+                     x:Name="mmgh"  Margin="110,19,24,15" Grid.RowSpan="3"/>
 
-                <TextBlock Grid.Row="53"
+                <TextBlock Grid.Row="54"
                        Grid.Column="4"
                        Text="FC:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="49,19,0,0" Grid.RowSpan="4"/>
-                <TextBox Grid.Row="53"
+                       VerticalAlignment="Top" Margin="63,23,0,0" RenderTransformOrigin="1.123,0.054" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="54"
                      Grid.Column="4"
                 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="fc" Margin="110,21,24,26" Grid.RowSpan="4"/>
+                     x:Name="fc"  Margin="110,23,24,11" Grid.RowSpan="3"/>
                 <TextBlock Grid.Row="56"
                        Grid.Column="4"
                        Text="FR:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="49,19,0,0" Grid.RowSpan="4"/>
+                       VerticalAlignment="Top" Margin="68,26,0,0" Grid.RowSpan="3"/>
                 <TextBox Grid.Row="56"
                      Grid.Column="4"
                 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="fr" Margin="110,21,24,26" Grid.RowSpan="4"/>
+                     x:Name="fr"  Margin="110,29,24,5" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="47"
+                <TextBlock Grid.Row="50"
                        Grid.Column="5"
                        Text="T:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="49,19,0,0" Grid.RowSpan="4"/>
-                <TextBox Grid.Row="47"
+                       VerticalAlignment="Top" Margin="49,26,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="50"
                      Grid.Column="5"
                 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="t" Margin="110,20,24,26" Grid.RowSpan="4"/>
+                     x:Name="t"  Margin="110,19,24,15" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="50"
+                <TextBlock Grid.Row="52"
                        Grid.Column="5"
                        Text="W:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="49,19,0,0" Grid.RowSpan="4"/>
-                <TextBox Grid.Row="50"
+                       VerticalAlignment="Top" Margin="49,26,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="52"
                      Grid.Column="5"
                 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="w" Margin="110,21,24,26" Grid.RowSpan="4"/>
+                     x:Name="w"  Margin="110,19,24,15" Grid.RowSpan="3"/>
 
 
-                <TextBlock Grid.Row="53"
+                <TextBlock Grid.Row="54"
                        Grid.Column="5"
                        Text="Talla:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="49,19,0,0" Grid.RowSpan="4"/>
-                <TextBox Grid.Row="53"
+                       VerticalAlignment="Top" Margin="49,29,0,0" Grid.RowSpan="3"/>
+                <TextBox Grid.Row="54"
                      Grid.Column="5"
                 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="talla" Margin="110,21,24,26" Grid.RowSpan="4"/>
+                     x:Name="talla"  Margin="110,23,24,11" Grid.RowSpan="3"/>
 
-                <TextBlock Grid.Row="56"
+                <TextBlock Grid.Row="58"
                        Grid.Column="5"
                        Text="IMC:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="49,19,0,0" Grid.RowSpan="4"/>
+                       VerticalAlignment="Center" Margin="49,0,0,0"/>
                 <TextBox Grid.Row="56"
                      Grid.Column="5"
                 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="imc" Margin="110,21,24,26" Grid.RowSpan="4"/>
+                     x:Name="imc"  Margin="110,29,24,5" Grid.RowSpan="3"/>
                 <Button Style="{DynamicResource ButtonStyle}" 
                         x:Name="btnInsertarPaciente"
                     Click="InsertarPaciente"
                      Content="Guardar"
                     Grid.Column="4"
-                    Grid.Row="10"
+                    Grid.Row="6"
                     Width="100"
                     Cursor="Hand"
                     BorderBrush="Pink"
                     Background="pink" 
-                        Margin="147,15,0,0" Grid.RowSpan="3"/>
+                        Margin="33,1,115,14" Grid.RowSpan="3"/>
 
 
 
