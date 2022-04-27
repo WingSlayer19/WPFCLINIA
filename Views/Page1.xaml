@@ -4,8 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFclinica.Views"
-      mc:Ignorable="d" d:DesignWidth="1078.205"
-      Title="Page1" Height="1282">
+      mc:Ignorable="d"
+      Title="Page1" Height="1282" Width="944">
     <Page.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -111,7 +111,7 @@
 
     <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,10,-165" >
 
-        <ScrollViewer Margin="0,0,0,59">
+        <ScrollViewer Margin="0,0,0,907">
             <Grid Height="1215" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20"/>
@@ -286,7 +286,7 @@
                     Cursor="Hand"
                     BorderBrush="Pink"
                     Background="pink" 
-                        Margin="32,6,116,10" 
+                        Margin="30,6,84,10" 
                         Grid.RowSpan="3" 
                         Click="ActualizarPaciente"/>
 
@@ -613,16 +613,16 @@ Style="{DynamicResource TextBoxStyle1}"
 
                 <!--#region GINECO-->
                 <TextBlock Grid.Row="24"
-                       Grid.Column="2"
+                       Grid.Column="3"
                        Text="G:"
                          FontSize="15"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="234,0,0,0"/>
+                       VerticalAlignment="Top" Margin="17,0,0,0" Grid.ColumnSpan="2"/>
                 <TextBox Grid.Row="24"
-                     Grid.Column="3"
+                     Grid.Column="4"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="g1"  Margin="4,0,150,4" Grid.ColumnSpan="2"/>
+                     x:Name="g1"  Margin="14,0,120,4"/>
 
 
                 <TextBlock Grid.Row="24"
@@ -648,15 +648,8 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="22"
                      Grid.Column="5"
                           Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="ab1"  Margin="126,29,7,5" Grid.RowSpan="3">
-                    <TextBox.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </TextBox.RenderTransform>
+                     x:Name="ab1"  Margin="45,29,87,5" Grid.RowSpan="3">
+
                 </TextBox>
                 <TextBlock Grid.Row="20"
                        Grid.Column="4"
@@ -981,7 +974,7 @@ Style="{DynamicResource TextBoxStyle1}"
                     Cursor="Hand"
                     BorderBrush="Pink"
                     Background="pink" 
-                        Margin="33,1,115,14" Grid.RowSpan="3"/>
+                        Margin="31,1,83,14" Grid.RowSpan="3"/>
 
 
 
