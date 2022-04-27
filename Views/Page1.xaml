@@ -423,34 +423,37 @@ Style="{DynamicResource TextBoxStyle1}"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Top" Margin="72,3,0,0"/>
                 <TextBox Grid.Row="26"
-                Grid.Column="1"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="mx2" Margin="109,6,20,3" Grid.RowSpan="3" Grid.ColumnSpan="3" AcceptsReturn="True" TextWrapping="Wrap"/>
+                         Grid.Column="1"
+                         Style="{DynamicResource TextBoxStyle1}"
+                         x:Name="mx2" Margin="109,6,20,3" 
+                         Grid.RowSpan="3" Grid.ColumnSpan="3" AcceptsReturn="True" TextWrapping="Wrap"/>
                 <TextBlock Grid.Row="30"
-                       Grid.Column="1"
-                       Text="QX:"
-                         FontSize="15"
-                Foreground="White"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,15,0,0" Grid.RowSpan="3"/>
+                           Grid.Column="1"
+                           Text="QX:"
+                           FontSize="15"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top" Margin="72,15,0,0" Grid.RowSpan="3"/>
                 <TextBox Grid.Row="30"
-                Grid.Column="1"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="qx2" Margin="109,6,20,3" Grid.ColumnSpan="3" Grid.RowSpan="3" TextWrapping="Wrap" AcceptsReturn="True"/>
+                         Grid.Column="1"
+                         Style="{DynamicResource TextBoxStyle1}"
+                         x:Name="qx2" 
+                         Margin="109,6,20,3" Grid.ColumnSpan="3" Grid.RowSpan="3" TextWrapping="Wrap" AcceptsReturn="True"/>
 
 
 
                 <TextBlock Grid.Row="34"
-                       Grid.Column="1"
-                       Text="TX:"
-                         FontSize="15"
-                Foreground="White"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="72,9,0,0"/>
+                           Grid.Column="1"
+                           Text="TX:"
+                           FontSize="15"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top" Margin="72,9,0,0"/>
                 <TextBox Grid.Row="34"
-                Grid.Column="1"
-                          Style="{DynamicResource TextBoxStyle1}"
-                x:Name="tx2" Margin="109,6,20,3" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
+                         Grid.Column="1"
+                         Style="{DynamicResource TextBoxStyle1}"
+                         x:Name="tx2" 
+                         Margin="109,6,20,3" Grid.ColumnSpan="3" TextWrapping="Wrap" AcceptsReturn="True" Grid.RowSpan="3"/>
 
 
 

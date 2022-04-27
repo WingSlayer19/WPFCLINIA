@@ -46,10 +46,10 @@ namespace WPFclinica.Views
             obst.Evoluciones = NewEvolucion();
             obst.SignosVitales = new SignosVitales(
                 W: W.Text,
-                PresionArterial: uint.Parse(presion.Text),
-                Fc: uint.Parse(FC.Text),
-                Fr: uint.Parse(FR.Text),
-                T: uint.Parse(T.Text));
+                PresionArterial: (presion.Text),
+                Fc: (FC.Text),
+                Fr: (FR.Text),
+                T: (T.Text));
             obst.NuevosDatos = NewPlanDatos(nd.Text);
             obst.Plan = NewPlanDatos(plan.Text);
             return new List<HObstetrico>() { obst };

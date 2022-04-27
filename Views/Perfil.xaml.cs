@@ -89,7 +89,7 @@ namespace WPFclinica.Views
                  var h = exp.Historial.HGinecologicos.First(x => x.MyUUID == historialItem.MyUUID);
                  ViewGine(h);
             }
-            MessageBox.Show("UUID: " + historialItem.MyUUID + ' ' + uuid);
+            //MessageBox.Show("UUID: " + historialItem.MyUUID + ' ' + uuid);
         }
 
         public void updateObstet(object sender, RoutedEventArgs e)

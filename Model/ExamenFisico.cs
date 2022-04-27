@@ -13,7 +13,7 @@ namespace WPFclinica.Model
         {
 
         }
-        public ExamenFisico(uint Pa, uint Mmhg, uint Fc, uint Fr, uint T, string W, ushort Talla, ushort Imc)
+        public ExamenFisico(string Pa, string Mmhg, string Fc, string Fr, string T, string W, string Talla, string Imc)
         {
             this.Pa = Pa;
             this.Mmhg = Mmhg;
@@ -25,20 +25,20 @@ namespace WPFclinica.Model
             this.T = T;
         }
         [BsonElement("PA")]
-        public uint Pa { get; set; }
+        public string Pa { get; set; }
         [BsonElement("MMHG")]
-        public uint Mmhg { get; set; }
+        public string Mmhg { get; set; }
         [BsonElement("FC")]
-        public uint Fc { get; set; }
+        public string Fc { get; set; }
         [BsonElement("FR")]
-        public uint Fr { get; set; }
+        public string Fr { get; set; }
         [BsonElement("T")]
-        public uint T { get; set; }
+        public string T { get; set; }
         [BsonElement("W")]
         public string W { get; set; }
         [BsonElement("TALLA")]
-        public ushort Talla { get; set; }
+        public string Talla { get; set; }
         [BsonElement("IMC")]
-        public ushort Imc { get; set; }
+        public string Imc { get; set; }
     }
 }

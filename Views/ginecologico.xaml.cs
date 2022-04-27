@@ -47,10 +47,10 @@ namespace WPFclinica.Views
             obst.MotivoConsulta = motivo_consultag.Text;
             obst.SignosVitales = new SignosVitales(
                 W: W.Text,
-                PresionArterial: uint.Parse(presion.Text),
-                Fc: uint.Parse(FC.Text),
-                Fr: uint.Parse(FR.Text),
-                T: uint.Parse(T.Text));
+                PresionArterial: (presion.Text),
+                Fc: (FC.Text),
+                Fr: (FR.Text),
+                T: (T.Text));
             obst.Descripciones = NewDescripciones();
             obst.NuevosDatos = NewPlanDatos(nd.Text);
             obst.Plan = NewPlanDatos(plan.Text);

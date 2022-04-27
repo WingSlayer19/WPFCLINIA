@@ -13,9 +13,9 @@ namespace WPFclinica.Model
         {
 
         }
-        public GinecoObstretrico(uint G, uint P, uint Ab, uint Fur, double Pan, string Menarquia, 
-            string Ciclos, string Ivs, uint Ps, string Pap, string Ets, uint C, string Fpp, string Pf, 
-            uint Ectopico, string Fup, string Hv, string Hm)
+        public GinecoObstretrico(string G, string P, string Ab, string Fur, string Pan, string Menarquia, 
+            string Ciclos, string Ivs, string Ps, string Pap, string Ets, string C, string Fpp, string Pf, 
+            string Ectopico, string Fup, string Hv, string Hm)
         {
             this.G = G;
             this.P = P;
@@ -38,15 +38,15 @@ namespace WPFclinica.Model
         }
 
         [BsonElement("G")]
-        public uint G { get; set; }
+        public string G { get; set; }
         [BsonElement("P")]
-        public uint P { get; set; }
+        public string P { get; set; }
         [BsonElement("Ab")]
-        public uint Ab { get; set; }
+        public string Ab { get; set; }
         [BsonElement("FUR")]
-        public uint Fur { get; set; }
+        public string Fur { get; set; }
         [BsonElement("PAN")]
-        public double Pan { get; set; }
+        public string Pan { get; set; }
         [BsonElement("MENARQUIA")]
         public string Menarquia { get; set; }
         [BsonElement("CICLOS")]
@@ -54,19 +54,19 @@ namespace WPFclinica.Model
         [BsonElement("IVS")]
         public string Ivs { get; set; }
         [BsonElement("PS")]
-        public uint Ps { get; set; }
+        public string Ps { get; set; }
         [BsonElement("PAP")]
         public string Pap { get; set; }
         [BsonElement("ETS")]
         public string Ets { get; set; }
         [BsonElement("C")]
-        public uint C { get; set; }
+        public string C { get; set; }
         [BsonElement("FPP")]
         public string FPP { get; set; }
         [BsonElement("PF")]
         public string PF { get; set; }
         [BsonElement("Ectopico")]
-        public uint Ectopico { get; set; }
+        public string Ectopico { get; set; }
         [BsonElement("FUP")]
         public string Fup { get; set; }
         [BsonElement("HV")]

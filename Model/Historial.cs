@@ -122,7 +122,7 @@ namespace WPFclinica.Model
 
     public class SignosVitales
     {
-        public SignosVitales(string W, uint PresionArterial, uint Fc, uint Fr, uint T)
+        public SignosVitales(string W, string PresionArterial, string Fc, string Fr, string T)
         {
             this.W = W;
             this.Fr = Fr;
@@ -133,13 +133,13 @@ namespace WPFclinica.Model
         [BsonElement("W")]
         public string W { get; set; }
         [BsonElement("PRESION_ARTERIAL")]
-        public uint PresionArterial { get; set; }
+        public string PresionArterial { get; set; }
         [BsonElement("FC")]
-        public uint Fc { get; set; }
+        public string Fc { get; set; }
         [BsonElement("FR")]
-        public uint Fr { get; set; }
+        public string Fr { get; set; }
         [BsonElement("T")]
-        public uint T { get; set; }
+        public string T { get; set; }
     }
 
     public class PlanDatos

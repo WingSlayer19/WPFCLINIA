@@ -57,18 +57,12 @@ namespace WPFclinica.Model
         {
 
         }
-        public Examen(string fe, string ti, uint fo)
+        public Examen(string ti)
         {
-            this.Fecha = fe;
-            this.Folio = fo;
             this.Tipo = ti;
         }
-        [BsonElement("fecha")]
-        public string Fecha { get; set; }
         [BsonElement("tipo")]
         public string Tipo { get; set; }
-        [BsonElement("folio")]
-        public uint Folio { get; set; }
     }
 
 }
