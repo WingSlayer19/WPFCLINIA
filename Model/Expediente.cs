@@ -23,7 +23,7 @@ namespace WPFclinica.Model
         public string EstadoCivil { get; set; }
 
         [BsonElement("EDAD")]
-        public ushort Edad { get; set; }
+        public string Edad { get; set; }
 
         [BsonElement("PROFESION")]
         public string Profesion { get; set; }
