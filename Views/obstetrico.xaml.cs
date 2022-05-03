@@ -26,6 +26,7 @@ namespace WPFclinica.Views
         public obstetrico()
         {
             InitializeComponent();
+            fecha.SelectedDate = DateTime.Now;
         }
 
         public List<HObstetrico> ObstetricoDatos()

@@ -28,6 +28,7 @@ namespace WPFclinica.Views
         public ginecologico()
         {
             InitializeComponent();
+            fecha.SelectedDate = DateTime.Now;
         }
 
         public List<HGinecologico> GinecologicoDatos()

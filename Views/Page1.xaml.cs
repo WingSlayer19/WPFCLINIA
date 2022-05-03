@@ -27,6 +27,7 @@ namespace WPFclinica.Views
         public Page1()
         {
             InitializeComponent();
+            fecha.SelectedDate = DateTime.Now;
         }
 
         private string idPaciente;
