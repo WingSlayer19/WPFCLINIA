@@ -103,7 +103,9 @@ namespace WPFclinica.Views
 
             medico.Text = h.Medico;
             hora.Text = h.Hora;
-            fecha.SelectedDate = DateTime.ParseExact(h.Fecha,"M/d/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None);
+            if (h.Fecha != null)
+                fecha.SelectedDate = DateTime.ParseExact(h.Fecha,"M/d/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None);
+            
             motivo_consultag.Text = h.MotivoConsulta;
             W.Text = h.SignosVitales.W;
             presion.Text = h.SignosVitales.PresionArterial.ToString();
