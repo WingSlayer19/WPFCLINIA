@@ -102,8 +102,9 @@ namespace WPFclinica.Views
 
             medico.Text = h.Medico;
             hora.Text = h.Hora;
-            if (h.Fecha != null)
+            if (!string.IsNullOrEmpty(h.Fecha))
                 fecha.SelectedDate = DateTime.Parse(h.Fecha);
+
             motivo_consultag.Text = h.MotivoConsulta;
             evolucion.Text = h.Evoluciones.First().Descripcion;
             W.Text = h.SignosVitales.W;
