@@ -269,18 +269,6 @@
                                 <ColumnDefinition Width="15"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock
-                                Grid.Column="1"
-                                Text="Mí Cuenta"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Margin="5,0,0,0"
-                                />
-                            <Image Grid.Column="0"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Source="/SCS/IMG/cogs-solid.png"
-                                   />
                         </Grid>
 
 
@@ -299,17 +287,6 @@
                                 <ColumnDefinition Width="15"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock
-                                Grid.Column="1"
-                                Text="Información"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Margin="5,0,0,0"
-                                />
-                            <Image Grid.Column="0"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Source="/SCS/IMG/info-circle-solid.png"/>
                         </Grid>
 
                     </Button>
@@ -496,11 +473,6 @@
                 <Border
                     CornerRadius="0,0,0,10"
                     Background="Transparent" Grid.ColumnSpan="2"/>
-                <TextBlock
-                     Text="PRUEBA"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     FontSize="50" Margin="420,0,0,0"/>
                 <ContentControl Content="{Binding}"/>
             </Grid>
             <!--#endregion CONTENT-->

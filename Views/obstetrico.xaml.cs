@@ -20,7 +20,7 @@ namespace WPFclinica.Views
     /// <summary>
     /// Lógica de interacción para obstetrico.xaml
     /// </summary>
-    public partial class obstetrico : Page
+    public partial class obstetrico : Window
     {
         private ExpedienteHandler _expediente = new ExpedienteHandler();
         public obstetrico()
@@ -166,7 +166,7 @@ namespace WPFclinica.Views
         private Perfil _page2;
         private void Regresar(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(_page2);
+            // NavigationService.Navigate(_page2);
         }
     }
 }

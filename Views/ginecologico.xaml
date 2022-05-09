@@ -1,12 +1,12 @@
-﻿<Page x:Class="WPFclinica.Views.ginecologico"
+﻿<Window x:Class="WPFclinica.Views.ginecologico"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFclinica.Views"
       mc:Ignorable="d"
-      Title="ginecologico" Height="1374" Width="984">
-    <Page.Resources>
+      Title="Ginecologico" Height="1374" Width="984">
+    <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
@@ -106,10 +106,10 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Page.Resources>
+    </Window.Resources>
 
-    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,0,-705" >
-        <ScrollViewer Margin="0,0,0,1529">
+    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,0,-284" >
+        <ScrollViewer Height="758" VerticalAlignment="Top" Margin="0,0,10,0">
             <Grid Margin="0,10,0,98" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20"/>
@@ -124,6 +124,16 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0"/>
                     <RowDefinition Height="50"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="30"/>
@@ -181,14 +191,7 @@
                 <!--#endregion TITULO-->
                 <!--#region BOTONES -->
                 <!--#region REGRESAR -->
-                <Button Style="{DynamicResource ButtonStyle1}"   x:Name="BtnRegresar"
-                    Content="Regresar"
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Foreground="White"
-                    Cursor="Hand"
-                      BorderBrush="Pink"
-                    Background="pink" Margin="3,20,33,10" Grid.RowSpan="2" Click="Regresar" />
+
                 <!--#endregion REGRESAR-->
 
 
@@ -370,29 +373,29 @@ Style="{DynamicResource TextBoxStyle1}"
                     Background="blue" Margin="36,43,28,-39"
                 Click="InsertGineco"/>
                 <Button  Style="{DynamicResource ButtonStyle1}" 
-                    Grid.Column="5" 
+                    Grid.Column="2" 
                         Content="Borrar" 
                         HorizontalAlignment="Left" 
-                        Margin="15,3,0,0" 
-                        Grid.Row="41"
-                         Background="Red"
+                        Margin="82,10,0,0" 
+                        Grid.Row="40"
+                         Background="blue"
                          Foreground="White"
                          BorderBrush="White"
                         VerticalAlignment="Top"
                         x:Name="btnDelete"
-                        Click="DeleteHistorial" Width="69" Height="29" Grid.RowSpan="3"/>
+                        Click="DeleteHistorial" Width="111" Height="29" Grid.RowSpan="3"/>
                 <Button Style="{DynamicResource ButtonStyle1}"
-                     Grid.Column="4" 
-                        Background="PaleVioletRed"
+                     Grid.Column="1" 
+                        Background="blue"
                         Content="Actualizar" 
                         HorizontalAlignment="Left" 
-                        Margin="15,29,0,0" 
-                        Grid.Row="36" 
+                        Margin="216,13,0,0" 
+                        Grid.Row="40" 
                         Foreground="White"
                         BorderBrush="White"
                         VerticalAlignment="Top"
                         Click="UpdateGine"
-                        x:Name="btnUpdate" Height="27" Width="61" Grid.RowSpan="3"/>
+                        x:Name="btnUpdate" Height="27" Width="72" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
 
 
 
@@ -408,4 +411,4 @@ Style="{DynamicResource TextBoxStyle1}"
         </ScrollViewer>
     </Border>
 
-</Page>
+</Window>

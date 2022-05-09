@@ -22,7 +22,7 @@ namespace WPFclinica.Views
     /// <summary>
     /// Lógica de interacción para Perfil.xaml
     /// </summary>
-    public partial class Perfil : Page
+    public partial class Perfil : UserControl
     {
         ExpedienteHandler _expediente = new ExpedienteHandler();
         public Perfil()
@@ -33,23 +33,25 @@ namespace WPFclinica.Views
         private void BtnObs_Click(object sender, RoutedEventArgs e)
         {
             obstetrico ventana1 = new obstetrico();
+            ventana1.Show();
             ventana1.IdExpediente = IdUsuario;
             ventana1.btnDelete.IsEnabled = false;
             ventana1.btnDelete.Visibility = Visibility.Collapsed;
             ventana1.btnUpdate.IsEnabled = false;
             ventana1.btnUpdate.Visibility = Visibility.Collapsed;
-            FramePerfil.Content = ventana1;
+            //FramePerfil.Content = ventana1;
         }
 
         private void Avanzar(object sender, RoutedEventArgs e)
         {
             ginecologico ventana2 = new ginecologico();
+            ventana2.Show();
             ventana2.IdExpediente = IdUsuario;
             ventana2.btnDelete.IsEnabled = false;
             ventana2.btnDelete.Visibility = Visibility.Collapsed;
             ventana2.btnUpdate.IsEnabled = false;
             ventana2.btnUpdate.Visibility = Visibility.Collapsed;
-            FramePerfil.Content = ventana2;
+           // FramePerfil.Content = ventana2;
         }
 
         public void Consultar()
@@ -105,23 +107,25 @@ namespace WPFclinica.Views
         private void ViewObste(HObstetrico h)
         {
             obstetrico ventana1 = new obstetrico();
+            ventana1.Show();    
             ventana1.IdExpediente = IdUsuario;
             ventana1.MyUUID = h.MyUUID;
             ventana1.BtnSave.IsEnabled = false;
             ventana1.BtnSave.Visibility = Visibility.Collapsed;
             ventana1.SetHistorial(ventana1.IdExpediente, ventana1.MyUUID);
-            FramePerfil.Content = ventana1;
+           // FramePerfil.Content = ventana1;
         }
 
         private void ViewGine(HGinecologico h)
         {
             ginecologico ventana2 = new ginecologico();
+            ventana2.Show();    
             ventana2.IdExpediente = IdUsuario;
             ventana2.MyUUID = h.MyUUID;
             ventana2.BtnIng.IsEnabled = false;
             ventana2.BtnIng.Visibility = Visibility.Collapsed;
             ventana2.SetHistorial(IdUsuario, h.MyUUID);
-            FramePerfil.Content = ventana2;
+            //FramePerfil.Content = ventana2;
         }
 
         public string IdUsuario = string.Empty;
@@ -179,11 +183,12 @@ namespace WPFclinica.Views
 
         private void Ficha(object sender, RoutedEventArgs e)
         {
-            Page1 ventana = new Page1();
-            ventana.btnInsertarPaciente.Visibility = Visibility.Hidden;
-            ventana.btnInsertarPaciente.IsEnabled = false;
-            ventana.LlenarCampos(IdUsuario);
-            FramePerfil.Content = ventana;
+            Page1 ventana3 = new Page1();
+            ventana3.Show();
+            ventana3.btnInsertarPaciente.Visibility = Visibility.Hidden;
+            ventana3.btnInsertarPaciente.IsEnabled = false;
+            ventana3.LlenarCampos(IdUsuario);
+            //FramePerfil.Content = ventana;
         }
     }
 }

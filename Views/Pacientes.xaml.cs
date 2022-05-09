@@ -51,9 +51,10 @@ namespace WPFclinica.Views
         //Window2 win1 = new Window2();
           //  win1.Show();
         Page1 ventana = new Page1();
+            ventana.Show();
             ventana.btnPacienteCambio.Visibility = Visibility.Hidden;
             ventana.btnPacienteCambio.IsEnabled = false;
-            FramePacientes.Content = ventana;
+           // FramePacientes.Content = ventana;
         }
 
         private void RealizarBusqueda(object sender, RoutedEventArgs e)

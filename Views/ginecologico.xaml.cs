@@ -21,7 +21,7 @@ namespace WPFclinica.Views
     /// <summary>
     /// Lógica de interacción para ginecologico.xaml
     /// </summary>
-    public partial class ginecologico : Page
+    public partial class ginecologico : Window
     {
 
         private ExpedienteHandler _expediente = new ExpedienteHandler();
@@ -172,7 +172,7 @@ namespace WPFclinica.Views
         private Perfil _page1;
         private void Regresar(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(_page1);
+           // NavigationService.Navigate(_page1);
         }
     }
 }

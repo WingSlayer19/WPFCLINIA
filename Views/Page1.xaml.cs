@@ -21,7 +21,7 @@ namespace WPFclinica.Views
     /// <summary>
     /// Lógica de interacción para Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Page1 : Window
     {
         private ExpedienteHandler _expediente = new ExpedienteHandler();
         public Page1()
