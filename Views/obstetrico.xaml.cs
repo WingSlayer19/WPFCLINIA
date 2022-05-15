@@ -53,6 +53,7 @@ namespace WPFclinica.Views
                 T: (T.Text));
             obst.NuevosDatos = NewPlanDatos(nd.Text);
             obst.Plan = NewPlanDatos(plan.Text);
+            obst.ExamenFisico = ex.Text;
             return new List<HObstetrico>() { obst };
         }
 
@@ -114,6 +115,7 @@ namespace WPFclinica.Views
             T.Text = h.SignosVitales.T.ToString();
             nd.Text = h.NuevosDatos.First().Descripcion;
             plan.Text = h.Plan.First().Descripcion;
+            ex.Text = h.ExamenFisico;
         }
 
         public void DeleteHistorial(object sender, RoutedEventArgs e)
@@ -124,6 +126,7 @@ namespace WPFclinica.Views
             hObstetricos.Remove(hObst);
             expediente.Historial.HObstetricos = hObstetricos;
             _expediente.SaveHistorial(IdExpediente, expediente);
+            MessageBox.Show("Historial Borrado");
         }
 
         private void UpdateObstet(object sender, RoutedEventArgs e)
@@ -161,6 +164,7 @@ namespace WPFclinica.Views
             }
 
             _expediente.SaveHistorial(IdExpediente, expediente);
+            MessageBox.Show("Historial Registrado");
 
         }
         private Perfil _page2;

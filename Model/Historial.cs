@@ -72,6 +72,8 @@ namespace WPFclinica.Model
         public List<PlanDatos> Plan { get; set; }
         [BsonElement("uuid")]
         public string MyUUID { get; set; }
+        [BsonElement("examen_fisico")]
+        public string ExamenFisico { get; set; }
     }
 
     public class HGinecologico

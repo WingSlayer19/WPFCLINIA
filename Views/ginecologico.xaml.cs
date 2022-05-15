@@ -152,7 +152,7 @@ namespace WPFclinica.Views
             }
          
             _expediente.SaveHistorial(IdExpediente, expediente);
-
+            MessageBox.Show("Historial Registrado");
         }
 
         private void DeleteHistorial(object sender, RoutedEventArgs e)
@@ -163,6 +163,7 @@ namespace WPFclinica.Views
             hGinecologicos.Remove(hGine);
             expediente.Historial.HGinecologicos = hGinecologicos;
             _expediente.SaveHistorial(IdExpediente, expediente);
+            MessageBox.Show("Historial Borrado");
         }
 
         private void nd_TextChanged(object sender, TextChangedEventArgs e)
