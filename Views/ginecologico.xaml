@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFclinica.Views"
       mc:Ignorable="d"
-      Title="Ginecologico" Height="1374" Width="984">
+      Title="Historia Ginecologica" Height="710" Width="944">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -108,9 +108,9 @@
         </Style>
     </Window.Resources>
 
-    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,0,-284" >
-        <ScrollViewer Height="758" VerticalAlignment="Top" Margin="0,0,10,0">
-            <Grid Margin="0,10,0,98" >
+    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,0,-6" >
+        <ScrollViewer Height="700" VerticalAlignment="Center" Margin="0,0,10,0">
+            <Grid Margin="0,10,0,98" Height="1132" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="20"/>
                     <ColumnDefinition/>
@@ -244,7 +244,7 @@
                 <TextBox Grid.Row="9"
                      Grid.Column="1"
 Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="motivo_consultag" Grid.ColumnSpan="3" Margin="0,6,20,10" Grid.RowSpan="4" AcceptsReturn="True" TextWrapping="Wrap" FontSize="8"/>
+                     x:Name="motivo_consultag" Grid.ColumnSpan="5" Margin="0,6,188,10" Grid.RowSpan="4" AcceptsReturn="True" TextWrapping="Wrap"/>
 
                 <TextBlock Grid.Row="14"
                        Grid.Column="2"
@@ -327,75 +327,75 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBlock Grid.Row="20"
                         FontSize="15"
                        Foreground="White"
-                       Text="Descripción:"
+                       Text="Examen Físico:"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center" Margin="19,0,0,0" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
                 <TextBox Grid.Row="22"
                      Grid.Column="1"
                    Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="descripcion" Grid.ColumnSpan="3" Margin="0,13,20,10" Grid.RowSpan="5" TextWrapping="Wrap" AcceptsReturn="True" FontSize="8"/>
+                     x:Name="descripcion" Grid.ColumnSpan="5" Margin="0,13,33,1" Grid.RowSpan="16" TextWrapping="Wrap" AcceptsReturn="True"/>
 
 
 
-                <TextBlock Grid.Row="27"
+                <TextBlock Grid.Row="38"
                        Grid.Column="1"
                         FontSize="15"
                        Foreground="White"
                        Text="Nuevos Datos:"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Center"/>
+                       VerticalAlignment="Top" Margin="0,4,0,0"/>
 
 
 
-                <TextBlock Grid.Row="34"
+                <TextBlock Grid.Row="44"
                        Grid.Column="1"
                         FontSize="15"
                        Foreground="White"
                        Text="Plan:"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="3,0,0,0"/>
-                <TextBox Grid.Row="34"
+                       VerticalAlignment="Top" Margin="3,22,0,0" Grid.RowSpan="2"/>
+                <TextBox Grid.Row="46"
                      Grid.Column="1"
                     Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="plan" Grid.ColumnSpan="3" Margin="0,22,20,15" Grid.RowSpan="5" AcceptsReturn="True" TextWrapping="Wrap" FontSize="8"/>
-                <TextBox Grid.Row="28"
+                     x:Name="plan" Grid.ColumnSpan="3" Margin="0,19,20,-51" Grid.RowSpan="3" AcceptsReturn="True" TextWrapping="Wrap"/>
+                <TextBox Grid.Row="39"
                 Grid.Column="1"
                 Style="{DynamicResource TextBoxStyle1}"
-                x:Name="nd" Grid.ColumnSpan="3" Margin="0,7,20,15" Grid.RowSpan="5" TextChanged="nd_TextChanged" TextWrapping="Wrap" AcceptsReturn="True" FontSize="8"/>
+                x:Name="nd" Grid.ColumnSpan="3" Margin="0,7,20,17" Grid.RowSpan="6" TextChanged="nd_TextChanged" TextWrapping="Wrap" AcceptsReturn="True"/>
                 <Button 
                Style="{DynamicResource ButtonStyle1}"   x:Name="BtnIng"
                     Content="Guardar"
-                    Grid.Column="1"
-                    Grid.Row="38"
+                    Grid.Column="4"
+                    Grid.Row="46"
                     Foreground="White"
                     Cursor="Hand"
                       BorderBrush="White"
-                    Background="blue" Margin="36,43,28,-39"
-                Click="InsertGineco"/>
+                    Background="blue" Margin="79,29,209,4"
+                Click="InsertGineco" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
                 <Button  Style="{DynamicResource ButtonStyle1}" 
-                    Grid.Column="2" 
+                    Grid.Column="5" 
                         Content="Borrar" 
                         HorizontalAlignment="Left" 
-                        Margin="82,10,0,0" 
-                        Grid.Row="40"
+                        Margin="125,2,0,0" 
+                        Grid.Row="47"
                          Background="blue"
                          Foreground="White"
                          BorderBrush="White"
                         VerticalAlignment="Top"
                         x:Name="btnDelete"
-                        Click="DeleteHistorial" Width="111" Height="29" Grid.RowSpan="3"/>
+                        Click="DeleteHistorial" Width="111" Height="28" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 <Button Style="{DynamicResource ButtonStyle1}"
-                     Grid.Column="1" 
+                     Grid.Column="5" 
                         Background="blue"
                         Content="Actualizar" 
                         HorizontalAlignment="Left" 
-                        Margin="216,13,0,0" 
-                        Grid.Row="40" 
+                        Margin="35,4,0,0" 
+                        Grid.Row="47" 
                         Foreground="White"
                         BorderBrush="White"
                         VerticalAlignment="Top"
                         Click="UpdateGine"
-                        x:Name="btnUpdate" Height="27" Width="72" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+                        x:Name="btnUpdate" Height="28" Width="72" Grid.RowSpan="2"/>
 
 
 

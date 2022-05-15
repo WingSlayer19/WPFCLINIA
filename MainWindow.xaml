@@ -222,7 +222,7 @@
         <DataTemplate x:Name="Pacientes"
                       DataType="{x:Type Viewmodels:Pacientes}">
             <Viewmodels:Pacientes DataContext ="{Binding}"/>
-       
+
         </DataTemplate>
         <!--#endregion PACIENTES-->
     </Window.Resources>
@@ -470,7 +470,12 @@
                     <ColumnDefinition Width="884*"/>
                     <ColumnDefinition Width="41*"/>
                 </Grid.ColumnDefinitions>
+                <Image Width="413"
+                                   Grid.Column="0"
+                                   HorizontalAlignment="Center"
+                                   Source="/SCS/IMG/logo.PNG"/>
                 <Border
+
                     CornerRadius="0,0,0,10"
                     Background="Transparent" Grid.ColumnSpan="2"/>
                 <ContentControl Content="{Binding}"/>

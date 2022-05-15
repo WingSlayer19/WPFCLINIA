@@ -129,7 +129,7 @@ namespace WPFclinica.Views
             if (exp.ExamenFisico != null)
             {
                 pa.Text = exp.ExamenFisico.Pa.ToString();
-                mmgh.Text = exp.ExamenFisico.Mmhg.ToString();
+              //  mmgh.Text = exp.ExamenFisico.Mmhg.ToString();
                 fc.Text = exp.ExamenFisico.Fc.ToString();
                 fr.Text = exp.ExamenFisico.Fr.ToString();
                 t.Text = exp.ExamenFisico.T.ToString();
@@ -160,8 +160,8 @@ namespace WPFclinica.Views
                 ecto1.Text = "0";
             if (pa.Text == "")
                 pa.Text = "0";
-            if (mmgh.Text == "")
-                mmgh.Text = "0";
+         //   if (mmgh.Text == "")
+           //     mmgh.Text = "0";
             if (fc.Text == "")
                 fc.Text = "0";
             if (fr.Text == "")
@@ -175,7 +175,7 @@ namespace WPFclinica.Views
 
             Expediente expediente = new Expediente();
             expediente.Id = new ObjectId(idPaciente);
-            expediente.Nombre = nombres.Text + " " + apellidos.Text;
+        //    expediente.Nombre = nombres.Text + " " + apellidos.Text;
             expediente.EstadoCivil = estado_civil.Text;
             expediente.Edad = (edad.Text);
             expediente.Procedencia = procedencia.Text;
@@ -206,7 +206,7 @@ namespace WPFclinica.Views
                 Fup: fup1.Text);
             expediente.ExamenFisico = new ExamenFisico(
                 Pa: (pa.Text),
-                Mmhg: (mmgh.Text),
+              //  Mmhg: (mmgh.Text),
                 Fc: (fc.Text),
                 Fr: (fr.Text),
                 T: (t.Text),
@@ -242,8 +242,8 @@ namespace WPFclinica.Views
                 ecto1.Text = "0";
             if (pa.Text == "")
                 pa.Text = "0";
-            if (mmgh.Text == "")
-                mmgh.Text = "0";
+          //  if (mmgh.Text == "")
+            //    mmgh.Text = "0";
             if (fc.Text == "")
                 fc.Text = "0";
             if (fr.Text == "")
@@ -256,7 +256,7 @@ namespace WPFclinica.Views
                 imc.Text = "0";
 
             Expediente expediente = new Expediente();
-            expediente.Nombre = nombres.Text + " " + apellidos.Text;
+         //   expediente.Nombre = nombres.Text + " " + apellidos.Text;
             expediente.EstadoCivil = estado_civil.Text;
             expediente.Edad = (edad.Text);
             expediente.Procedencia = procedencia.Text;
@@ -287,7 +287,7 @@ namespace WPFclinica.Views
                 Fup: fup1.Text);
             expediente.ExamenFisico = new ExamenFisico(
                 Pa: (pa.Text),
-                Mmhg: (mmgh.Text),
+              //  Mmhg: (mmgh.Text),
                 Fc: (fc.Text),
                 Fr: (fr.Text),
                 T: (t.Text),

@@ -13,7 +13,7 @@ namespace WPFclinica.Model
         {
 
         }
-        public ExamenFisico(string Pa, string Mmhg, string Fc, string Fr, string T, string W, string Talla, string Imc)
+        public ExamenFisico(string Pa, string Fc, string Fr, string T, string W, string Talla, string Imc)
         {
             this.Pa = Pa;
             this.Mmhg = Mmhg;
