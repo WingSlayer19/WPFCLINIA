@@ -62,5 +62,10 @@ namespace WPFclinica
         {
 
         }
+
+        private void Return(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

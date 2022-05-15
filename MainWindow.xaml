@@ -396,7 +396,7 @@
                                 HorizontalAlignment="Left"
                                 Cursor="Hand"
                                 Background="Transparent"
-                                BorderBrush="Transparent" >
+                                BorderBrush="Transparent" Click="Return" >
                             <Grid Width="200">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="60"/>
@@ -404,7 +404,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Image Width="50"
                                    HorizontalAlignment="Center"
-                                   Source="/SCS/IMG/clinic-medical-solid.png" Height="44" VerticalAlignment="Bottom"/>
+                                   Source="/SCS/IMG/clinic-medical-solid.png"/>
                                 <TextBlock Grid.Column="1"
                                            Text="Inicio"
                                            FontWeight="SemiBold"
