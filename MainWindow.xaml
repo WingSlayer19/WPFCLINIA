@@ -232,7 +232,7 @@
 
 
         <Grid Name="Principal" 
-              Background="Transparent" >
+              Background="white" >
 
             <!--#region  HEADER-->
             <Grid x:Name="Header"
