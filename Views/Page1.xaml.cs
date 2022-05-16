@@ -175,7 +175,7 @@ namespace WPFclinica.Views
 
             Expediente expediente = new Expediente();
             expediente.Id = new ObjectId(idPaciente);
-        //    expediente.Nombre = nombres.Text + " " + apellidos.Text;
+            expediente.Nombre = nombres.Text;
             expediente.EstadoCivil = estado_civil.Text;
             expediente.Edad = (edad.Text);
             expediente.Procedencia = procedencia.Text;
@@ -256,7 +256,7 @@ namespace WPFclinica.Views
                 imc.Text = "0";
 
             Expediente expediente = new Expediente();
-         //   expediente.Nombre = nombres.Text + " " + apellidos.Text;
+            expediente.Nombre = nombres.Text;
             expediente.EstadoCivil = estado_civil.Text;
             expediente.Edad = (edad.Text);
             expediente.Procedencia = procedencia.Text;
