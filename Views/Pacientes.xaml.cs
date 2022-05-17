@@ -77,9 +77,19 @@ namespace WPFclinica.Views
             }
             else
             {
-                var lista = list.Where(x => x.Nombre.Contains(txtBuscarPaciente.Text)).ToList();
-                ViewExpediente viewExpediente = new ViewExpediente();
-                GridDatos.ItemsSource = viewExpediente.ConvertElement(lista);
+                try
+                {
+                    var lista = list.Where(x => x.Nombre.Contains(txtBuscarPaciente.Text)).ToList();
+
+                    ViewExpediente viewExpediente = new ViewExpediente();
+                    GridDatos.ItemsSource = viewExpediente.ConvertElement(lista);
+                    MessageBox.Show(list.First().Nombre);
+                }
+                catch (NullReferenceException)
+                {
+
+                    throw;
+                }
             }
         }
 
