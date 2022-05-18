@@ -371,6 +371,20 @@
                         Grid.RowSpan="2" 
                         Click="Ficha"/>
 
+                <Button Style="{DynamicResource ButtonStyle1}"
+                        Cursor="Hand"
+                        BorderBrush="White"
+                        Foreground="White"
+                        Width="100"
+                        Background="#bbdefb"      
+                        x:Name="btnRefresh"
+                        Content="Refrescar" 
+                        Margin="56,48,30,2" 
+                        Grid.Column="4" 
+                        Grid.Row="6" 
+                        Grid.RowSpan="2" 
+                        Click="Refresh"/>
+
 
                 <!--#endregion AGREGAR-->
 
@@ -470,7 +484,7 @@
                 Grid.Column="0"
                 Grid.Row="0"
                 Grid.RowSpan="11"
-                Grid.ColumnSpan="6" Margin="0,0,-16,0" Height="1118" VerticalAlignment="Top"  />
+                Grid.ColumnSpan="6" Margin="0,0,-16,0" Height="1118" VerticalAlignment="Top" Navigated="FramePerfil_Navigated"  />
                 <!--#endregion FRAME-->
 
             </Grid>

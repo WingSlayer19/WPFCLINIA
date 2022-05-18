@@ -54,6 +54,11 @@ namespace WPFclinica.Views
            // FramePerfil.Content = ventana2;
         }
 
+        public void Refresh(object sender, RoutedEventArgs e)
+        {
+            Consultar();
+        }
+
         public void Consultar()
         {
             exp = _expediente.GetById(IdUsuario);
@@ -195,6 +200,11 @@ namespace WPFclinica.Views
             ventana3.btnInsertarPaciente.IsEnabled = false;
             ventana3.LlenarCampos(IdUsuario);
             //FramePerfil.Content = ventana;
+        }
+
+        private void FramePerfil_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }
