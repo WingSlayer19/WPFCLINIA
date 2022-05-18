@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFclinica.Views"
       mc:Ignorable="d"
-      Title="Historia Ginecologica" Height="760" Width="944">
+      Title="Historia Ginecologica" Height="621" Width="944">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -375,7 +375,7 @@ Style="{DynamicResource TextBoxStyle1}"
                      x:Name="plan" Grid.ColumnSpan="5" Margin="0,1,188,15" Grid.RowSpan="4" AcceptsReturn="True" TextWrapping="Wrap"/>
                 <TextBox Grid.Row="18"
                 Style="{DynamicResource TextBoxStyle1}"
-                x:Name="nd"  Grid.ColumnSpan="6" Margin="18,11,188,5" Grid.RowSpan="4" AcceptsReturn="True" TextWrapping="Wrap"/>
+                x:Name="nd"  Grid.ColumnSpan="6" Margin="18,19,188,27" Grid.RowSpan="5" AcceptsReturn="True" TextWrapping="Wrap"/>
                 <Button 
                Style="{DynamicResource ButtonStyle1}"   x:Name="BtnIng"
                     Content="Guardar"
@@ -384,7 +384,7 @@ Style="{DynamicResource TextBoxStyle1}"
                     Foreground="White"
                     Cursor="Hand"
                       BorderBrush="White"
-                    Background="blue" Margin="174,5,182,13"
+                    Background="blue" Margin="176,7,185,3"
                 Click="InsertGineco" Height="28" Width="72" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 <Button  Style="{DynamicResource ButtonStyle1}" 
                     Grid.Column="5" 

@@ -50,7 +50,7 @@ namespace WPFclinica
 
         private void Cerrar(object sender, RoutedEventArgs e)
         {
-            Close();
+            Application.Current.Shutdown();
         }
 
         private void Pacientes(object sender, RoutedEventArgs e)
@@ -62,10 +62,9 @@ namespace WPFclinica
         {
 
         }
-
-        private void Return(object sender, RoutedEventArgs e)
+        private void Inicio(object sender, RoutedEventArgs e)
         {
-
+          // DataContext = new Inicio();
         }
     }
 }

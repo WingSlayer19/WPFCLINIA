@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WPFclinica.Views"
       mc:Ignorable="d" d:DesignWidth="800"
-      Title="Historia Obstetrica" Height="710" Width="944"
+      Title="Historia Obstetrica" Height="784" Width="944"
 
 >
     <Window.Resources>
@@ -369,38 +369,38 @@ Style="{DynamicResource TextBoxStyle1}"
 
 
                 <Button Template="{DynamicResource ButtonTemplate1}"
-                Grid.Column="4" 
+                Grid.Column="5" 
                  x:Name="BtnSave"
                 Content="Guardar" 
-                Margin="47,11,0,0" 
+                Margin="64,9,0,0" 
                 Grid.Row="59" 
                 Background="blue"
                 Foreground="White"
                 BorderBrush="white"
                 VerticalAlignment="Top"
-                Click="InserObstetrico" Height="20" HorizontalAlignment="Left" Width="113" Grid.RowSpan="2"/>
+                Click="InserObstetrico" Height="20" HorizontalAlignment="Left" Width="113"/>
                 <Button Template="{DynamicResource ButtonTemplate1}"
-                    Grid.Column="4" 
+                    Grid.Column="5" 
                         Content="Borrar" 
-                        Margin="165,11,104,0"  
-                        Grid.Row="59" 
+                        Margin="114,0,13,0"  
+                        Grid.Row="55" 
                         Background="Blue"
                         BorderBrush="White"
                         Foreground="White"
-                        VerticalAlignment="Top"
+                        VerticalAlignment="Center"
                         x:Name="btnDelete"
-                        Click="DeleteHistorial" Height="20" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                        Click="DeleteHistorial" Height="26" Grid.ColumnSpan="2" />
                 <Button Template="{DynamicResource ButtonTemplate1}"
                         Grid.Column="5" 
                         Content="Actualizar" 
-                        Margin="82,12,0,0"
+                        Margin="114,5,0,0"
                         Background="Blue" 
                         Foreground="White"
                         BorderBrush="White"
-                        Grid.Row="59" 
+                        Grid.Row="57" 
                         VerticalAlignment="Top"
                         x:Name="btnUpdate"
-                        Click="UpdateObstet" HorizontalAlignment="Left" Width="103" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                        Click="UpdateObstet" HorizontalAlignment="Left" Width="80" Grid.ColumnSpan="2" Height="22"/>
 
 
 

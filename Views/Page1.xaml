@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WPFclinica.Views"
       mc:Ignorable="d"
   
-  Title="Nuevo Paciente" Height="551" Width="944">
+  Title="Nuevo Paciente" Height="703" Width="944">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -589,7 +589,7 @@ Style="{DynamicResource TextBoxStyle1}"
                 <TextBox Grid.Row="78"
                      Grid.Column="1"
                      Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="revision1" Margin="0,24,10,-93" Grid.ColumnSpan="6" AcceptsReturn="True" TextWrapping="Wrap" Grid.RowSpan="14"/>
+                     x:Name="revision1" Margin="0,8,10,-77" Grid.ColumnSpan="6" AcceptsReturn="True" TextWrapping="Wrap" Grid.RowSpan="14"/>
                 <!--#endregion REVISION-->
 
 

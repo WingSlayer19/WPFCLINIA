@@ -224,6 +224,11 @@
             <Viewmodels:Pacientes DataContext ="{Binding}"/>
 
         </DataTemplate>
+
+
+      
+
+
         <!--#endregion PACIENTES-->
     </Window.Resources>
 
@@ -395,8 +400,9 @@
                                 Width="200"
                                 HorizontalAlignment="Left"
                                 Cursor="Hand"
+                                Click="Inicio"
                                 Background="Transparent"
-                                BorderBrush="Transparent" Click="Return" >
+                                BorderBrush="Transparent" >
                             <Grid Width="200">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="60"/>
