@@ -55,6 +55,7 @@ namespace WPFclinica.Views
             obst.Descripciones = NewDescripciones();
             obst.NuevosDatos = NewPlanDatos(nd.Text);
             obst.Plan = NewPlanDatos(plan.Text);
+            obst.HistoriaEnfermedadActual = actual.Text;
 
             return new List<HGinecologico>() { obst };
         }
@@ -115,6 +116,8 @@ namespace WPFclinica.Views
             descripcion.Text = h.Descripciones.First().Descripcion;
             nd.Text = h.NuevosDatos.First().Descripcion;
             plan.Text = h.Plan.First().Descripcion;
+            if (!string.IsNullOrEmpty(h.HistoriaEnfermedadActual))
+                actual.Text = h.HistoriaEnfermedadActual.ToString();
         }
 
         private void UpdateGine(object sender, RoutedEventArgs e)
@@ -143,6 +146,7 @@ namespace WPFclinica.Views
                 hGineElement.Descripciones = hgine.Descripciones;
                 hGineElement.NuevosDatos = hgine.NuevosDatos;
                 hGineElement.Plan = hgine.Plan;
+                hGineElement.HistoriaEnfermedadActual = hgine.HistoriaEnfermedadActual;
             }
             else
             {

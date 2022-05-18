@@ -101,6 +101,9 @@ namespace WPFclinica.Model
         public List<Descripciones> Descripciones { get; set; }
         [BsonElement("uuid")]
         public string MyUUID { get; set; }
+
+        [BsonElement("historia_enfermedad_actual")]
+        public string HistoriaEnfermedadActual { get; set; }
     }
 
     public class Evolucion
