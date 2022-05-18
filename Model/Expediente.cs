@@ -21,6 +21,8 @@ namespace WPFclinica.Model
 
         [BsonElement("ESTADO_CIVIL")]
         public string EstadoCivil { get; set; }
+        [BsonElement("fecha")]
+        public string Fecha { get; set; }
 
         [BsonElement("EDAD")]
         public string Edad { get; set; }
@@ -39,6 +41,8 @@ namespace WPFclinica.Model
         public string MotivoConsulta { get; set; }
         [BsonElement("HISTORIA_ENFERMEDAD_ACTUAL")]
         public string HistoriaEnfermedadActual { get; set; }
+        [BsonElement("plan")]
+        public string Plan { get; set; }
         // Pero me parece que esto hay que corregirlo no se
 
         [BsonElement("Revision_sistemas")]

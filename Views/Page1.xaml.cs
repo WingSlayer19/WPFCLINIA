@@ -37,7 +37,11 @@ namespace WPFclinica.Views
             nombres.Text = exp.Nombre;
             estado_civil.Text = exp.EstadoCivil;
             edad.Text = exp.Edad.ToString();
+            if (!string.IsNullOrEmpty(exp.Fecha))
+                fecha.SelectedDate = DateTime.Parse(exp.Fecha);
             procedencia.Text = exp.Procedencia;
+            if (!string.IsNullOrEmpty(exp.Plan))
+                plan1.Text = exp.Plan.ToString();
             if (exp.Telefonos != null)
                 telefono.Text = exp.Telefonos.First().ToString();
             motivo_consulta.Text = exp.MotivoConsulta;
@@ -176,6 +180,7 @@ namespace WPFclinica.Views
             Expediente expediente = new Expediente();
             expediente.Id = new ObjectId(idPaciente);
             expediente.Nombre = nombres.Text;
+            expediente.Fecha = fecha.Text;
             expediente.EstadoCivil = estado_civil.Text;
             expediente.Edad = (edad.Text);
             expediente.Procedencia = procedencia.Text;
@@ -185,6 +190,7 @@ namespace WPFclinica.Views
             expediente.RevisionSistemas = RevisionSistemasNuevo(revision1.Text);
             expediente.Nd = NDNuevo(ND1.Text);
             expediente.Antecedentes = AntecedentesNuevos();
+            expediente.Plan = plan1.Text;
             expediente.GinecoObstretrico = new GinecoObstretrico(
                 G: (g1.Text),
                 P: (p1.Text),
@@ -213,7 +219,8 @@ namespace WPFclinica.Views
                 W: w.Text,
                 Talla: (talla.Text),
                 Imc: (imc.Text));
-
+            var expResultante = _expediente.GetById(idPaciente);
+            expediente.Historial = expResultante.Historial;
             _expediente.UpdatePacienteExpe(e: expediente, id: idPaciente);
             MessageBox.Show("Paciente Cambiado");
         }
@@ -259,6 +266,8 @@ namespace WPFclinica.Views
             expediente.Nombre = nombres.Text;
             expediente.EstadoCivil = estado_civil.Text;
             expediente.Edad = (edad.Text);
+            expediente.Plan = plan1.Text;
+            expediente.Fecha = fecha.Text;
             expediente.Procedencia = procedencia.Text;
             expediente.Telefonos = ListaTel(telefono.Text);
             expediente.MotivoConsulta = motivo_consulta.Text;
