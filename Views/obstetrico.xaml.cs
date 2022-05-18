@@ -155,6 +155,7 @@ namespace WPFclinica.Views
                 hObsteElement.SignosVitales = hgine.SignosVitales;
                 hObsteElement.NuevosDatos = hgine.NuevosDatos;
                 hObsteElement.Plan = hgine.Plan;
+                hObsteElement.ExamenFisico = hgine.ExamenFisico;
             }
             else
             {
