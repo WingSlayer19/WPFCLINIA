@@ -79,18 +79,22 @@ namespace WPFclinica.Views
         public void Ver(object sender, RoutedEventArgs e)
         {
             string uuid = ((Button)sender).CommandParameter.ToString();
-            var historialItem = lista.Find(x => x.MyUUID == uuid);
+            if (!string.IsNullOrEmpty(uuid))
+            {
+                var historialItem = lista.Find(x => x.MyUUID == uuid);
 
-            if (historialItem.Tipo == "Obstetrico")
-            {
-                var h = exp.Historial.HObstetricos.First(x => x.MyUUID == historialItem.MyUUID);
-                ViewObste(h);
-            } 
-            else if (historialItem.Tipo == "Ginecologico")
-            {
-                 var h = exp.Historial.HGinecologicos.First(x => x.MyUUID == historialItem.MyUUID);
-                 ViewGine(h);
+                if (historialItem.Tipo == "Obstetrico")
+                {
+                    var h = exp.Historial.HObstetricos.First(x => x.MyUUID == historialItem.MyUUID);
+                    ViewObste(h);
+                }
+                else if (historialItem.Tipo == "Ginecologico")
+                {
+                    var h = exp.Historial.HGinecologicos.First(x => x.MyUUID == historialItem.MyUUID);
+                    ViewGine(h);
+                }
             }
+            
             //MessageBox.Show("UUID: " + historialItem.MyUUID + ' ' + uuid);
         }
 
@@ -113,7 +117,8 @@ namespace WPFclinica.Views
             ventana1.BtnSave.IsEnabled = false;
             ventana1.BtnSave.Visibility = Visibility.Collapsed;
             ventana1.SetHistorial(ventana1.IdExpediente, ventana1.MyUUID);
-           // FramePerfil.Content = ventana1;
+            // FramePerfil.Content = ventana1;
+            Consultar();
         }
 
         private void ViewGine(HGinecologico h)
@@ -126,6 +131,7 @@ namespace WPFclinica.Views
             ventana2.BtnIng.Visibility = Visibility.Collapsed;
             ventana2.SetHistorial(IdUsuario, h.MyUUID);
             //FramePerfil.Content = ventana2;
+            Consultar();
         }
 
         public string IdUsuario = string.Empty;

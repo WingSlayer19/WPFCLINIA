@@ -101,21 +101,28 @@ namespace WPFclinica.Views
             var exp = _expediente.GetById(id);
             var h = exp.Historial.HObstetricos.Find(x => x.MyUUID == uuid);
 
-            medico.Text = h.Medico;
-            hora.Text = h.Hora;
-            if (!string.IsNullOrEmpty(h.Fecha))
-                fecha.SelectedDate = DateTime.Parse(h.Fecha);
+            if (h != null)
+            {
+                medico.Text = h.Medico;
+                hora.Text = h.Hora;
+                if (!string.IsNullOrEmpty(h.Fecha))
+                    fecha.SelectedDate = DateTime.Parse(h.Fecha);
 
-            motivo_consultag.Text = h.MotivoConsulta;
-            evolucion.Text = h.Evoluciones.First().Descripcion;
-            W.Text = h.SignosVitales.W;
-            presion.Text = h.SignosVitales.PresionArterial.ToString();
-            FC.Text = h.SignosVitales.Fc.ToString();
-            FR.Text = h.SignosVitales.Fr.ToString();
-            T.Text = h.SignosVitales.T.ToString();
-            nd.Text = h.NuevosDatos.First().Descripcion;
-            plan.Text = h.Plan.First().Descripcion;
-            ex.Text = h.ExamenFisico;
+                motivo_consultag.Text = h.MotivoConsulta;
+                evolucion.Text = h.Evoluciones.First().Descripcion;
+                W.Text = h.SignosVitales.W;
+                presion.Text = h.SignosVitales.PresionArterial.ToString();
+                FC.Text = h.SignosVitales.Fc.ToString();
+                FR.Text = h.SignosVitales.Fr.ToString();
+                T.Text = h.SignosVitales.T.ToString();
+                nd.Text = h.NuevosDatos.First().Descripcion;
+                plan.Text = h.Plan.First().Descripcion;
+                ex.Text = h.ExamenFisico;
+            }
+            else
+            {
+                MessageBox.Show("El elemento no existe");
+            }
         }
 
         public void DeleteHistorial(object sender, RoutedEventArgs e)

@@ -102,22 +102,29 @@ namespace WPFclinica.Views
             var exp = _expediente.GetById(id);
             var h = exp.Historial.HGinecologicos.Find(x => x.MyUUID == uuid);
 
-            medico.Text = h.Medico;
-            hora.Text = h.Hora;
-            if (!string.IsNullOrEmpty(h.Fecha))
-                fecha.SelectedDate = DateTime.Parse(h.Fecha);
+            if (h != null)
+            {
+                medico.Text = h.Medico;
+                hora.Text = h.Hora;
+                if (!string.IsNullOrEmpty(h.Fecha))
+                    fecha.SelectedDate = DateTime.Parse(h.Fecha);
 
-            motivo_consultag.Text = h.MotivoConsulta;
-            W.Text = h.SignosVitales.W;
-            presion.Text = h.SignosVitales.PresionArterial.ToString();
-            FC.Text = h.SignosVitales.Fc.ToString();
-            FR.Text = h.SignosVitales.Fr.ToString();
-            T.Text = h.SignosVitales.T.ToString();
-            descripcion.Text = h.Descripciones.First().Descripcion;
-            nd.Text = h.NuevosDatos.First().Descripcion;
-            plan.Text = h.Plan.First().Descripcion;
-            if (!string.IsNullOrEmpty(h.HistoriaEnfermedadActual))
-                actual.Text = h.HistoriaEnfermedadActual.ToString();
+                motivo_consultag.Text = h.MotivoConsulta;
+                W.Text = h.SignosVitales.W;
+                presion.Text = h.SignosVitales.PresionArterial.ToString();
+                FC.Text = h.SignosVitales.Fc.ToString();
+                FR.Text = h.SignosVitales.Fr.ToString();
+                T.Text = h.SignosVitales.T.ToString();
+                descripcion.Text = h.Descripciones.First().Descripcion;
+                nd.Text = h.NuevosDatos.First().Descripcion;
+                plan.Text = h.Plan.First().Descripcion;
+                if (!string.IsNullOrEmpty(h.HistoriaEnfermedadActual))
+                    actual.Text = h.HistoriaEnfermedadActual.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Historial No existente");
+            }
         }
 
         private void UpdateGine(object sender, RoutedEventArgs e)
