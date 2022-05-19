@@ -324,28 +324,7 @@
                                         Foreground="White"
                                         Width="80"
                                         BorderBrush="Transparent"/>
-                                    <Button 
-                                        x:Name="BtnActualizar"
-                                        Content="Actualizar"
-                                        Grid.Column="5"
-                                        Grid.Row="10"
-                                        CommandParameter="{Binding Id}"
-                                        Foreground="White"
-                                        Cursor="Hand"
-                                        BorderBrush="White"
-                                        Background="Green" Margin="56,4,8,0"
-                                        Click="updateObstet"/>
-                                    <Button 
-                                        x:Name="BtnBorrar"
-                                        Content="Eliminar"
-                                        Grid.Column="5"
-                                        Grid.Row="12"
-                                        CommandParameter="{Binding Id}"
-                                        Foreground="White"
-                                        Cursor="Hand"
-                                        BorderBrush="White"
-                                        Background="red" Margin="56,4,8,0"
-                                        Click="deleteObstet"/>
+                                   
 
 
 

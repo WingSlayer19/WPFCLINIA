@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:WPFclinica.Views"
       mc:Ignorable="d"
   
-  Title="Nuevo Paciente" Height="703" Width="944">
+  Title="Nuevo Paciente" Height="1247" Width="944">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -217,7 +217,14 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*"/>
-
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
 
 
 
@@ -396,7 +403,7 @@ Style="{DynamicResource TextBoxStyle1}"
                          FontSize="20"
                 Foreground="White"
                        HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="118,9,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
+                       VerticalAlignment="Top" Margin="118,7,0,0" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
 
 
 

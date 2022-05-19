@@ -15,8 +15,8 @@ namespace WPFclinica.Database
         private readonly IMongoCollection<Archivo> _archivos;
         public MongoConnection()
         {
-            MongoClient client = new MongoClient("mongodb+srv://Erickff:Test12345.@cluster0.plls6.mongodb.net");
-            IMongoDatabase database = client.GetDatabase("test");
+            MongoClient client = new MongoClient("mongodb://8.tcp.ngrok.io:18464");
+            IMongoDatabase database = client.GetDatabase("clinica_paiz");
             _expediente = database.GetCollection<Expediente>("expediente");
             _archivos = database.GetCollection<Archivo>("archivos");
         }

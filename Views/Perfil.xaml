@@ -355,7 +355,7 @@
 
                     </TextBlock>
                 </Button>
-                
+
 
                 <Button Style="{DynamicResource ButtonStyle1}"
                         Cursor="Hand"
@@ -365,11 +365,10 @@
                         Background="#bbdefb"      
                         x:Name="BtnFicha"
                         Content="Consultar Ficha" 
-                        Margin="56,48,30,2" 
+                        Margin="56,4,30,46" 
                         Grid.Column="4" 
-                        Grid.Row="7" 
-                        Grid.RowSpan="2" 
-                        Click="Ficha"/>
+                        Grid.Row="8" 
+                        Click="Ficha" Grid.RowSpan="2"/>
 
                 <Button Style="{DynamicResource ButtonStyle1}"
                         Cursor="Hand"
