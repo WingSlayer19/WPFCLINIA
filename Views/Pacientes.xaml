@@ -324,7 +324,17 @@
                                         Foreground="White"
                                         Width="80"
                                         BorderBrush="Transparent"/>
-                                   
+
+
+                                    <Button 
+                                        Content="Eliminar"
+                                        x:Name="btnEliminar"
+                                        Click="deleteObstet"
+                                        CommandParameter="{Binding Id}"
+                                        Background="Pink"
+                                        Foreground="White"
+                                        Width="80"
+                                        BorderBrush="Transparent"/>
 
 
 
