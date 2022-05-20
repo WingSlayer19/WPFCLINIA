@@ -83,7 +83,6 @@ namespace WPFclinica.Views
 
                     ViewExpediente viewExpediente = new ViewExpediente();
                     GridDatos.ItemsSource = viewExpediente.ConvertElement(lista);
-                    MessageBox.Show(list.First().Nombre);
                 }
                 catch (NullReferenceException)
                 {
@@ -95,7 +94,27 @@ namespace WPFclinica.Views
 
         public void deleteObstet(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult result = MessageBox.Show("¿Desea elimanr el registro?", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    var id = ((Button)sender).CommandParameter.ToString();
+                    _expediente.DeleteExpediente(id);
+                    _expediente.DeleteFileByExp(id);
+                    string path = "C:\\Files\\CLINICA\\" + id;
+                    if (System.IO.File.Exists(path))
+                    {
+                        System.IO.File.Delete(path);
+                    }
+                }
+                catch (Exception)
+                {
 
+                    throw;
+                }
+                ReadAllExpedientes();
+            }
         }
 
         public void updateObstet(object sender, RoutedEventArgs e)

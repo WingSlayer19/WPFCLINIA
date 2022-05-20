@@ -66,5 +66,15 @@ namespace WPFclinica.Handler
         {
             mongoConnection.UpdateExpecientePaciente(e, id);
         }
+
+        public void DeleteExpediente(string id)
+        {
+            mongoConnection.DeleteExpediente(id);
+        }
+
+        public void DeleteFileByExp(string id)
+        {
+            mongoConnection.DeletePacienteByExp(id);
+        }
     }
 }

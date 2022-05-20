@@ -15,7 +15,7 @@ namespace WPFclinica.Database
         private readonly IMongoCollection<Archivo> _archivos;
         public MongoConnection()
         {
-            MongoClient client = new MongoClient("mongodb://2.tcp.ngrok.io:18023");
+            MongoClient client = new MongoClient("mongodb://localhost:27017");
             IMongoDatabase database = client.GetDatabase("clinica_paiz");
             _expediente = database.GetCollection<Expediente>("expediente");
             _archivos = database.GetCollection<Archivo>("archivos");
@@ -73,6 +73,18 @@ namespace WPFclinica.Database
         { 
             ObjectId Id = new ObjectId(id);
             _expediente.ReplaceOneAsync(x => x.Id == Id, e);
+        }
+
+        public void DeleteExpediente(string id)
+        {
+            ObjectId Id = new ObjectId(id);
+            _expediente.DeleteOneAsync(x => x.Id == Id);
+        }
+
+        public void DeletePacienteByExp(string id)
+        {
+            ObjectId Id = new ObjectId(id);
+            _archivos.DeleteOneAsync(x => x.ExpedienteId == Id);
         }
     }
 }
