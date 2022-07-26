@@ -188,19 +188,19 @@
             </Style.Triggers>
         </Style>
         <Style TargetType="{x:Type DataGridColumnHeader}">
-            <Setter Property="Background" Value="Pink"/>
+            <Setter Property="Background" Value="#ba9df4"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Height" Value="20"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
-        
-        
+
+
     </UserControl.Resources>
 
 
     <!--#region CONTENIDO-->
-    <Border CornerRadius="10,10,0,0" Background="#f8bbd0">
+    <Border CornerRadius="10,10,0,0" Background="#d0bdf6">
         <Grid x:Name="Grid_Pacientes">
             <!--#region Columnas-->
             <Grid.ColumnDefinitions>
@@ -258,8 +258,9 @@
             <!--#region BUSCADOR-->
             <Button Style="{DynamicResource ButtonBuscarStyle}" Grid.Column="3"
                     Grid.Row="2"
-                    Background="Pink"
-                    BorderBrush="Pink"
+                     BorderBrush="White"
+                        Foreground="White"
+                        Background="#84b6f4"   
                     Margin="10,0,0,0"
                     Cursor="Hand"
                     Width="100"
@@ -271,11 +272,11 @@
                            FontSize="15"/>
             </Button>
             <!--#endregion BUSCADOR-->
-            
+
             <!--#region AGREGAR-->
-            <Button Background="Pink"
-                    BorderBrush="Pink"
-                    Grid.Column="4"
+            <Button   BorderBrush="White"
+                        Foreground="White"
+                        Background="#f3a8c2"                      Grid.Column="4"
                     Grid.Row="2"
                     Cursor="Hand"
                     Width="150"
@@ -289,7 +290,7 @@
 
             </Button>
             <!--#endregion AGREGAR-->
-            
+
             <!--#region DATAGRID-->
             <DataGrid Style="{DynamicResource DataGridStyle}" Grid.Row="4"
                       Grid.Column="1"
@@ -311,19 +312,20 @@
                 <DataGrid.Columns>
                     <DataGridTemplateColumn Header="Opciones"
                                             Width="245">
-                    <DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <DockPanel>
-                                   <!--#region BOTONES CONTROL-->
+                                    <!--#region BOTONES CONTROL-->
                                     <Button 
                                         Content="Consultar"
                                         x:Name="btnConsultar"
                                         Click="Consultar"
                                         CommandParameter="{Binding Id}"
-                                        Background="Pink"
-                                        Foreground="White"
+                                        Background="#cfffca"
+                                        Foreground="Black"
+                                       Style="{DynamicResource ButtonBuscarStyle}"
                                         Width="80"
-                                        BorderBrush="Transparent"/>
+                                        BorderBrush="black"/>
 
 
                                     <Button 
@@ -331,22 +333,23 @@
                                         x:Name="btnEliminar"
                                         Click="deleteObstet"
                                         CommandParameter="{Binding Id}"
-                                        Background="Pink"
-                                        Foreground="White"
+                                        Background="#ffbfb0"
+                                        Foreground="Black"
                                         Width="80"
-                                        BorderBrush="Transparent"/>
+                                        Style="{DynamicResource ButtonBuscarStyle}" 
+                                        BorderBrush="Black"/>
 
 
 
                                     <!--#endregion BOTONES CONTROL-->
                                 </DockPanel>
                             </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                    <DataGridTextColumn
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <!--     <DataGridTextColumn
                         Binding="{Binding Id}"
                         Header="ID"
-                        Width="50"/>
+                        Width="50"/> -->
                     <DataGridTextColumn
                         Binding="{Binding Nombre}"
                         Header="Nombres"
@@ -366,7 +369,7 @@
                 Grid.RowSpan="8"
                 Grid.ColumnSpan="6" Margin="0,0,-70,-483" />
             <!--#endregion FRAME-->
-            
+
         </Grid>
     </Border>
     <!--#endregion CONTENIDO-->

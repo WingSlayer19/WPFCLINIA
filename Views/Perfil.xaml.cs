@@ -72,11 +72,15 @@ namespace WPFclinica.Views
                     ImageSourceConverter imgs = new ImageSourceConverter();
                     foto.SetValue(Image.SourceProperty, imgs.ConvertFrom(exp.Image));
                 }
-                
+
                 if (exp.Historial != null)
                 {
                     lista = exp.Historial.ConverToViewHistorial(exp.Historial);
-                    historias.ItemsSource = lista;
+                    // Esta la agregue 
+                    var l = (from e in lista
+                             orderby e.Fecha
+                             select e).ToList();
+                    historias.ItemsSource = l;
                 }
             }
         }
@@ -202,7 +206,20 @@ namespace WPFclinica.Views
             //FramePerfil.Content = ventana;
         }
 
+        public void SortByDate(object sender, RoutedEventArgs e)
+        { /*
+            var tempList = list.OrderBy(x => x.Fecha).ToList();
+            ViewExpediente viewExpediente = new ViewExpediente();
+            GridDatos.ItemsSource = viewExpediente.ConvertElement(tempList);
+            */
+        }
+
         private void FramePerfil_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void historias_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

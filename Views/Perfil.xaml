@@ -88,7 +88,7 @@
             </Style.Triggers>
         </Style>
         <Style TargetType="{x:Type DataGridColumnHeader}">
-            <Setter Property="Background" Value="Pink"/>
+            <Setter Property="Background" Value="#ba9df4"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Height" Value="20"/>
@@ -195,7 +195,8 @@
         </Style>
     </UserControl.Resources>
 
-    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,0,-250">
+    <Border CornerRadius="10,10,0,0" Background="#d0bdf6
+" Margin="0,0,0,-250">
         <ScrollViewer Margin="0,2,0,-238">
             <Grid x:Name="Grid_Historias" Margin="0,0,0,349">
                 <!--#region Columnas-->
@@ -254,13 +255,12 @@
 
 
                 <TextBlock
-                Text="Dirección:"
+                Text="Profesion/Procedencia:"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Grid.Column="1"
                 Grid.Row="3"
-                FontSize="15"
-                Foreground="White" Margin="9,29,0,0"/>
+                FontSize="8"
+                Foreground="White" Margin="10,29,0,0" Width="84" Height="36" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
 
                 <!--#endregion TEXTO-->
@@ -270,7 +270,7 @@
                        BorderBrush ="White"
                         Grid.Column="1"
                        Grid.Row="1"
-                       FontSize="20" Grid.ColumnSpan="2" Margin="76,8,10,2"
+                       FontSize="20" Grid.ColumnSpan="3" Margin="76,8,10,2"
                      x:Name="nombre_paciente"/>
 
 
@@ -280,8 +280,8 @@
                        BorderBrush ="White"
                         Grid.Column="1"
                        Grid.Row="2"
-                       FontSize="20" Grid.ColumnSpan="2" Margin="76,8,11,2"
-                     x:Name="télefono_paciente"/>
+                       FontSize="20" Grid.ColumnSpan="2" Margin="76,8,0,2"
+                     x:Name="télefono_paciente" HorizontalAlignment="Left" Width="286"/>
 
 
                 <TextBox Style="{DynamicResource TextBoxStyle1}" TextAlignment="Center"
@@ -289,8 +289,8 @@
                        BorderBrush ="White"
                         Grid.Column="1"
                        Grid.Row="3"
-                       FontSize="20" Grid.ColumnSpan="2" Margin="76,6,10,4"
-                     x:Name="direccion_paciente"/>
+                       FontSize="20" Grid.ColumnSpan="3" Margin="76,6,0,4"
+                     x:Name="direccion_paciente" HorizontalAlignment="Left" Width="471"/>
                 <!--#endregion TEXTBOX-->
 
 
@@ -300,13 +300,13 @@
                  Style="{DynamicResource ButtonStyle1}"
                 Grid.Row="4"
                     Grid.Column="1"
-                    Background="#bbdefb"
+                    Background="#f6d1de"
                     Cursor="Hand"
                     BorderBrush="White"
                     x:Name="BtnObs" Margin="19,20,15,0" Click="BtnObs_Click">
                     <TextBlock
                     Text="Nueva Historia Obstétrica"
-                    Foreground="White"
+                    Foreground="black"
                     FontSize="12"
                     >
 
@@ -317,7 +317,7 @@
                 Grid.RowSpan="4"
                 x:Name="foto"
                 Source="/SCS/IMG/user-solid.png" Margin="183,-1,74,14" Grid.ColumnSpan="2"/>
-                <Button x:Name="foto_perfil" 
+                <!--Button x:Name="foto_perfil" 
                   Style="{DynamicResource ButtonStyle1}"
                     Grid.Column="4"
                     Grid.Row="4" 
@@ -328,7 +328,7 @@
                     Width="100"
                     Background="Pink"
                     
-                    Content="Agregar Foto" Click="Subir"/>
+                    Content="Agregar Foto" Click="Subir"/ -->
                 <Button x:Name="BTnArchivos"
                       Style="{DynamicResource ButtonStyle1}"
                     Grid.Column="3"
@@ -336,21 +336,21 @@
                     Margin="11,16,74,0" 
                     Cursor="Hand"
                         BorderBrush="White"
-                     Foreground="White"
+                     Foreground="Black"
                     Width="100"
-                    Background="#bbdefb"
+                    Background="#84b6f4"
                    
                     Content="Ver Archivos" Height="34" VerticalAlignment="Top" Click="Visualizar"
                     />
                 <Button Style="{DynamicResource ButtonStyle1}" Grid.Row="4"
                     Grid.Column="2"
-                    Background="#bbdefb"
+                    Background="#eef6b0"
                     Cursor="Hand"
                     BorderBrush="White"
                     x:Name="BtnGinecologico" Margin="18,21,9,0" Click="Avanzar">
                     <TextBlock
                     Text="Nueva Historia Ginecológica"
-                    Foreground="White"
+                    Foreground="Black"
                     FontSize="12">
 
                     </TextBlock>
@@ -360,9 +360,9 @@
                 <Button Style="{DynamicResource ButtonStyle1}"
                         Cursor="Hand"
                         BorderBrush="White"
-                        Foreground="White"
+                        Foreground="black"
                         Width="100"
-                        Background="#bbdefb"      
+                        Background="#f47e8e"      
                         x:Name="BtnFicha"
                         Content="Consultar Ficha" 
                         Margin="56,4,30,46" 
@@ -373,9 +373,9 @@
                 <Button Style="{DynamicResource ButtonStyle1}"
                         Cursor="Hand"
                         BorderBrush="White"
-                        Foreground="White"
+                        Foreground="black"
                         Width="100"
-                        Background="#bbdefb"      
+                        Background="#7ff9c7"      
                         x:Name="btnRefresh"
                         Content="Refrescar" 
                         Margin="56,48,30,2" 
@@ -391,6 +391,7 @@
                 <DataGrid Style="{DynamicResource DataGridStyle1}" 
                 x:Name="historias" 
                 Grid.Row="5"
+                         
                 Grid.Column="1"
                 Grid.ColumnSpan="4"
                 Background="GhostWhite"
@@ -404,7 +405,7 @@
                 CanUserAddRows="False"
                 CanUserResizeColumns="True"
                 CanUserResizeRows="False"
-                CanUserSortColumns="False" Margin="0,16,166,33" Grid.RowSpan="6">
+                CanUserSortColumns="False" Margin="0,16,166,33" Grid.RowSpan="6" SelectionChanged="historias_SelectionChanged">
 
 
 
@@ -420,10 +421,10 @@
                                         x:Name="btnConsultar"
                                         Click="Ver"
                                         CommandParameter="{Binding MyUUID}"
-                                        Background="Pink"
-                                        Foreground="White"
+                                       Background="#cfffca"
+                                        Foreground="Black"
                                         Width="80"
-                                        BorderBrush="Transparent"/>
+                                        BorderBrush="Black"/>
 
                                         <!--     <Button 
                                         x:Name="BtnActualizar"
@@ -457,7 +458,7 @@
                         </DataGridTemplateColumn>
 
                         <DataGridTextColumn
-                        Binding="{Binding Fecha}"
+                        Binding="{Binding Fecha, StringFormat=\{0:dd/MM/yyyy\}}"
                         Header="Fecha"
                         Width="*"/>
                         <DataGridTextColumn
@@ -478,12 +479,7 @@
                 <!--#endregion DATAGRID-->
 
                 <!--#region FRAME-->
-                <Frame
-                x:Name="FramePerfil"
-                Grid.Column="0"
-                Grid.Row="0"
-                Grid.RowSpan="11"
-                Grid.ColumnSpan="6" Margin="0,0,-16,0" Height="1118" VerticalAlignment="Top" Navigated="FramePerfil_Navigated"  />
+
                 <!--#endregion FRAME-->
 
             </Grid>

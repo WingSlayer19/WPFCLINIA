@@ -84,7 +84,8 @@
             </Style.Triggers>
         </Style>
     </Window.Resources>
-    <Border CornerRadius="10,10,0,0" Background="#f8bbd0"  Margin="0,0,0,-6" >
+    <Border CornerRadius="10,10,0,0" Background="#d0bdf6
+"  Margin="0,0,0,-6" >
         <ScrollViewer Margin="0,2,0,0">
             <Grid x:Name="gridObs" Height="983" >
                 <Grid.ColumnDefinitions>
@@ -230,6 +231,37 @@
                      Grid.Column="1"
 Style="{DynamicResource TextBoxStyle1}"
                      x:Name="motivo_consultag"  Grid.ColumnSpan="4" Margin="0,16,7,0" Grid.RowSpan="5" AcceptsReturn="True" TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="16"
+                       Grid.Column="1"
+                        FontSize="15"
+                       Foreground="White"
+                       Text="Historia de la Enfermedad Actual:"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="2,0,0,0"/>
+                <TextBox Grid.Row="16"
+                     Grid.Column="1"
+         Style="{DynamicResource TextBoxStyle1}"
+                     x:Name="evolucion"  Grid.ColumnSpan="4" Margin="0,21,7,25" Grid.RowSpan="7" AcceptsReturn="True" TextWrapping="Wrap">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="1.206"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0.379"/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <TextBlock Grid.Row="22"
+                       Grid.Column="1"
+                        FontSize="15"
+                       Foreground="White"
+                       Text="Nuevos Datos:"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top" Margin="2,1,0,0"/>
+                <TextBox Grid.Row="22"
+                  Style="{DynamicResource TextBoxStyle1}"
+                     x:Name="nd" Grid.ColumnSpan="4" Margin="0,24,10,22" Grid.RowSpan="7" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1"/>
+
 
                 <TextBlock Grid.Row="28"
                        Grid.Column="1"
@@ -321,41 +353,10 @@ Style="{DynamicResource TextBoxStyle1}"
 
 
 
-                <TextBlock Grid.Row="16"
-                       Grid.Column="1"
-                        FontSize="15"
-                       Foreground="White"
-                       Text="Historia de la Enfermedad Actual:"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="2,0,0,0"/>
-                <TextBox Grid.Row="16"
-                     Grid.Column="1"
-         Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="evolucion"  Grid.ColumnSpan="4" Margin="0,21,7,25" Grid.RowSpan="7" AcceptsReturn="True" TextWrapping="Wrap">
-                    <TextBox.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform AngleX="1.206"/>
-                            <RotateTransform/>
-                            <TranslateTransform X="0.379"/>
-                        </TransformGroup>
-                    </TextBox.RenderTransform>
-                </TextBox>
+          
 
 
-
-                <TextBlock Grid.Row="22"
-                       Grid.Column="1"
-                        FontSize="15"
-                       Foreground="White"
-                       Text="Nuevos Datos:"
-                       HorizontalAlignment="Left"
-                       VerticalAlignment="Top" Margin="2,1,0,0"/>
-                <TextBox Grid.Row="22"
-                  Style="{DynamicResource TextBoxStyle1}"
-                     x:Name="nd" Grid.ColumnSpan="4" Margin="0,24,10,22" Grid.RowSpan="7" AcceptsReturn="True" TextWrapping="Wrap" Grid.Column="1"/>
-
-
+      
 
                 <TextBlock Grid.Row="51"
                        Grid.Column="1"
@@ -374,9 +375,9 @@ Style="{DynamicResource TextBoxStyle1}"
                 Content="Guardar" 
                 Margin="64,9,0,0" 
                 Grid.Row="59" 
-                Background="blue"
-                Foreground="White"
-                BorderBrush="white"
+                  BorderBrush="White"
+                        Foreground="White"
+                        Background="#84b6f4"   
                 VerticalAlignment="Top"
                 Click="InserObstetrico" Height="20" HorizontalAlignment="Left" Width="113"/>
                 <Button Template="{DynamicResource ButtonTemplate1}"
@@ -384,9 +385,9 @@ Style="{DynamicResource TextBoxStyle1}"
                         Content="Borrar" 
                         Margin="114,0,13,0"  
                         Grid.Row="55" 
-                        Background="Blue"
-                        BorderBrush="White"
-                        Foreground="White"
+                        Background="#ffbfb0"
+                        BorderBrush="Black"
+                        Foreground="Black"
                         VerticalAlignment="Center"
                         x:Name="btnDelete"
                         Click="DeleteHistorial" Height="26" Grid.ColumnSpan="2" />
@@ -394,9 +395,9 @@ Style="{DynamicResource TextBoxStyle1}"
                         Grid.Column="5" 
                         Content="Actualizar" 
                         Margin="114,5,0,0"
-                        Background="Blue" 
-                        Foreground="White"
-                        BorderBrush="White"
+                        BorderBrush="Black"
+                        Foreground="Black"
+                        Background="#84b6f4"   
                         Grid.Row="57" 
                         VerticalAlignment="Top"
                         x:Name="btnUpdate"

@@ -28,8 +28,9 @@ namespace WPFclinica.Views
         private void ReadAllExpedientes()
         {
             list = _expediente.GetAllExpedientes();
+            var tempList = list.OrderBy(x => x.Nombre).ToList();
             ViewExpediente viewExpediente = new ViewExpediente();
-            GridDatos.ItemsSource = viewExpediente.ConvertElement(list);
+            GridDatos.ItemsSource = viewExpediente.ConvertElement(tempList);
             
         }
         public Pacientes()
@@ -81,8 +82,10 @@ namespace WPFclinica.Views
                 {
                     var lista = list.Where(x => x.Nombre.Contains(txtBuscarPaciente.Text)).ToList();
 
+                    //Esta la agregue
+                    var tempList = lista.OrderBy(x => x.Nombre).ToList();
                     ViewExpediente viewExpediente = new ViewExpediente();
-                    GridDatos.ItemsSource = viewExpediente.ConvertElement(lista);
+                    GridDatos.ItemsSource = viewExpediente.ConvertElement(tempList);
                 }
                 catch (NullReferenceException)
                 {
@@ -91,7 +94,6 @@ namespace WPFclinica.Views
                 }
             }
         }
-
         public void deleteObstet(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("¿Desea elimanr el registro?", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Question);
@@ -121,5 +123,6 @@ namespace WPFclinica.Views
         {
 
         }
+
     }
 }

@@ -108,7 +108,8 @@
         </Style>
     </Window.Resources>
 
-    <Border CornerRadius="10,10,0,0" Background="#f8bbd0" Margin="0,0,0,-6" >
+    <Border CornerRadius="10,10,0,0" Background="#d0bdf6
+" Margin="0,0,0,-6" >
         <ScrollViewer  Margin="0,2,0,0" VerticalAlignment="Center">
             <Grid Margin="0,10,0,98" Height="952" >
                 <Grid.ColumnDefinitions>
@@ -259,7 +260,9 @@ Style="{DynamicResource TextBoxStyle1}"
 Style="{DynamicResource TextBoxStyle1}"
                      x:Name="actual" Grid.ColumnSpan="5" Margin="0,1,188,15" Grid.RowSpan="4" AcceptsReturn="True" TextWrapping="Wrap"/>
 
-
+                <TextBox Grid.Row="18"
+                Style="{DynamicResource TextBoxStyle1}"
+                x:Name="nd"  Grid.ColumnSpan="6" Margin="18,19,188,27" Grid.RowSpan="5" AcceptsReturn="True" TextWrapping="Wrap"/>
 
                 <TextBlock Grid.Row="22"
                        Grid.Column="2"
@@ -373,18 +376,18 @@ Style="{DynamicResource TextBoxStyle1}"
                      Grid.Column="1"
                     Style="{DynamicResource TextBoxStyle1}"
                      x:Name="plan" Grid.ColumnSpan="5" Margin="0,1,188,15" Grid.RowSpan="4" AcceptsReturn="True" TextWrapping="Wrap"/>
-                <TextBox Grid.Row="18"
-                Style="{DynamicResource TextBoxStyle1}"
-                x:Name="nd"  Grid.ColumnSpan="6" Margin="18,19,188,27" Grid.RowSpan="5" AcceptsReturn="True" TextWrapping="Wrap"/>
+               
                 <Button 
                Style="{DynamicResource ButtonStyle1}"   x:Name="BtnIng"
                     Content="Guardar"
                     Grid.Column="4"
                     Grid.Row="47"
-                    Foreground="White"
-                    Cursor="Hand"
+                  
                       BorderBrush="White"
-                    Background="blue" Margin="176,7,185,3"
+                        Foreground="White"
+                        Background="#84b6f4"   
+                    Cursor="Hand"
+                       Margin="176,7,185,3"
                 Click="InsertGineco" Height="28" Width="72" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
                 <Button  Style="{DynamicResource ButtonStyle1}" 
                     Grid.Column="5" 
@@ -392,21 +395,22 @@ Style="{DynamicResource TextBoxStyle1}"
                         HorizontalAlignment="Left" 
                         Margin="111,3,0,0" 
                         Grid.Row="47"
-                         Background="blue"
-                         Foreground="White"
-                         BorderBrush="White"
+                     BorderBrush="Black"
+                        Foreground="Black"
+                        Background="#ffbfb0"   
                         VerticalAlignment="Top"
                         x:Name="btnDelete"
                         Click="DeleteHistorial" Height="28" Width="72" Grid.RowSpan="2"/>
                 <Button Style="{DynamicResource ButtonStyle1}"
                      Grid.Column="5" 
-                        Background="blue"
+                          BorderBrush="Black"
+                        Foreground="Black"
+                        Background="#84b6f4"   
                         Content="Actualizar" 
                         HorizontalAlignment="Left" 
                         Margin="35,4,0,0" 
                         Grid.Row="47" 
-                        Foreground="White"
-                        BorderBrush="White"
+                      
                         VerticalAlignment="Top"
                         Click="UpdateGine"
                         x:Name="btnUpdate" Height="28" Width="72" Grid.RowSpan="2"/>

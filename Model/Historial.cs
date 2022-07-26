@@ -23,7 +23,7 @@ namespace WPFclinica.Model
                 foreach (var item in lista.HObstetricos)
                 {
                     historial = new ViewHistorial();
-                    historial.Fecha = item.Fecha;
+                    historial.Fecha = Convert.ToDateTime(item.Fecha);
                     historial.Medico = item.Medico;
                     historial.Tipo = "Obstetrico";
                     historial.MyUUID = item.MyUUID;
@@ -35,7 +35,7 @@ namespace WPFclinica.Model
                 foreach (var item in lista.HGinecologicos)
                 {
                     historial = new ViewHistorial();
-                    historial.Fecha = item.Fecha;
+                    historial.Fecha = Convert.ToDateTime(item.Fecha);
                     historial.Medico = item.Medico;
                     historial.Tipo = "Ginecologico";
                     historial.MyUUID = item.MyUUID;
@@ -195,7 +195,7 @@ namespace WPFclinica.Model
         }
         public string Tipo { get; set; } = string.Empty;
         public string Medico { get; set; } = string.Empty;
-        public string Fecha { get; set; } = string.Empty;
+        public DateTime Fecha { get; set; } 
         public string MyUUID { get; set; } = string.Empty;
     }
 }

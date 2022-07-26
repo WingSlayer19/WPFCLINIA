@@ -226,7 +226,7 @@
         </DataTemplate>
 
 
-      
+
 
 
         <!--#endregion PACIENTES-->
@@ -244,7 +244,7 @@
                   Height="35"
                   VerticalAlignment="Top"
                   Background="Transparent">
-                <Border CornerRadius="10,10,0,0" Background="#f8bbd0"/>
+                <Border CornerRadius="10,10,0,0" Background="#bd96f3"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -252,7 +252,7 @@
                         <ColumnDefinition Width="100"/>
                     </Grid.ColumnDefinitions>
                     <TextBlock
-                        Text="Doctora Dulce Paíz"
+                        Text="Doctora Dulce Paiz"
                         Grid.Column="0"
                         Foreground="Black"
                         FontSize="15"
@@ -337,9 +337,13 @@
                 Width="75"
                 HorizontalAlignment="Left"
                 Margin="0,35,0,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="473*"/>
+                    <RowDefinition Height="92*"/>
+                </Grid.RowDefinitions>
                 <Border
-                    Background="#fce4ec"
-                    CornerRadius="0,0,0,0"/>
+                    Background="#bd96f3"
+                    CornerRadius="0,0,0,0" Grid.RowSpan="2"/>
 
                 <!--#region MENU-->
                 <StackPanel
@@ -389,7 +393,8 @@
                 <ListView Background="Transparent"
                           BorderBrush="Transparent"
                           Margin="0,30,0,0"
-                          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        
+                          ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.RowSpan="2">
                     <!--#endregion MENU-->
 
                     <!--#region LISTA -->
