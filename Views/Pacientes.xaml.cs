@@ -82,8 +82,10 @@ namespace WPFclinica.Views
                 {
                     var lista = list.Where(x => x.Nombre.Contains(txtBuscarPaciente.Text)).ToList();
 
+                    //Esta la agregue
+                    var tempList = lista.OrderBy(x => x.Nombre).ToList();
                     ViewExpediente viewExpediente = new ViewExpediente();
-                    GridDatos.ItemsSource = viewExpediente.ConvertElement(lista);
+                    GridDatos.ItemsSource = viewExpediente.ConvertElement(tempList);
                 }
                 catch (NullReferenceException)
                 {

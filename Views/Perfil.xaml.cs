@@ -76,8 +76,11 @@ namespace WPFclinica.Views
                 if (exp.Historial != null)
                 {
                     lista = exp.Historial.ConverToViewHistorial(exp.Historial);
-                    var tempList = lista.OrderBy(x => x.Fecha).ToList();
-                    historias.ItemsSource = tempList;
+                   // Esta la agregue 
+                    var l = (from e in lista
+                             orderby e.Fecha.ToLocalTime()
+                             select e).ToList();
+                    historias.ItemsSource = l;
                 }              
             }
         }
