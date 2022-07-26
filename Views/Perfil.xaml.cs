@@ -76,8 +76,9 @@ namespace WPFclinica.Views
                 if (exp.Historial != null)
                 {
                     lista = exp.Historial.ConverToViewHistorial(exp.Historial);
-                    historias.ItemsSource = lista;
-                }
+                    var tempList = lista.OrderBy(x => x.Fecha).ToList();
+                    historias.ItemsSource = tempList;
+                }              
             }
         }
 
@@ -200,6 +201,14 @@ namespace WPFclinica.Views
             ventana3.btnInsertarPaciente.IsEnabled = false;
             ventana3.LlenarCampos(IdUsuario);
             //FramePerfil.Content = ventana;
+        }
+
+        public void SortByDate(object sender, RoutedEventArgs e)
+        { /*
+            var tempList = list.OrderBy(x => x.Fecha).ToList();
+            ViewExpediente viewExpediente = new ViewExpediente();
+            GridDatos.ItemsSource = viewExpediente.ConvertElement(tempList);
+            */
         }
 
         private void FramePerfil_Navigated(object sender, NavigationEventArgs e)

@@ -194,8 +194,8 @@
             <Setter Property="Height" Value="20"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
-        
-        
+
+
     </UserControl.Resources>
 
 
@@ -271,7 +271,7 @@
                            FontSize="15"/>
             </Button>
             <!--#endregion BUSCADOR-->
-            
+
             <!--#region AGREGAR-->
             <Button Background="Pink"
                     BorderBrush="Pink"
@@ -289,7 +289,7 @@
 
             </Button>
             <!--#endregion AGREGAR-->
-            
+
             <!--#region DATAGRID-->
             <DataGrid Style="{DynamicResource DataGridStyle}" Grid.Row="4"
                       Grid.Column="1"
@@ -311,10 +311,10 @@
                 <DataGrid.Columns>
                     <DataGridTemplateColumn Header="Opciones"
                                             Width="245">
-                    <DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <DockPanel>
-                                   <!--#region BOTONES CONTROL-->
+                                    <!--#region BOTONES CONTROL-->
                                     <Button 
                                         Content="Consultar"
                                         x:Name="btnConsultar"
@@ -341,12 +341,12 @@
                                     <!--#endregion BOTONES CONTROL-->
                                 </DockPanel>
                             </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                    <DataGridTextColumn
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <!--     <DataGridTextColumn
                         Binding="{Binding Id}"
                         Header="ID"
-                        Width="50"/>
+                        Width="50"/> -->
                     <DataGridTextColumn
                         Binding="{Binding Nombre}"
                         Header="Nombres"
@@ -366,7 +366,7 @@
                 Grid.RowSpan="8"
                 Grid.ColumnSpan="6" Margin="0,0,-70,-483" />
             <!--#endregion FRAME-->
-            
+
         </Grid>
     </Border>
     <!--#endregion CONTENIDO-->

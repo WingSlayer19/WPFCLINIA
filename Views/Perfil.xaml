@@ -254,13 +254,12 @@
 
 
                 <TextBlock
-                Text="Dirección:"
+                Text="Profesion/Procedencia:"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Grid.Column="1"
                 Grid.Row="3"
-                FontSize="15"
-                Foreground="White" Margin="9,29,0,0"/>
+                FontSize="8"
+                Foreground="White" Margin="10,29,0,0" Width="84" Height="36" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
 
 
                 <!--#endregion TEXTO-->
@@ -270,7 +269,7 @@
                        BorderBrush ="White"
                         Grid.Column="1"
                        Grid.Row="1"
-                       FontSize="20" Grid.ColumnSpan="2" Margin="76,8,10,2"
+                       FontSize="20" Grid.ColumnSpan="3" Margin="76,8,10,2"
                      x:Name="nombre_paciente"/>
 
 
@@ -280,8 +279,8 @@
                        BorderBrush ="White"
                         Grid.Column="1"
                        Grid.Row="2"
-                       FontSize="20" Grid.ColumnSpan="2" Margin="76,8,11,2"
-                     x:Name="télefono_paciente"/>
+                       FontSize="20" Grid.ColumnSpan="2" Margin="76,8,0,2"
+                     x:Name="télefono_paciente" HorizontalAlignment="Left" Width="286"/>
 
 
                 <TextBox Style="{DynamicResource TextBoxStyle1}" TextAlignment="Center"
@@ -289,8 +288,8 @@
                        BorderBrush ="White"
                         Grid.Column="1"
                        Grid.Row="3"
-                       FontSize="20" Grid.ColumnSpan="2" Margin="76,6,10,4"
-                     x:Name="direccion_paciente"/>
+                       FontSize="20" Grid.ColumnSpan="3" Margin="76,6,0,4"
+                     x:Name="direccion_paciente" HorizontalAlignment="Left" Width="471"/>
                 <!--#endregion TEXTBOX-->
 
 
@@ -317,7 +316,7 @@
                 Grid.RowSpan="4"
                 x:Name="foto"
                 Source="/SCS/IMG/user-solid.png" Margin="183,-1,74,14" Grid.ColumnSpan="2"/>
-                <Button x:Name="foto_perfil" 
+                <!--Button x:Name="foto_perfil" 
                   Style="{DynamicResource ButtonStyle1}"
                     Grid.Column="4"
                     Grid.Row="4" 
@@ -328,7 +327,7 @@
                     Width="100"
                     Background="Pink"
                     
-                    Content="Agregar Foto" Click="Subir"/>
+                    Content="Agregar Foto" Click="Subir"/ -->
                 <Button x:Name="BTnArchivos"
                       Style="{DynamicResource ButtonStyle1}"
                     Grid.Column="3"
@@ -478,12 +477,7 @@
                 <!--#endregion DATAGRID-->
 
                 <!--#region FRAME-->
-                <Frame
-                x:Name="FramePerfil"
-                Grid.Column="0"
-                Grid.Row="0"
-                Grid.RowSpan="11"
-                Grid.ColumnSpan="6" Margin="0,0,-16,0" Height="1118" VerticalAlignment="Top" Navigated="FramePerfil_Navigated"  />
+
                 <!--#endregion FRAME-->
 
             </Grid>

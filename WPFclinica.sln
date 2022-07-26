@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFclinica", "WPFclinica.csproj", "{6257B39B-C163-4020-97A7-E0D83D1DDA5A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_Clinica", "..\Setup_Clinica\Setup_Clinica.vdproj", "{121CF557-5B09-4351-9520-3DD79E816C37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +16,9 @@ Global
 		{6257B39B-C163-4020-97A7-E0D83D1DDA5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6257B39B-C163-4020-97A7-E0D83D1DDA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6257B39B-C163-4020-97A7-E0D83D1DDA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121CF557-5B09-4351-9520-3DD79E816C37}.Debug|Any CPU.ActiveCfg = Release
+		{121CF557-5B09-4351-9520-3DD79E816C37}.Debug|Any CPU.Build.0 = Release
+		{121CF557-5B09-4351-9520-3DD79E816C37}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

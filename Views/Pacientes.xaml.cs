@@ -28,8 +28,9 @@ namespace WPFclinica.Views
         private void ReadAllExpedientes()
         {
             list = _expediente.GetAllExpedientes();
+            var tempList = list.OrderBy(x => x.Nombre).ToList();
             ViewExpediente viewExpediente = new ViewExpediente();
-            GridDatos.ItemsSource = viewExpediente.ConvertElement(list);
+            GridDatos.ItemsSource = viewExpediente.ConvertElement(tempList);
             
         }
         public Pacientes()
@@ -121,5 +122,6 @@ namespace WPFclinica.Views
         {
 
         }
+
     }
 }

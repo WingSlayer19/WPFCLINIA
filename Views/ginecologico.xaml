@@ -259,7 +259,9 @@ Style="{DynamicResource TextBoxStyle1}"
 Style="{DynamicResource TextBoxStyle1}"
                      x:Name="actual" Grid.ColumnSpan="5" Margin="0,1,188,15" Grid.RowSpan="4" AcceptsReturn="True" TextWrapping="Wrap"/>
 
-
+                <TextBox Grid.Row="18"
+                Style="{DynamicResource TextBoxStyle1}"
+                x:Name="nd"  Grid.ColumnSpan="6" Margin="18,19,188,27" Grid.RowSpan="5" AcceptsReturn="True" TextWrapping="Wrap"/>
 
                 <TextBlock Grid.Row="22"
                        Grid.Column="2"
@@ -373,9 +375,7 @@ Style="{DynamicResource TextBoxStyle1}"
                      Grid.Column="1"
                     Style="{DynamicResource TextBoxStyle1}"
                      x:Name="plan" Grid.ColumnSpan="5" Margin="0,1,188,15" Grid.RowSpan="4" AcceptsReturn="True" TextWrapping="Wrap"/>
-                <TextBox Grid.Row="18"
-                Style="{DynamicResource TextBoxStyle1}"
-                x:Name="nd"  Grid.ColumnSpan="6" Margin="18,19,188,27" Grid.RowSpan="5" AcceptsReturn="True" TextWrapping="Wrap"/>
+               
                 <Button 
                Style="{DynamicResource ButtonStyle1}"   x:Name="BtnIng"
                     Content="Guardar"
