@@ -456,7 +456,7 @@
                         </DataGridTemplateColumn>
 
                         <DataGridTextColumn
-                        Binding="{Binding Fecha}"
+                        Binding="{Binding Fecha, StringFormat=\{0:dd/MM/yyyy \}}"
                         Header="Fecha"
                         Width="*"/>
                         <DataGridTextColumn
